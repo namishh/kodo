@@ -1,7 +1,6 @@
 vim.cmd('filetype plugin indent on')
-vim.o.shortmess = vim.o.shortmess .. 'c'
 vim.o.hidden = true
-vim.o.pumheight = 10
+vim.o.pumheight = 2
 vim.o.fileencoding = 'utf-8'
 vim.o.cmdheight = 2
 vim.o.splitbelow = true
@@ -23,7 +22,6 @@ vim.o.mouse = "a"
 vim.wo.wrap = false
 vim.wo.number = true
 vim.o.cursorline = true
-vim.wo.signcolumn = "yes"
 vim.o.tabstop = 2
 vim.bo.tabstop = 2
 vim.o.softtabstop = 2
@@ -34,7 +32,7 @@ vim.bo.autoindent = true
 vim.o.expandtab = true
 vim.opt.fillchars:append('eob: ')
 vim.bo.expandtab = true
-vim.cmd('colorscheme wave')
+vim.cmd('colorscheme warm')
 vim.opt_local.bufhidden = 'wipe'
 vim.opt_local.buflisted = false
 vim.cmd('set lazyredraw')

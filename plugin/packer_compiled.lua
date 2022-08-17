@@ -157,7 +157,7 @@ _G.packer_plugins = {
     url = "https://github.com/kyazdani42/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
-    after = { "nvim-ts-autotag", "nvim-ts-rainbow" },
+    after = { "nvim-ts-rainbow", "nvim-ts-autotag" },
     config = { "require('config/treesitter')" },
     loaded = false,
     needs_bufread = false,
@@ -241,14 +241,14 @@ time([[Defining packer_plugins]], false)
 time([[Config for impatient.nvim]], true)
 require('impatient')
 time([[Config for impatient.nvim]], false)
--- Config for: filetype.nvim
-time([[Config for filetype.nvim]], true)
-require('config/filetype')
-time([[Config for filetype.nvim]], false)
 -- Config for: toggleterm.nvim
 time([[Config for toggleterm.nvim]], true)
 require('config/terminal')
 time([[Config for toggleterm.nvim]], false)
+-- Config for: filetype.nvim
+time([[Config for filetype.nvim]], true)
+require('config/filetype')
+time([[Config for filetype.nvim]], false)
 -- Config for: nvim-lspconfig
 time([[Config for nvim-lspconfig]], true)
 require('config/autocomplete')
@@ -274,7 +274,7 @@ vim.cmd [[au!]]
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
 vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'nvim-ts-autotag'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
-vim.cmd [[au BufWinEnter * ++once lua require("packer.load")({'lualine.nvim', 'yuck.vim', 'which-key.nvim', 'nvim-treesitter', 'bufferline.nvim'}, { event = "BufWinEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au BufWinEnter * ++once lua require("packer.load")({'bufferline.nvim', 'yuck.vim', 'lualine.nvim', 'which-key.nvim', 'nvim-treesitter'}, { event = "BufWinEnter *" }, _G.packer_plugins)]]
 vim.cmd [[au BufRead * ++once lua require("packer.load")({'nvim-colorizer.lua', 'alpha-nvim'}, { event = "BufRead *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
