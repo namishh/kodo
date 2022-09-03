@@ -11,6 +11,7 @@ local feedkey = function(key, mode)
 end
 -- Setup nvim-cmp.
 local cmp = require 'cmp'
+local lspkind = require('lspkind')
 
 cmp.setup({
   snippet = {
@@ -59,4 +60,6 @@ cmp.setup({
     -- { name = 'ultisnips' },
     {name = 'buffer'}
   },
+  formatting = {format = lspkind.cmp_format({with_text = true, maxwidth = 50})}
 })
+

@@ -19,7 +19,6 @@ return require('packer').startup(function(use)
     cmd = "NvimTreeToggle",
     config = "require('config/nvim-tree')"
   }
-  use { 'windwp/nvim-ts-autotag', event = "InsertEnter", after = "nvim-treesitter" }
   use { 'p00f/nvim-ts-rainbow', after = "nvim-treesitter" }
   use { 'windwp/nvim-autopairs', config = "require('config/autopair')", after = "nvim-cmp" }
   use {'norcalli/nvim-colorizer.lua', event = "BufRead", config="require('config/colorizer')"}
@@ -43,8 +42,11 @@ return require('packer').startup(function(use)
   use { 'hrsh7th/nvim-cmp' }
   use { 'hrsh7th/cmp-vsnip' }
   use { 'hrsh7th/vim-vsnip' }
+  use { 'onsails/lspkind-nvim' }
   use {'akinsho/toggleterm.nvim', config="require('config/terminal')"}
   use {"elkowar/yuck.vim", event = "BufWinEnter"}
+  use "dstein64/vim-startuptime"
+  use {"williamboman/nvim-lsp-installer"}
   use { "nathom/filetype.nvim", config="require('config/filetype')"}
 end)
 
