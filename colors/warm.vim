@@ -1,5 +1,5 @@
 " Setting up the colors
-let s:warm0_gui = "#202026"
+let s:warm0_gui = "#212126"
 let s:warm1_gui = "#da696d"
 let s:warm2_gui = "#74be88"
 let s:warm3_gui = "#e1b56a"
@@ -17,9 +17,9 @@ let s:warm14_gui = "#6bd1e0"
 let s:warm15_gui = "#ccc9c3"
 let s:warmbg_gui = "#0f0f0f"
 let s:warmfg_gui = "#dfdee0"
-let s:warmbg_alt = "#151618"
+let s:warmbg_alt = "#18181a"
 let s:warmNR_fg = s:warm7_gui
-
+let s:comment = "#3d404e"
 hi clear
 syntax reset
 let g:colors_name = "warm"
@@ -42,20 +42,19 @@ if g:warmNR == 0
     let s:warmNR_fg = .s:warm0_gui
 endif
 
-exe "hi AlphaHeader guifg="s:warm2_gui
+exe "hi AlphaHeader guifg="s:warm12_gui
 exe "hi AlphaButtons guifg="s:warm3_gui
 "Telescope
-exe "hi TelescopeBorder guifg="s:warmbg_gui
-exe "hi TelescopePromptBorder guifg="s:warm8_gui. " guibg="s:warm8_gui
-exe "hi TelescopePromptNormal guifg="s:warmfg_gui. " guibg="s:warm8_gui
-exe "hi TelescopePromptPrefix guifg="s:warm9_gui. " guibg="s:warm8_gui
+exe "hi TelescopeBorder guifg="s:warmbg_alt
+exe "hi TelescopePromptBorder guifg="s:warm0_gui. " guibg="s:warm0_gui
+exe "hi TelescopePromptNormal guifg="s:warmfg_gui. " guibg="s:warm0_gui
+exe "hi TelescopePromptPrefix guifg="s:warm9_gui. " guibg="s:warm0_gui
 exe "hi TelescopeNormal guibg="s:warmbg_alt
 exe "hi TelescopePreviewBorder guifg="s:warmbg_alt." guibg="s:warmbg_alt
 exe "hi TelescopePreviewTitle guifg="s:warm0_gui." guibg="s:warm12_gui
 exe "hi TelescopePromptTitle guifg="s:warm8_gui." guibg="s:warm9_gui
 exe "hi TelescopeResultsTitle guifg="s:warmbg_alt." guibg="s:warmbg_alt
 exe "hi TelescopeResultsBorder guifg="s:warmbg_alt." guibg="s:warmbg_alt
-
 "Whichkey
 exe "hi WhichKey guifg="s:warm2_gui
 exe "hi WhichKeyGroup guifg="s:warm12_gui
@@ -110,7 +109,7 @@ exe "hi SignColumn guibg=" s:warm0_gui
 exe "hi Title guifg=" s:warm3_gui
 exe "hi LineNr guifg="s:warm8_gui
 exe "hi NonText guifg="s:warm5_gui." guibg="s:warm0_gui
-exe "hi Comment guifg="s:warm8_gui "gui=italic" 
+exe "hi Comment guifg="s:comment "gui=italic" 
 exe "hi SpecialComment guifg="s:warm8_gui "gui=italic guibg=NONE "
 exe "hi TabLineFill gui=NONE guibg="s:warm1_gui
 exe "hi TabLineSel gui=NONE guibg="s:warm1_gui
