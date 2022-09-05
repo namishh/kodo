@@ -19,7 +19,6 @@ return require('packer').startup(function(use)
     cmd = "NvimTreeToggle",
     config = "require('config/nvim-tree')"
   }
-  use { 'p00f/nvim-ts-rainbow', after = "nvim-treesitter" }
   use { 'windwp/nvim-autopairs', config = "require('config/autopair')", after = "nvim-cmp" }
   use {'norcalli/nvim-colorizer.lua', event = "BufRead", config="require('config/colorizer')"}
   use {"folke/which-key.nvim", event = "BufWinEnter", config = "require('config/whichkey')"}
@@ -46,7 +45,10 @@ return require('packer').startup(function(use)
   use {'akinsho/toggleterm.nvim', config="require('config/terminal')"}
   use {"elkowar/yuck.vim", event = "BufWinEnter"}
   use "dstein64/vim-startuptime"
-  use {"williamboman/nvim-lsp-installer"}
   use { "nathom/filetype.nvim", config="require('config/filetype')"}
+  use {"kyazdani42/nvim-web-devicons"}
+  use { "williamboman/mason.nvim" }
+  use { "williamboman/mason-lspconfig.nvim" }
+
 end)
 
