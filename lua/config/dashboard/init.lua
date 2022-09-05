@@ -21,7 +21,8 @@ local logo = {
 }
 
 dashboard.section.header.val = logo
-
+dashboard.section.header.opts.hl = "AlphaHeader"
+dashboard.section.buttons.opts.hl = "AlphaButtons"
 dashboard.section.buttons.val = {
   dashboard.button("Ctrl + B", "  File Explorer", ":NvimTreeToggle<cr>"),
   dashboard.button("Leader + F", "  Find File", ":Telescope find_files <cr>"),

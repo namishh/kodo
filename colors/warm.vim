@@ -17,7 +17,7 @@ let s:warm14_gui = "#6bd1e0"
 let s:warm15_gui = "#ccc9c3"
 let s:warmbg_gui = "#0f0f0f"
 let s:warmfg_gui = "#dfdee0"
-
+let s:warmbg_alt = "#151618"
 let s:warmNR_fg = s:warm7_gui
 
 hi clear
@@ -42,9 +42,29 @@ if g:warmNR == 0
     let s:warmNR_fg = .s:warm0_gui
 endif
 
+exe "hi AlphaHeader guifg="s:warm2_gui
+exe "hi AlphaButtons guifg="s:warm3_gui
+"Telescope
+exe "hi TelescopeBorder guifg="s:warmbg_gui
+exe "hi TelescopePromptBorder guifg="s:warm8_gui. " guibg="s:warm8_gui
+exe "hi TelescopePromptNormal guifg="s:warmfg_gui. " guibg="s:warm8_gui
+exe "hi TelescopePromptPrefix guifg="s:warm9_gui. " guibg="s:warm8_gui
+exe "hi TelescopeNormal guibg="s:warmbg_alt
+exe "hi TelescopePreviewBorder guifg="s:warmbg_alt." guibg="s:warmbg_alt
+exe "hi TelescopePreviewTitle guifg="s:warm0_gui." guibg="s:warm12_gui
+exe "hi TelescopePromptTitle guifg="s:warm8_gui." guibg="s:warm9_gui
+exe "hi TelescopeResultsTitle guifg="s:warmbg_alt." guibg="s:warmbg_alt
+exe "hi TelescopeResultsBorder guifg="s:warmbg_alt." guibg="s:warmbg_alt
+
+"Whichkey
+exe "hi WhichKey guifg="s:warm2_gui
+exe "hi WhichKeyGroup guifg="s:warm12_gui
+exe "hi WhichKeyValue guifg="s:warm12_gui
+exe "hi WhichKeySeparator guifg="s:warm8_gui
+exe "hi WhichKeyDesc guifg="s:warm9_gui
 "Syntax Highlighting
 exe "hi CursorLineNR guifg=" s:warmNR_fg
-exe "hi CursorLine guibg=" s:warm0_gui
+exe "hi CursorLine guibg=" s:warmbg_alt
 
 exe "hi ErrorMsg guifg=" s:warm1_gui." guibg="s:warm8_gui
 exe "hi WarningMsg guifg=" s:warm0_gui
