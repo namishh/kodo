@@ -12,6 +12,7 @@ local toggle_lazygit = function()
   return lazygit:toggle()
 end
 
+
 local mappings = {
   q = { ":q<cr>", "Quit" },
   Q = { ":wq<cr>", "Save & Quit" },
@@ -35,7 +36,8 @@ local mappings = {
     s = { ":PackerSync<cr>", "Sync Plugins" },
     S = { ":PackerStatus<cr>", "Packer Status" },
     u = { ":PackerUpdate<cr>", "Update Plugins" }
-  }
+  },
+  m = { ":Mason<cr>", "Open Mason" }
 }
 
 local opts = { prefix = '<leader>' }

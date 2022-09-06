@@ -20,7 +20,7 @@ return require('packer').startup(function(use)
     config = "require('config/nvim-tree')"
   }
   use { 'windwp/nvim-autopairs', config = "require('config/autopair')", after = "nvim-cmp" }
-  use {'norcalli/nvim-colorizer.lua', event = "BufRead", config="require('config/colorizer')"}
+  use {'NvChad/nvim-colorizer.lua', event = "BufRead", config="require('config/colorizer')"}
   use {"folke/which-key.nvim", event = "BufWinEnter", config = "require('config/whichkey')"}
   use 'nvim-lua/plenary.nvim'
   use {
@@ -42,13 +42,11 @@ return require('packer').startup(function(use)
   use { 'hrsh7th/cmp-vsnip' }
   use { 'hrsh7th/vim-vsnip' }
   use { 'onsails/lspkind-nvim' }
-  use {'akinsho/toggleterm.nvim', config="require('config/terminal')"}
   use {"elkowar/yuck.vim", event = "BufWinEnter"}
   use "dstein64/vim-startuptime"
   use { "nathom/filetype.nvim", config="require('config/filetype')"}
   use {"kyazdani42/nvim-web-devicons"}
   use { "williamboman/mason.nvim" }
   use { "williamboman/mason-lspconfig.nvim" }
-
+  use { "akinsho/toggleterm.nvim", config = "require('config/terminal')" }
 end)
-
