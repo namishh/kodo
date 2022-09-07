@@ -7,6 +7,7 @@ require"toggleterm".setup {
   start_in_insert = true,
   persist_size = true,
   direction = 'horizontal',
+
   float_opts = {
     -- The border key is *almost* the same as 'nvim_open_win'
     -- see :h nvim_open_win for details on borders however
