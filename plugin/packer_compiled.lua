@@ -130,16 +130,6 @@ _G.packer_plugins = {
     path = "/home/namish/.local/share/nvim/site/pack/packer/opt/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
-  ["mason-lspconfig.nvim"] = {
-    loaded = true,
-    path = "/home/namish/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
-    url = "https://github.com/williamboman/mason-lspconfig.nvim"
-  },
-  ["mason.nvim"] = {
-    loaded = true,
-    path = "/home/namish/.local/share/nvim/site/pack/packer/start/mason.nvim",
-    url = "https://github.com/williamboman/mason.nvim"
-  },
   ["nvim-autopairs"] = {
     config = { "require('config/autopair')" },
     load_after = {},
@@ -159,7 +149,12 @@ _G.packer_plugins = {
     needs_bufread = false,
     only_cond = false,
     path = "/home/namish/.local/share/nvim/site/pack/packer/opt/nvim-colorizer.lua",
-    url = "https://github.com/NvChad/nvim-colorizer.lua"
+    url = "https://github.com/norcalli/nvim-colorizer.lua"
+  },
+  ["nvim-lsp-installer"] = {
+    loaded = true,
+    path = "/home/namish/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
+    url = "https://github.com/williamboman/nvim-lsp-installer"
   },
   ["nvim-lspconfig"] = {
     config = { "require('config/autocomplete')" },
@@ -200,12 +195,6 @@ _G.packer_plugins = {
     path = "/home/namish/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
-  nvterm = {
-    config = { "require('config/terminal')" },
-    loaded = true,
-    path = "/home/namish/.local/share/nvim/site/pack/packer/start/nvterm",
-    url = "https://github.com/NvChad/nvterm"
-  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/namish/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -224,6 +213,12 @@ _G.packer_plugins = {
     only_cond = false,
     path = "/home/namish/.local/share/nvim/site/pack/packer/opt/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["toggleterm.nvim"] = {
+    config = { "require('config/terminal')" },
+    loaded = true,
+    path = "/home/namish/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
+    url = "https://github.com/akinsho/toggleterm.nvim"
   },
   ["vim-startuptime"] = {
     loaded = true,
@@ -253,14 +248,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-lspconfig
-time([[Config for nvim-lspconfig]], true)
-require('config/autocomplete')
-time([[Config for nvim-lspconfig]], false)
--- Config for: nvterm
-time([[Config for nvterm]], true)
-require('config/terminal')
-time([[Config for nvterm]], false)
 -- Config for: impatient.nvim
 time([[Config for impatient.nvim]], true)
 require('impatient')
@@ -269,6 +256,14 @@ time([[Config for impatient.nvim]], false)
 time([[Config for filetype.nvim]], true)
 require('config/filetype')
 time([[Config for filetype.nvim]], false)
+-- Config for: nvim-lspconfig
+time([[Config for nvim-lspconfig]], true)
+require('config/autocomplete')
+time([[Config for nvim-lspconfig]], false)
+-- Config for: toggleterm.nvim
+time([[Config for toggleterm.nvim]], true)
+require('config/terminal')
+time([[Config for toggleterm.nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd nvim-cmp ]]
@@ -289,9 +284,9 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au BufWinEnter * ++once lua require("packer.load")({'nvim-treesitter', 'lualine.nvim', 'yuck.vim', 'bufferline.nvim', 'which-key.nvim'}, { event = "BufWinEnter *" }, _G.packer_plugins)]]
 vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'nvim-ts-autotag'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
-vim.cmd [[au BufRead * ++once lua require("packer.load")({'alpha-nvim', 'nvim-colorizer.lua'}, { event = "BufRead *" }, _G.packer_plugins)]]
+vim.cmd [[au BufWinEnter * ++once lua require("packer.load")({'which-key.nvim', 'nvim-treesitter', 'lualine.nvim', 'yuck.vim', 'bufferline.nvim'}, { event = "BufWinEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au BufRead * ++once lua require("packer.load")({'nvim-colorizer.lua', 'alpha-nvim'}, { event = "BufRead *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 

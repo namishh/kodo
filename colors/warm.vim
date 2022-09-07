@@ -42,8 +42,15 @@ if g:warmNR == 0
     let s:warmNR_fg = .s:warm0_gui
 endif
 
+
+exe "hi DiagnosticError guifg="s:warm9_gui
+exe "hi DiagnosticWarn guifg="s:warm11_gui
+exe "hi DiagnosticHint guifg="s:warm14_gui
+
+"Alpha
 exe "hi AlphaHeader guifg="s:warm12_gui
-exe "hi AlphaButton guifg="s:warm10_gui
+exe "hi AlphaButton guifg="s:warm4_gui
+exe "hi AlphaFooter guifg="s:warm4_gui
 "Telescope
 exe "hi TelescopeBorder guifg="s:warmbg_alt
 exe "hi TelescopePromptBorder guifg="s:warm0_gui. " guibg="s:warm0_gui
