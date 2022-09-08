@@ -48,4 +48,16 @@ return require('packer').startup(function(use)
   use {"kyazdani42/nvim-web-devicons"}
   use { 'williamboman/nvim-lsp-installer' }
   use { "akinsho/toggleterm.nvim", config = "require('config/terminal')" }
+  use {"folke/twilight.nvim", event="BufWinEnter", config="require('config/focus')"}
+  use {"folke/zen-mode.nvim", event="BufWinEnter", config="require('config/focus')"}
+  use {"MunifTanjim/nui.nvim"}
+  use {
+  'VonHeikemen/searchbox.nvim',
+  requires = {
+    {'MunifTanjim/nui.nvim'}
+  },
+  event="BufWinEnter", config="require('config/search')"
+  }
+  use {"folke/trouble.nvim", event="BufWinEnter", config="require('config/trouble')"}
 end)
+

@@ -25,6 +25,16 @@ local default_plugins = {
   "syntax",
   "bugreport",
   "ftplugin",
+  'telescope-luasnip.nvim',
+  "telescope-tele-tabby.nvim",
+  "telescope-bookmarks.nvim",
+  "nvim-lua-guide",
+  "telescope-env.nvim",
+  "luv-vimdocs",
+  "cmp-emoji",
+  "cmp-latex-symbols",
+  "urlview.nvim",
+
 }
 for _, plugin in pairs(default_plugins) do
   vim.g["loaded_" .. plugin] = 1

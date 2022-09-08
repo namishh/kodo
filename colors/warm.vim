@@ -38,14 +38,13 @@ if !exists("g:warmNR")
     let g:warmNR = 1
 endif
 
-if g:warmNR == 0
-    let s:warmNR_fg = .s:warm0_gui
-endif
+exe "hi FloatBorder guifg="s:warm12_gui
 
-
+exe "hi DiagnosticSign guibg="s:warmbg_gui
 exe "hi DiagnosticError guifg="s:warm9_gui
 exe "hi DiagnosticWarn guifg="s:warm11_gui
 exe "hi DiagnosticHint guifg="s:warm14_gui
+
 
 "Alpha
 exe "hi AlphaHeader guifg="s:warm12_gui
@@ -70,8 +69,8 @@ exe "hi WhichKeyValue guifg="s:warm12_gui. " guibg="s:warmbg_alt
 exe "hi WhichKeySeparator guifg="s:warm5_gui. " guibg="s:warmbg_alt
 exe "hi WhichKeyDesc guifg="s:warm9_gui. " guibg="s:warmbg_alt
 "Syntax Highlighting
-exe "hi CursorLineNR guifg=" s:warmbg_alt." guibg="s:warmbg_alt
-exe "hi CursorLine guibg=" s:warmbg_alt
+exe "hi CursorLineNR guifg=" s:warmbg_gui." guibg="s:warmbg_gui
+exe "hi CursorLine guibg=" s:warmbg_gui
 
 exe "hi ErrorMsg guifg=" s:warm1_gui." guibg="s:warm8_gui
 exe "hi WarningMsg guifg=" s:warm0_gui

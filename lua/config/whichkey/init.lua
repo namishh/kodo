@@ -37,7 +37,9 @@ local mappings = {
     S = { ":PackerStatus<cr>", "Packer Status" },
     u = { ":PackerUpdate<cr>", "Update Plugins" }
   },
-  m = { ":Mason<cr>", "Open Mason" }
+  m = { ":Mason<cr>", "Open Mason"},
+  v = {":SearchBoxIncSearch<cr>", "Search Box"},
+  e = {":SearchBoxReplace<cr>", "Replace"},
 }
 
 local opts = { prefix = '<leader>' }
