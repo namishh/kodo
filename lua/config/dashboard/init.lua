@@ -20,9 +20,9 @@ local function button(sc, txt, keybind, keybind_opts)
   end
 dashboard.section.buttons.val = {
   button("Ctrl + B", "  File Explorer", ":NvimTreeToggle<cr>"),
-  button("Leader + F", "  Find File", ":Telescope find_files <cr>"),
-  button("Leader + R", "  Find Word", ":Telescope live_grep<cr>"),
-  button("Leader + G", "  Recently Opened", ":Telescope oldfiles<cr>"),
+  button("Leader + ff", "  Find File", ":Telescope find_files <cr>"),
+  button("Leader + fr", "  Find Word", ":Telescope live_grep<cr>"),
+  button("Leader + tt", "  Open Terminal", ":ToggleTerm<cr>"),
   button("q", "  Quit", ":qa<cr>")
 }
 local function footer()

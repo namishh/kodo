@@ -2,7 +2,6 @@ vim.cmd('filetype plugin indent on')
 vim.o.hidden = true
 vim.o.pumheight = 2
 vim.o.fileencoding = 'utf-8'
---vim.o.cmdheight = 1
 vim.o.splitbelow = true
 vim.o.splitright = true
 vim.opt.termguicolors = true
@@ -36,3 +35,5 @@ vim.cmd('colorscheme warm')
 vim.opt_local.bufhidden = 'wipe'
 vim.opt_local.buflisted = false
 vim.cmd('set lazyredraw')
+vim.opt.laststatus=3
+vim.diagnostic.config {signs=false}

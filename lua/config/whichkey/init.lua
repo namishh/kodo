@@ -14,15 +14,23 @@ end
 
 
 local mappings = {
-  q = { ":q<cr>", "Quit" },
-  Q = { ":wq<cr>", "Save & Quit" },
-  w = { ":w<cr>", "Save" },
-  x = { ":bdelete<cr>", "Close" },
-  E = { ":e ~/.config/nvim/init.lua<cr>", "Edit config" },
-  f = { ":Telescope find_files<cr>", "Telescope Find Files" },
-  g = { ":Telescope oldfiles<cr>", "Telescope Recently Opened" },
-  r = { ":Telescope live_grep<cr>", "Telescope Live Grep" },
+  q = {
+    name = 'File',
+    q = { ":q<cr>", "Quit" },
+    w = { ":wq<cr>", "Save & Quit" },
+    s = { ":w<cr>", "Save" },
+    x = { ":bdelete<cr>", "Close" },
+  },
+  f = {
+    name = 'Telescope',
+    f = { ":Telescope find_files<cr>", "Find Files" },
+    g = { ":Telescope oldfiles<cr>", "Recently Opened" },
+    r = { ":Telescope live_grep<cr>", "Find String" },
+    e = { ":Telescope emoji<cr>", "Emoji Picker" },
+    m = { ":Telescope media_files<cr>", "Find Media" },
+  },
   t = {
+    name = "Terminal",
     t = { ":ToggleTerm<cr>", "Split Below" },
     f = { toggle_float, "Floating Terminal" },
     l = { toggle_lazygit, "LazyGit" }
@@ -37,9 +45,13 @@ local mappings = {
     S = { ":PackerStatus<cr>", "Packer Status" },
     u = { ":PackerUpdate<cr>", "Update Plugins" }
   },
-  m = { ":Mason<cr>", "Open Mason"},
-  v = {":SearchBoxIncSearch<cr>", "Search Box"},
-  e = {":SearchBoxReplace<cr>", "Replace"},
+  s = {
+    name = "Search",
+    s = { ":SearchBoxSimple<cr>" , "Simple" },
+    r = { ":SearchBoxReplace<cr>" , "Replace" },
+    m = { ":SearchBoxMatchAll<cr>" , "Match All" },
+    c = { ":SearchBoxClear<cr>" , "Empty Prompt" },
+  }
 }
 
 local opts = { prefix = '<leader>' }
