@@ -26,13 +26,11 @@ let g:colors_name = "warm"
 set background=dark
 set t_Co=256
 hi Normal guifg=#dfdde0 ctermbg=NONE guibg=#0f0f0f gui=NONE
-
 set t_Co=256
 let &t_ut=''
 if exists('+termguicolors')
   set termguicolors
 endif
-
 " Focused line Number toggle
 if !exists("g:warmNR")
     let g:warmNR = 1
@@ -53,6 +51,8 @@ exe "hi StalineBranch guifg="s:comment
 exe "hi CmpItemAbbrMatch guifg="s:warm12_gui
 exe "hi CmpItemAbbr guifg="s:warmfg_gui
 exe "hi CmpBorder guifg="s:warm12_gui
+exe "hi CmpDocBorder guifg="s:warm12_gui. " guibg="s:warmbg_gui
+exe "hi CmPmenu guibg="s:warmbg_gui
 "SearchBox
 exe "hi FloatBorder guifg="s:warm12_gui
 
@@ -323,25 +323,3 @@ exe "hi NvimTreeGitDirty guifg="s:warm1_gui
 exe "hi NvimTreeGitDeleted guifg="s:warm1_gui
 exe "hi NvimTreeRootFolder guifg="s:warm5_gui
 exe "hi NvimTreeIndentMarker guifg="s:warm8_gui
-
-" Notifications
-exe "hi NotifyERRORBorder  guifg="s:warmbg_alt. " guibg="s:warmbg_alt
-exe "hi NotifyWARNBorder  guifg="s:warmbg_alt. " guibg="s:warmbg_alt 
-exe "hi NotifyINFOBorder guifg="s:warmbg_alt. " guibg="s:warmbg_alt 
-exe "hi NotifyDEBUGBorder  guifg="s:warmbg_alt. " guibg="s:warmbg_alt
-exe "hi NotifyTRACEBorder guifg="s:warmbg_alt. " guibg="s:warmbg_alt
-exe "hi NotifyERRORIcon guibg="s:warmbg_alt. " guifg="s:warm9_gui
-exe "hi NotifyWARNIcon guibg="s:warmbg_alt. " guifg="s:warm3_gui
-exe "hi NotifyINFOIcon guibg="s:warmbg_alt. " guifg="s:warm4_gui
-exe "hi NotifyDEBUGIcon guibg="s:warmbg_alt. " guifg="s:warm5_gui
-exe "hi NotifyTRACEIcon guibg="s:warmbg_alt. " guifg="s:warm6_gui
-exe "hi NotifyERRORTitle guibg="s:warmbg_alt. " guifg="s:warm9_gui
-exe "hi NotifyWARNTitle guibg="s:warmbg_alt. " guifg="s:warm3_gui
-exe "hi NotifyINFOTitle guibg="s:warmbg_alt. " guifg="s:warm4_gui
-exe "hi NotifyDEBUGTitle guibg="s:warmbg_alt. " guifg="s:warm5_gui
-exe "hi NotifyTRACETitle guibg="s:warmbg_alt. " guifg="s:warm6_gui
-exe "hi NotifyERRORBody guibg="s:warmbg_alt. " guifg="s:warmfg_gui
-exe "hi NotifyWARNBody guibg="s:warmbg_alt. " guifg="s:warmfg_gui
-exe "hi NotifyINFOBody guibg="s:warmbg_alt. " guifg="s:warmfg_gui
-exe "hi NotifyDEBUGBody guibg="s:warmbg_alt. " guifg="s:warmfg_gui
-exe "hi NotifyTRACEBody guibg="s:warmbg_alt. " guifg="s:warmfg_gui

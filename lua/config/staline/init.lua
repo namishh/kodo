@@ -25,14 +25,14 @@ require('staline').setup {
         i = "#74be88",
         c = "#da696d",
         V = "#e1b56a",
-        v = "#e1b56a",
+        cv = "#e1b56a",
     },
     mode_icons = {
         n = "  NORMAL ",
         i = "  INSERT ",
         c = "  COMMAND ",
+        cv = "  BLOCK ",
         V = "  SELECT",
-        v = "  BLOCK "
     },
     sections = {
         left = { '-mode','left_sep_double', {'StalineFilename', 'file_name'}, {"StalineBranch", "branch"}, ' ', 'lsp' },

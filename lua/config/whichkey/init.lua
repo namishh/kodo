@@ -27,7 +27,6 @@ local mappings = {
     g = { ":Telescope oldfiles<cr>", "Recently Opened" },
     r = { ":Telescope live_grep<cr>", "Find String" },
     e = { ":Telescope emoji<cr>", "Emoji Picker" },
-    m = { ":Telescope media_files<cr>", "Find Media" },
   },
   t = {
     name = "Terminal",

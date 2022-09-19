@@ -10,3 +10,4 @@ map('i', 'jk', '<ESC>', {noremap = true, silent = false})
 map('i', 'kj', '<ESC>', {noremap = true, silent = false})
 
 map('n', '<C-b>', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
+
