@@ -39,6 +39,7 @@ require 'nvim-tree'.setup{
         update_focused_file = { enable = true },
         hijack_directories = { enable = true },
         view = {
+            hide_root_folder = true,
             mappings = {
                 list = {
                     { key='l'   , action = "edit" },
@@ -57,3 +58,4 @@ require 'nvim-tree'.setup{
 vim.cmd [[
 autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif
 ]]
+

@@ -36,7 +36,7 @@ if !exists("g:warmNR")
     let g:warmNR = 1
 endif
 
-
+exe "hi none guibg=#00000000"
 "Staline
 exe "hi StalineFolderIcon guibg="s:warm1_gui. " guifg="s:warmbg_gui
 exe "hi StalineFolderSep guibg="s:warmbg_gui. " guifg="s:warm1_gui
@@ -64,8 +64,9 @@ exe "hi DiagnosticHint guifg="s:warm14_gui
 
 "Alpha
 exe "hi AlphaHeader guifg="s:warm12_gui
-exe "hi AlphaButton guifg="s:warm4_gui
-exe "hi AlphaFooter guifg="s:warm4_gui
+exe "hi AlphaButton guifg="s:warm12_gui
+exe "hi AlphaFooter guifg="s:warm12_gui
+exe "hi AlphaComment guifg="s:warm12_gui
 "Telescope
 exe "hi TelescopeBorder guifg="s:warmbg_alt
 exe "hi TelescopePromptBorder guifg="s:warm0_gui. " guibg="s:warm0_gui

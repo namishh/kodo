@@ -4,7 +4,6 @@ if not present then
 end
 vim.opt.completeopt = "menuone,noselect"
 
-
 local function border(hl_name)
   return {
     { "╭", hl_name },

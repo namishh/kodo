@@ -2,6 +2,7 @@ local alpha = require("alpha")
 local dashboard = require("alpha.themes.dashboard")
 math.randomseed(os.time())
 
+
 local logo = {
 "███╗   ██╗██╗   ██╗      ██╗██████╗ ███████╗",
 "████╗  ██║██║   ██║      ██║██╔══██╗██╔════╝",
@@ -30,6 +31,16 @@ local function footer()
 
     return "Loaded " .. total_plugins .. " plugins  "
 end
+
+local heading = {
+  type = "text",
+  val = "~ brain.exists() == null; ~",
+  opts = {
+    position = "center",
+    hl = "AlphaComment",
+  },
+}
+
 dashboard.section.footer.val = footer()
 dashboard.section.footer.opts.hl = "AlphaFooter"
 local opts = {
@@ -37,6 +48,8 @@ local opts = {
     {type = "padding", val = 5},
     dashboard.section.header,
     {type = "padding", val = 3},
+   heading,
+    {type = "padding", val = 2},
     dashboard.section.buttons,
     {type = "padding", val = 1},
     dashboard.section.footer,

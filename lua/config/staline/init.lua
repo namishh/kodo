@@ -51,3 +51,4 @@ require('staline').setup {
         Hint=" ",
     },
 }
+

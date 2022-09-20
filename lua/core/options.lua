@@ -37,3 +37,6 @@ vim.opt_local.buflisted = false
 vim.cmd('set lazyredraw')
 vim.opt.laststatus=3
 vim.diagnostic.config {signs=false}
+vim.cmd [[
+  autocmd VimEnter * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+]]
