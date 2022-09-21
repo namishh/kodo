@@ -1,7 +1,6 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim 
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
-
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use {
@@ -38,7 +37,7 @@ return require('packer').startup(function(use)
         requires = {"kyazdani42/nvim-web-devicons"},
         config = "require('config/dashboard')",
       }
-  use {'neovim/nvim-lspconfig', config="require('config/autocomplete')"}
+  use {'neovim/nvim-lspconfig'}
   use {'rafamadriz/friendly-snippets', event="InsertEnter"}
   use {'hrsh7th/nvim-cmp', after="friendly-snippets", config="require('config/autocomplete')"}
   use {'L3MON4D3/LuaSnip', after="nvim-cmp", config="require('config/luasnip')"}

@@ -7,10 +7,6 @@ local toggle_float = function()
   local float = Terminal:new({ direction = "float" })
   return float:toggle()
 end
-local toggle_lazygit = function()
-  local lazygit = Terminal:new({ cmd = 'lazygit', direction = "float" })
-  return lazygit:toggle()
-end
 
 
 local mappings = {
@@ -26,13 +22,11 @@ local mappings = {
     f = { ":Telescope find_files<cr>", "Find Files" },
     g = { ":Telescope oldfiles<cr>", "Recently Opened" },
     r = { ":Telescope live_grep<cr>", "Find String" },
-    e = { ":Telescope emoji<cr>", "Emoji Picker" },
   },
   t = {
     name = "Terminal",
     t = { ":ToggleTerm<cr>", "Split Below" },
     f = { toggle_float, "Floating Terminal" },
-    l = { toggle_lazygit, "LazyGit" }
   },
   p = {
     name = "Packer",
@@ -44,13 +38,6 @@ local mappings = {
     S = { ":PackerStatus<cr>", "Packer Status" },
     u = { ":PackerUpdate<cr>", "Update Plugins" }
   },
-  s = {
-    name = "Search",
-    s = { ":SearchBoxSimple<cr>" , "Simple" },
-    r = { ":SearchBoxReplace<cr>" , "Replace" },
-    m = { ":SearchBoxMatchAll<cr>" , "Match All" },
-    c = { ":SearchBoxClear<cr>" , "Empty Prompt" },
-  }
 }
 
 local opts = { prefix = '<leader>' }

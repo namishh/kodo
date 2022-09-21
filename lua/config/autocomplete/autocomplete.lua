@@ -1,9 +1,5 @@
-local present, cmp = pcall(require, "cmp")
-if not present then
-  return
-end
-vim.opt.completeopt = "menuone,noselect"
-
+local cmp = require("cmp")
+vim.g.completeopt = "menu,menuone,noselect,noinsert"
 local function border(hl_name)
   return {
     { "╭", hl_name },
@@ -16,7 +12,6 @@ local function border(hl_name)
     { "│", hl_name },
   }
 end
-
 local cmp_window = require "cmp.utils.window"
 
 cmp_window.info_ = cmp_window.info
@@ -59,7 +54,7 @@ local options = {
     completion = {
       border = border "CmpBorder",
       winhighlight = "Normal:CmpPmenu,CursorLine:PmenuSel,Search:None",
-    },
+},
     documentation = {
       border = border "CmpDocBorder",
     },
