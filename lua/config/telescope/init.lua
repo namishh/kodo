@@ -1,15 +1,17 @@
 local actions = require('telescope.actions')
 local options = {
   defaults = {
-    riprep_arguments = {
-      "rg",
-      "--color=never",
-      "--no-heading",
-      "--with-filename",
-      "--line-number",
-      "--column",
-      "--smart-case",
+    vimgrep_arguments = {
+      'rg',
+      '--color=never',
+      '--no-heading',
+      '--with-filename',
+      '--line-number',
+      '--column',
+      '--smart-case',
+      '-u' -- thats the new thing
     },
+
     prompt_prefix = "   ",
     selection_caret = "  ",
     entry_prefix = "  ",

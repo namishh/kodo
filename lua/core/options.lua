@@ -31,7 +31,7 @@ vim.bo.autoindent = true
 vim.o.expandtab = true
 vim.opt.fillchars:append('eob: ')
 vim.bo.expandtab = true
-vim.cmd('colorscheme warm')
+--vim.cmd('colorscheme warm')
 vim.opt_local.bufhidden = 'wipe'
 vim.opt_local.buflisted = false
 vim.cmd('set lazyredraw')
