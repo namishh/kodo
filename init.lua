@@ -1,4 +1,4 @@
 require('impatient')
-require('themes').setup{}
+require('themes')
 require("core")
 require("plugins")

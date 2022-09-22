@@ -279,6 +279,14 @@ M.highlights_base = function (colors)
     AlphaButton = {fg=colors.color12},
     AlphaFooter = {fg=colors.color12},
     AlphaComment = {fg=colors.color12},
+
+
+    Blue = {fg=colors.color12},
+    Cyan = {fg=colors.color14},
+    Red = {fg=colors.color9},
+    Yellow = {fg=colors.color11},
+    Green = {fg=colors.color10},
+    Magenta = {fg=colors.color13},
   }
 end
 

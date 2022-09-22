@@ -1,3 +1,7 @@
+local function ExtractHl(name)
+	return vim.api.nvim_exec('highlight ' .. name, true):match('guifg=(#[0-9A-Fa-f]+)')
+end
+
 require('staline').setup {
     defaults = {
         expand_null_ls = false,  -- This expands out all the null-ls sources to be shown
@@ -8,7 +12,7 @@ require('staline').setup {
 
 
         fg              = "#0f0f0f",  -- Foreground text color.
-        bg              = "#0f0f0f",     -- Default background is transparent.
+        bg              = "none",     -- Default background is transparent.
         inactive_color  = "#212126",
         inactive_bgcolor = "none",
         true_colors     = true,      -- true lsp colors.
@@ -21,17 +25,17 @@ require('staline').setup {
         null_ls_symbol = "",          -- A symbol to indicate that a source is coming from null-ls
     },
     mode_colors = {
-        n = "#6d92b7",
-        i = "#74be88",
-        c = "#da696d",
-        V = "#e1b56a",
-        cv = "#e1b56a",
+        n = ExtractHl('Blue'),
+        i = ExtractHl('Green'),
+        c = ExtractHl('Red'),
+        V = ExtractHl('Yellow'),
+        v = ExtractHl('Yellow'),
     },
     mode_icons = {
         n = "  NORMAL ",
         i = "  INSERT ",
         c = "  COMMAND ",
-        cv = "  BLOCK ",
+        v = "  BLOCK ",
         V = "  SELECT",
     },
     sections = {

@@ -50,7 +50,7 @@ I know it sucks but you will have to do it manually
 
 ## Todo
 - [ ]  add colorschemes
-- [ ]  better screenshots
+- [x]  better screenshots
 
 ## Special Thanks 
 (this config wouldn't have been possible without you rockstars!) \
