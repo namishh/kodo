@@ -1,5 +1,5 @@
 local M = {}
-local core = require('themes.warm.core')
+local core = require('themes.colorschemes.warm')
 local highlights = require('themes.highlights')
 
 function M.setup (opts)

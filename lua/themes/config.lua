@@ -45,10 +45,10 @@ M.highlights_base = function (colors)
     Conceal = { fg = colors.color4, bg = colors.background },
     Directory = { fg = colors.color12 },
     SpecialKey = { fg = colors.color12 },
-    Title = { fg = colors.color12 },
+    Title = { fg = colors.color11 },
     ErrorMsg = { fg = colors.color1, bg = colors.background },
     Search = { fg = colors.background, bg = colors.color10 },
-    IncSearch = { fg = colors.background, bg = colors.color10 },
+    IncSearch = { fg = colors.background, bg = colors.color11 },
     Substitute = { fg = colors.color3, bg = colors.color12 },
     MoreMsg = { fg = colors.color5 },
     Question = { fg = colors.color5 },
@@ -272,7 +272,7 @@ M.highlights_base = function (colors)
     StalineProgress = {bg = colors.color8, fg=colors.color15},
     StalineProgressSep = {bg = colors.background, fg=colors.color10},
     StalineProgressSepIcon = {bg = colors.color10, fg=colors.color8},
-    StalineBranch = {bg = colors.background,fg=colors.color8},
+    StalineBranch = {bg = colors.background,fg=colors.comment},
 
     --Alpha
     AlphaHeader = {fg=colors.color12},

@@ -10,7 +10,7 @@ return require('packer').startup(function(use)
       config = "require('config/bufferline')"
   }
   use 'wbthomason/packer.nvim'
-  use {'lewis6991/impatient.nvim', config="require('impatient')"}
+  use {'lewis6991/impatient.nvim'}
   use {'nvim-treesitter/nvim-treesitter', run = ":TSUpdate", event = "BufWinEnter", config="require('config/treesitter')"}
   use {'tamton-aquib/staline.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true }, event="BufWinEnter", config="require('config/staline')"}
   use {'windwp/nvim-ts-autotag',event = "InsertEnter", after = "nvim-treesitter"}
