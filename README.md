@@ -1,7 +1,11 @@
-
 # nvide
-A neovim configuration that looks good and is fast (~0.045s - 0.060ms).
+A neovim configuration that looks good and is fast (~0.045s - 0.070ms).
 Has something like 26 plugins and but is still fast becuase of holy lazy loading.
+
+```
+45-50ms -- Charging
+60-70ms -- Normal -- looking to reduce this pls help uwu
+```
 
 ## Plugins And Features
 + Lazy loading done most of the time to get blazingly fast startup times.
@@ -26,7 +30,7 @@ Has something like 26 plugins and but is still fast becuase of holy lazy loading
 
 It's really easy , just a simple one liner with git!
 ```bash
-    git clone --depth 1 https://github.com/dark-Jedi2108/nvide ~/.config/nvim
+git clone --depth 1 https://github.com/dark-Jedi2108/nvide ~/.config/nvim
 ```
 ## Changing Colorschemes
 I know it sucks but you will have to do it manually
@@ -39,19 +43,18 @@ I know it sucks but you will have to do it manually
 + THIS IS NOT A "DISTRO", just my personal dotfiles that i wanted to share with you guys!
 ## Screenshots
 
-![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/screenshots/n1.png)
+![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/n1.png)
 
-![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/screenshots/n3.png)
+![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/n3.png)
 
-![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/screenshots/n4.png)
+![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/n4.png)
 
-![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/screenshots/n2.png)
+![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/n2.png)
 
 
 ## Todo
-- [ ]  add colorschemes
-- [x]  better screenshots
-
+- [ ]  better screenshots
+- [ ]  more, MORE fast
 ## Special Thanks 
 (this config wouldn't have been possible without you rockstars!) \
 [dharmx](https://github.com/dharmx/KrakeNvim/) \
