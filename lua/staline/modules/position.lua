@@ -7,7 +7,7 @@ local M = function ()
   text = (current == 1 and "Top") or text
   text = (current == total and "Bot") or text
 
-  return "  " .. "%#StalineProgressSep#" .. "" .. "%#StalineProgressIcon#" .. " " .. "%#StalineProgress#" .. " " .. text .. " " .. "%#StalineEmptySpace#"
+  return "  " .. "%#StalineProgressSep#" .. "" .. "%#StalineProgressIcon#" .. " " .. "%#StalineProgress#" .. " " .. text .. " | " .. current .. "/" .. total .. " " .. "%#StalineEmptySpace#"
 end
 
 return M
