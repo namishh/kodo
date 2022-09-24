@@ -1,42 +1,61 @@
-vim.cmd('filetype plugin indent on')
-vim.o.hidden = true
-vim.o.pumheight = 2
-vim.o.fileencoding = 'utf-8'
-vim.o.splitbelow = true
-vim.o.splitright = true
-vim.opt.termguicolors = true
-vim.o.conceallevel = 0
-vim.o.showtabline = 2
-vim.o.showmode = false
-vim.o.backup = false
-vim.o.writebackup = false
-vim.o.updatetime = 300
-vim.o.timeoutlen = 100
-vim.o.clipboard = "unnamedplus"
-vim.o.hlsearch = true
-vim.o.ignorecase = true
-vim.o.scrolloff = 0
-vim.o.sidescrolloff = 5
-vim.o.mouse = "a"
-vim.wo.wrap = false
-vim.wo.number = true
-vim.o.cursorline = true
-vim.o.tabstop = 2
-vim.bo.tabstop = 2
-vim.o.softtabstop = 2
-vim.o.shiftwidth = 0
-vim.bo.shiftwidth = 0
-vim.o.autoindent = true
-vim.bo.autoindent = true
-vim.o.expandtab = true
-vim.opt.fillchars:append('eob: ')
-vim.bo.expandtab = true
---vim.cmd('colorscheme warm')
-vim.opt_local.bufhidden = 'wipe'
-vim.opt_local.buflisted = false
-vim.cmd('set lazyredraw')
-vim.opt.laststatus=3
-vim.diagnostic.config {signs=false}
-vim.cmd [[
-  autocmd VimEnter * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-]]
+local cmd = vim.cmd
+local opt = vim.opt
+local diagnostic = vim.diagnostic
+local g = vim.g
+opt.hidden = true
+opt.pumheight = 2
+opt.fileencoding = 'utf-8'
+opt.splitbelow = true
+opt.splitright = true
+opt.termguicolors = true
+opt.conceallevel = 0
+opt.showtabline = 2
+opt.showmode = false
+opt.backup = false
+opt.writebackup = false
+opt.updatetime = 300
+opt.timeoutlen = 100
+opt.clipboard = "unnamedplus"
+opt.hlsearch = true
+opt.ignorecase = true
+opt.scrolloff = 0
+opt.sidescrolloff = 5
+opt.mouse = "a"
+opt.cursorline = true
+opt.tabstop = 2
+opt.softtabstop = 2
+opt.shiftwidth = 0
+opt.autoindent = true
+opt.expandtab = true
+opt.fillchars:append('eob: ')
+cmd('set lazyredraw')
+opt.laststatus=3
+diagnostic.config {signs=false}
+
+g.did_load_filetypes = 0
+g.do_filetype_lua = 1
+local builtins = {
+    "gzip",
+    "zip",
+    "zipPlugin",
+    "tar",
+    "tarPlugin",
+    "getscript",
+    "getscriptPlugin",
+    "vimball",
+    "vimballPlugin",
+    "2html_plugin",
+    "matchit",
+    "matchparen",
+    "logiPat",
+    "rrhelper",
+    "netrw",
+    "netrwPlugin",
+    "netrwSettings",
+    "netrwFileHandlers",
+}
+
+for _, plugin in ipairs(builtins) do
+    g["loaded_" .. plugin] = 1
+end
+

@@ -1,19 +1,15 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim 
--- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
-  -- Packer can manage itself
   use {
       'akinsho/bufferline.nvim',
       requires = 'kyazdani42/nvim-web-devicons',
-      event = "BufWinEnter",
+      event = "UIEnter",
       config = "require('config/bufferline')"
   }
-  use 'wbthomason/packer.nvim'
-  use {'norcalli/nvim-colorizer.lua', config="require('config/colorizer')"}
+  use { 'wbthomason/packer.nvim', cmd='require("plugins.commands").packer'}
+  use {'norcalli/nvim-colorizer.lua', config="require('config.colorizer')", opt=true, event="BufRead"}
   use {'lewis6991/impatient.nvim'}
-  use {'nvim-treesitter/nvim-treesitter', run = ":TSUpdate", event = "BufWinEnter", config="require('config/treesitter')"}
-  use {'tamton-aquib/staline.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true }, event="BufWinEnter", config="require('config/staline')"}
+  use {'nvim-treesitter/nvim-treesitter', cmd = 'require("plugins.commands").treesitter', run = ":TSUpdate", event = "BufWinEnter", config="require('config/treesitter')"}
   use {'windwp/nvim-ts-autotag',event = "InsertEnter", after = "nvim-treesitter"}
   use {
   'kyazdani42/nvim-tree.lua',
@@ -37,6 +33,10 @@ return require('packer').startup(function(use)
         "goolord/alpha-nvim",
         requires = {"kyazdani42/nvim-web-devicons"},
         config = "require('config/dashboard')",
+        cmd = {
+          "Alpha"
+        },
+        event="BufWinEnter",
       }
   use {'neovim/nvim-lspconfig'}
   use {'rafamadriz/friendly-snippets', event="InsertEnter"}
@@ -47,9 +47,17 @@ return require('packer').startup(function(use)
   use {'hrsh7th/cmp-nvim-lsp', after="cmp-nvim-lua"}
   use {'hrsh7th/cmp-buffer', after="cmp-nvim-lsp"}
   use {'hrsh7th/cmp-path', after="cmp-buffer"}
-  use "dstein64/vim-startuptime"
-  use { 'williamboman/nvim-lsp-installer' }
-  use { "akinsho/toggleterm.nvim", config = "require('config/terminal')" }
-  use {"nathom/filetype.nvim", config="require('filetype').setup{}"}
+  use {"dstein64/vim-startuptime", cmd="StartupTime"}
+  use { 'williamboman/nvim-lsp-installer',   
+    cmd = {
+    "LspInstallInfo",
+    "LspInstallLog",
+    "LspStart",
+  }, module = "nvim-lsp-installer"}
+  use { "akinsho/toggleterm.nvim", config = "require('config/terminal')", event="BufWinEnter"}
+  use {"lewis6991/gitsigns.nvim", event="BufWinEnter",
+    config = function()
+    require('gitsigns').setup()
+  end }
 end)
 

@@ -10,10 +10,6 @@ function M.highlight_all(colors, opts)
   for group, properties in pairs(base_highlights) do
     hi(0, group, properties)
   end
-  local override = opts.override or {}
-  for group, properties in pairs(override) do
-    hi(0, group, properties)
-  end
 end
 
 return M

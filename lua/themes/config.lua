@@ -37,7 +37,7 @@ M.highlights_base = function (colors)
     PmenuSbar = { bg = colors.background },
     PmenuThumb = { bg = colors.color2 },
     MatchParen = { fg = colors.color12, bg = colors.background },
-    Cursor = { fg = colors.foreground, bg = colors.cursor },
+    Cursor = { fg = colors.comment, bg = colors.cursor },
     lCursor = { fg = colors.foreground, bg = colors.cursor },
     CursorIM = { fg = colors.foreground, bg = colors.cursor },
     TermCursor = { fg = colors.foreground, bg = colors.cursor },
@@ -267,12 +267,31 @@ M.highlights_base = function (colors)
     StalineFolderIcon = {bg = colors.color1, fg=colors.background},
     StalineFolderSep = {bg = colors.background, fg=colors.color1},
     StalineFolderText = {bg = colors.color8, fg=colors.color15},
-    StalineFilename = {bg = colors.background, fg=colors.color15},
+    StalineFilename = {bg = colors.color8, fg=colors.color15},
+    StalineFilenameSep = {fg = colors.color8, bg=colors.background},
     StalineLogo = {bg = colors.background, fg=colors.color12},
     StalineProgress = {bg = colors.color8, fg=colors.color15},
     StalineProgressSep = {bg = colors.background, fg=colors.color10},
-    StalineProgressSepIcon = {bg = colors.color10, fg=colors.color8},
+    StalineProgressIcon = {bg = colors.color10, fg=colors.color8},
     StalineBranch = {bg = colors.background,fg=colors.comment},
+    StalineNormalMode = {bg=colors.color12 , fg=colors.background},
+    StalineVisualMode = {bg=colors.color11, fg=colors.background},
+    StalineCommandMode = {bg=colors.color9, fg=colors.background},
+    StalineInsertMode = {bg=colors.color10, fg=colors.background},
+    StalineTerminalMode = {bg=colors.color13, fg=colors.background},
+    StalineConfirmMode = {bg=colors.color6, fg=colors.background},
+    StalineNormalModeSep = {fg=colors.color12 , bg=colors.color8},
+    StalineVisualModeSep = {fg=colors.color11, bg=colors.color8},
+    StalineCommandModeSep = {fg=colors.color9, bg=colors.color8},
+    StalineInsertModeSep = {fg=colors.color10, bg=colors.color8},
+    StalineTerminalModeSep = {fg=colors.color13, bg=colors.color8},
+    StalineConfirmModeSep = {fg=colors.color6, bg=colors.color8},
+    StalineEmptySpace = {bg=colors.background, fg=colors.color8},
+    StalineLspError = {bg=colors.background, fg=colors.color9},
+    StalineLspInfo = {bg=colors.background, fg=colors.color12},
+    StalineLspHints = {bg=colors.background, fg=colors.color14},
+    StalineLspWarning = {bg=colors.background, fg=colors.color11},
+    StalineLspName = {bg=colors.background, fg=colors.comment},
 
     --Alpha
     AlphaHeader = {fg=colors.color12},
@@ -280,13 +299,13 @@ M.highlights_base = function (colors)
     AlphaFooter = {fg=colors.color12},
     AlphaComment = {fg=colors.color12},
 
-
     Blue = {fg=colors.color12},
     Cyan = {fg=colors.color14},
     Red = {fg=colors.color9},
     Yellow = {fg=colors.color11},
     Green = {fg=colors.color10},
     Magenta = {fg=colors.color13},
+
   }
 end
 

@@ -1,4 +1,6 @@
 require('impatient')
 require('themes')
-require("core")
 require("plugins")
+require("core")
+vim.opt.statusline = "%!v:lua.require('staline').run()"
+

@@ -1,5 +1,8 @@
 local cmp = require("cmp")
 vim.g.completeopt = "menu,menuone,noselect,noinsert"
+
+require("luasnip.loaders.from_vscode").lazy_load()
+
 local function border(hl_name)
   return {
     { "╭", hl_name },

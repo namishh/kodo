@@ -2,15 +2,11 @@
 A neovim configuration that looks good and is fast (~0.045s - 0.070ms).
 Has something like 26 plugins and but is still fast becuase of holy lazy loading.
 
-```
-45-50ms -- Charging
-60-70ms -- Normal -- looking to reduce this pls help uwu
-```
 
 ## Plugins And Features
-+ Lazy loading done most of the time to get blazingly fast startup times.
++ Lazy loading done most of the time to get blazingly moderate startup times.
 + A Minimal and Styline bufferline with [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
-+ Cool Looking Statusline with [staline.nvim](https://github.com/tamton-aquib/staline.nvim/tree/main/lua)
++ Cool Looking Custom [Statusline](https://github.com/dark-Jedi2108/nvide/tree/main/lua/staline)
 + Parsing with [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 + A File Tree with [nvim-tree](https://github.com/kyazdani42/nvim-tree.lua)
 + Fast file finding and more with [telescope](https://github.com/nvim-telescope/telescope.nvim/)
@@ -55,6 +51,8 @@ I know it sucks but you will have to do it manually
 ## Todo
 - [ ]  better screenshots
 - [ ]  more, MORE fast
+- [x]  custom statusline
+- [ ]  custom bufferline (optional)
 ## Special Thanks 
 (this config wouldn't have been possible without you rockstars!) \
 [dharmx](https://github.com/dharmx/KrakeNvim/) \
