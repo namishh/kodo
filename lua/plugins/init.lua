@@ -1,7 +1,7 @@
 vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   use {
-      'akinsho/bufferline.nvim',
+       'akinsho/bufferline.nvim',
       requires = 'kyazdani42/nvim-web-devicons',
       event = "UIEnter",
       config = "require('plugins.bufferline')"
@@ -15,9 +15,9 @@ return require('packer').startup(function(use)
   }
   use {
     'nvim-treesitter/nvim-treesitter',
-    cmd = 'require("plugins.commands").treesitter',
     run = ":TSUpdate",
-    event = "BufWinEnter",
+    event = "BufRead",
+    cmd = 'require("plugins.commands").treesitter',
     config="require('plugins.treesitter')"
   }
   use {
@@ -33,7 +33,7 @@ return require('packer').startup(function(use)
     cmd = "NvimTreeToggle",
     config = "require('plugins.nvim-tree')"
   }
-  use "kyazdani42/nvim-web-devicons"
+  use {"kyazdani42/nvim-web-devicons", event="BufWinEnter"}
   use {
     'windwp/nvim-autopairs',
     config = "require('plugins.autopair')",
@@ -61,7 +61,12 @@ return require('packer').startup(function(use)
     },
     event="BufWinEnter",
   }
-  use {'neovim/nvim-lspconfig'}
+  use {
+    'neovim/nvim-lspconfig',
+    config="require('plugins.lspconfig')",
+    event="BufWinEnter"
+
+  }
   use {
     'rafamadriz/friendly-snippets',
     event="InsertEnter"
@@ -96,14 +101,16 @@ return require('packer').startup(function(use)
     after="cmp-buffer"
   }
   use {"dstein64/vim-startuptime", cmd="StartupTime"}
-  use { 'williamboman/nvim-lsp-installer',
+  use { "williamboman/mason.nvim",
     cmd = {
-      "LspInstallInfo",
-      "LspInstallLog",
-      "LspStart",
+      "MasonInstall",
+      "MasonUninstall",
+      "Mason",
+      "MasonUninstallAll",
+      "MasonLog",
       },
-    module = "nvim-lsp-installer",
-    config="require('plugins.lsp-installer')"
+    config="require('plugins.mason')",
+    event="BufWinEnter"
   }
   use {
     "akinsho/toggleterm.nvim",

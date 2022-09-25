@@ -5,7 +5,7 @@ local M = function()
     if client.name == '' then
       return ""
     else
-      return "%#StalineLspName#" .. "   LSP ~ " .. client.name .. "  " .. "%#StalineEmptySpace#"
+      return "%#StalineLspName#" .. "   " .. client.name .. "  " .. "%#StalineEmptySpace#"
     end
   end
 end

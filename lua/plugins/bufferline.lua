@@ -6,7 +6,6 @@ require("bufferline").setup {
     show_close_icon = false,
     left_trunc_marker = '',
     right_trunc_marker = '',
-    separator_style = "thick",
     color_icons = true,
     offsets = {
           {

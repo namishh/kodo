@@ -16,6 +16,6 @@ local M = function ()
     local ft_icon = devicons.get_icon(filename)
     icon = (ft_icon ~= nil and " " .. ft_icon) or ""
   end
-  return "%#StalineFilename#" .. icon .. "  " .. filename .. "  " .. "%#StalineFilenameSep#" .. " " .. " "
+  return "%#StalineFilename#" .. icon .. "  " .. filename .. "  "
 end
 return M

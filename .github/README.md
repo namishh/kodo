@@ -1,4 +1,7 @@
 # nvide
+![GitHub top language](https://img.shields.io/github/languages/top/dark-Jedi2108/nvide?color=6d92bf&style=for-the-badge)
+![Lines of code](https://img.shields.io/tokei/lines/github/dark-Jedi2108/nvide?color=e1b56a&style=for-the-badge)
+![GitHub Repo stars](https://img.shields.io/github/stars/dark-Jedi2108/nvide?color=74be88&style=for-the-badge)
 A neovim configuration that looks good and is fast (~0.045s - 0.070ms).
 Has something like 26 plugins and but is still fast becuase of holy lazy loading.
 
