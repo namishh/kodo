@@ -1,4 +1,6 @@
+<div align="center">
 # nvide
+</div>
 <div align="center">
 
 ![GitHub top language](https://img.shields.io/github/languages/top/dark-Jedi2108/nvide?color=6d92bf&style=for-the-badge)
@@ -6,7 +8,7 @@
 ![GitHub Repo stars](https://img.shields.io/github/stars/dark-Jedi2108/nvide?color=74be88&style=for-the-badge)
 
 </div>
-A neovim configuration that looks good and is fast (~0.045s - 0.070ms).
+A neovim configuration that looks good and is fast (0.045s ~ 0.075ms).
 Has something like 26 plugins and but is still fast becuase of holy lazy loading.
 
 
@@ -22,13 +24,16 @@ Has something like 26 plugins and but is still fast becuase of holy lazy loading
 + Terminalsssssss with [toggleterm](https://github.com/akinsho/toggleterm.nvim)
 + Color Hightlighting with [nvim-colorizer](https://github.com/norcalli/nvim-colorizer.lua)
 + Popup mappings keysheet [whichkey.nvim](https://github.com/folke/which-key.nvim)
-+ Lsp Management with [lsp-installer](https://github.com/williamboman/nvim-lsp-installer/)
++ Lsp Management with [Mason](https://github.com/williamboman/mason.nvim/)
++ Easy Package Managing with [Packer](https://github.com/wbthomason/packer.nvim)
 
 ## Requirements
 + Neovim
 + ripgrep (optional)
 + nodejs and npm
 + a brain (mandatory)
++ some xp with lua and neovim
+
 ## Installation
 
 It's really easy , just a simple one liner with git!
@@ -41,9 +46,10 @@ I know it sucks but you will have to do it manually
 + change colorscheme name at `/lua/themes/init.lua` 
     `local core = require('themes.colorschemes.scheme')`
 + Reload Neovim
-## Why this config when there are so many already?
-+ This is meant to be a simple base config which can be extended and customised very easily. Premade configs like NvChad or AstroNvim are really cool but for someone who is a total beginner to lua, it seems very hard to configure with a lot of imports.
+## Some Points To be Noted
++ This is meant to be a simple base config which can be extended and customised very easily. Premade configs like NvChad or AstroNvim are really cool but for someone who is a total beginner to lua, it seems very hard to configure with a lot of imports and custom libraries, user configurations and etc.
 + THIS IS NOT A "DISTRO", just my personal dotfiles that i wanted to share with you guys!
++ This is not for beginners, you need to have some experience wihth lua and neovim.
 ## Screenshots
 
 ![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/n1.png)
@@ -57,11 +63,11 @@ I know it sucks but you will have to do it manually
 
 ## Todo
 - [ ]  better screenshots
-- [ ]  more, MORE fast
-- [x]  custom statusline
+- [ ]  more, MORE fast `how do i do it pls help uwu`
+- [x]  ~~custom statusline~~ (i am proud)
 - [ ]  custom bufferline (optional)
 ## Special Thanks 
 (this config wouldn't have been possible without you rockstars!) \
-[dharmx](https://github.com/dharmx/KrakeNvim/) \
-[siduck](https://github.com/NvChad/NvChad)
++ [dharmx](https://github.com/dharmx/KrakeNvim/) \
++ [siduck](https://github.com/NvChad/NvChad)
 
