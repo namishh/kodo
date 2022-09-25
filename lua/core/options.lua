@@ -12,6 +12,9 @@ opt.conceallevel = 0
 opt.showtabline = 2
 opt.showmode = false
 opt.backup = false
+opt.number = true
+opt.numberwidth = 3
+opt.ruler = false
 opt.writebackup = false
 opt.updatetime = 300
 opt.timeoutlen = 100
@@ -20,7 +23,7 @@ opt.hlsearch = true
 opt.ignorecase = true
 opt.scrolloff = 0
 opt.sidescrolloff = 5
-opt.mouse = "a"
+opt.mouse = "a" -- Mouse support for noobs
 opt.cursorline = true
 opt.tabstop = 2
 opt.softtabstop = 2
@@ -29,9 +32,12 @@ opt.autoindent = true
 opt.expandtab = true
 opt.fillchars:append('eob: ')
 cmd('set lazyredraw')
-opt.laststatus=3
-diagnostic.config {signs=false}
+opt.laststatus=3 -- Global Status
+diagnostic.config {signs=false} -- Removinfgdiagnostic column
+opt.shortmess:append "sI"
+opt.updatetime = 250
 
+-- Disabling some built in plugins
 g.did_load_filetypes = 0
 g.do_filetype_lua = 1
 local builtins = {

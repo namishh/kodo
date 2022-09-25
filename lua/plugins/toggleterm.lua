@@ -31,4 +31,3 @@ require"toggleterm".setup {
     winblend = 3,
   },
 }
-

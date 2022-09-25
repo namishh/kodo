@@ -120,3 +120,4 @@ local options = {
 }
 
 cmp.setup(options)
+

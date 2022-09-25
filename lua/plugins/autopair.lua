@@ -1,2 +1,3 @@
 require("nvim-autopairs").setup {
 }
+
