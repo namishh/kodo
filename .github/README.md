@@ -41,16 +41,22 @@ It's really easy , just a simple one liner with git!
 ```bash
 git clone --depth 1 https://github.com/dark-Jedi2108/nvide ~/.config/nvim
 ```
-## Changing Colorschemes
+## Custom Colorschemes
 I know it sucks but you will have to do it manually
 + Make a new color scheme  `/lua/themes/colorschemes/scheme.lua` (copy the default colorscheme and change the colors) 
 + change colorscheme name at `/lua/themes/init.lua` 
-    `local core = require('themes.colorschemes.scheme')`
+
+```bash
+local core = require('themes.colorschemes.scheme')
+```
+
 + Reload Neovim
+
 ## Some Points To be Noted
-+ This is meant to be a simple base config which can be extended and customised very easily. Premade configs like NvChad or AstroNvim are really cool but for someone who is a total beginner to lua, it seems very hard to configure with a lot of imports and custom libraries, user configurations and etc.
++ This is meant to be a simple base config which can be extended and customised very easily.
 + THIS IS NOT A "DISTRO", just my personal dotfiles that i wanted to share with you guys!
 + This is not for beginners, you need to have some experience wihth lua and neovim.
+
 ## Screenshots
 
 ![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/n1.png)
