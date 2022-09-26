@@ -1,5 +1,5 @@
 vim.cmd [[packadd packer.nvim]]
-return require('packer').startup(function(use)
+return require('packer').startup( { function(use)
   use {
        'akinsho/bufferline.nvim',
       requires = 'kyazdani42/nvim-web-devicons',
@@ -122,5 +122,13 @@ return require('packer').startup(function(use)
   config = function()
     require('gitsigns').setup()
   end }
-end)
+end,
+config = {
+  display = {
+    open_fn = function()
+      return require('packer.util').float({ border = 'single' })
+    end
+  }
+}
+})
 

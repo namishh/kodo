@@ -23,6 +23,7 @@ opt.hlsearch = true
 opt.ignorecase = true
 opt.scrolloff = 0
 opt.sidescrolloff = 5
+opt.foldenable = false
 opt.mouse = "a" -- Mouse support for noobs
 opt.cursorline = true
 opt.tabstop = 2

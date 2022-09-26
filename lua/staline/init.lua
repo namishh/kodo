@@ -16,8 +16,9 @@ return {
       diff(),
       "%=",
       diagnostics(),
-      lsp() or "",
+      "%=",
       folder(),
+      lsp() or "",
       position(),
     }
   end,
