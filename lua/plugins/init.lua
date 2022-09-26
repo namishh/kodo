@@ -14,6 +14,11 @@ return require('packer').startup( { function(use)
     'lewis6991/impatient.nvim'
   }
   use {
+    'norcalli/nvim-colorizer.lua',
+    config="require('plugins.colorizer')",
+    event="BufWinEnter"
+  }
+  use {
     'nvim-treesitter/nvim-treesitter',
     run = ":TSUpdate",
     event = "BufRead",
