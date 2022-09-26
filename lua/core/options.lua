@@ -37,29 +37,32 @@ opt.laststatus=3 -- Global Status
 diagnostic.config {signs=false} -- Removinfgdiagnostic column
 opt.shortmess:append "sI"
 opt.updatetime = 250
-
+opt.shadafile = "NONE"
+opt.shadafile = ""
 -- Disabling some built in plugins
 g.did_load_filetypes = 0
 g.do_filetype_lua = 1
 local builtins = {
-    "gzip",
-    "zip",
-    "zipPlugin",
-    "tar",
-    "tarPlugin",
+    "2html_plugin",
     "getscript",
     "getscriptPlugin",
-    "vimball",
-    "vimballPlugin",
-    "2html_plugin",
-    "matchit",
-    "matchparen",
-    "logiPat",
-    "rrhelper",
+    "gzip",
+    "logipat",
     "netrw",
     "netrwPlugin",
     "netrwSettings",
     "netrwFileHandlers",
+    "matchit",
+    "tar",
+    "tarPlugin",
+    "rrhelper",
+    "vimball",
+    "vimballPlugin",
+    "zip",
+    "zipPlugin",
+    "tutor_mode_plugin",
+    "fzf",
+    "spellfile_plugin",
 }
 
 for _, plugin in ipairs(builtins) do
