@@ -16,7 +16,7 @@ return require('packer').startup( { function(use)
   use {
     'norcalli/nvim-colorizer.lua',
     config="require('plugins.colorizer')",
-    event="BufWinEnter"
+    event={"UIEnter"}
   }
   use {
     'nvim-treesitter/nvim-treesitter',
