@@ -4,7 +4,7 @@
 <div align="center">
 
 ![GitHub top language](https://img.shields.io/github/languages/top/dark-Jedi2108/nvide?color=6d92bf&style=for-the-badge)
-![Lines of code](https://img.shields.io/tokei/lines/github/dark-Jedi2108/nvide?color=e1b56a&style=for-the-badge)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/dark-Jedi2108/nvide?color=e1b56a&style=for-the-badge)
 ![GitHub Repo stars](https://img.shields.io/github/stars/dark-Jedi2108/nvide?color=74be88&style=for-the-badge)
 
 </div>
@@ -66,6 +66,8 @@ I know it sucks but you will have to do it manually
 - [ ]  more, MORE fast `how do i do it pls help uwu`
 - [x]  ~~custom statusline~~ (i am proud)
 - [ ]  custom bufferline (optional)
+- [ ]  learn markdown bcoz i suck at it
+
 ## Special Thanks 
 (this config wouldn't have been possible without you rockstars!) \
 + [dharmx](https://github.com/dharmx/KrakeNvim/) \
