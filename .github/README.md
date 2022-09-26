@@ -64,14 +64,13 @@ I know it sucks but you will have to do it manually
 
 
 ## Todo
-- [x]  better screenshots
+- [x]  ~~better screenshots~~
 - [ ]  more, MORE fast `how do i do it pls help uwu`
 - [x]  ~~custom statusline~~ (i am proud)
-- [ ]  custom bufferline (optional)
 - [ ]  learn markdown bcoz i suck at it
 
 ## Special Thanks 
-(this config wouldn't have been possible without you rockstars!) \
-+ [dharmx](https://github.com/dharmx/KrakeNvim/) \
+This config wouldn't have been possible without these chads!
++ [dharmx](https://github.com/dharmx/KrakeNvim/) 
 + [siduck](https://github.com/NvChad/NvChad)
 
