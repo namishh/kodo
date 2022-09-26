@@ -55,15 +55,16 @@ I know it sucks but you will have to do it manually
 
 ![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/n1.png)
 
+![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/n2.png)
+
 ![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/n3.png)
 
 ![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/n4.png)
 
-![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/n2.png)
 
 
 ## Todo
-- [ ]  better screenshots
+- [x]  better screenshots
 - [ ]  more, MORE fast `how do i do it pls help uwu`
 - [x]  ~~custom statusline~~ (i am proud)
 - [ ]  custom bufferline (optional)
