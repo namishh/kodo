@@ -100,11 +100,6 @@ return require('packer').startup( { function(use)
     'hrsh7th/cmp-path',
     after="cmp-buffer"
   }
-  use {
-    "jose-elias-alvarez/null-ls.nvim",
-    after = 'cmp-buffer',
-    config="require('plugins.null-ls')"
-  }
   use {"dstein64/vim-startuptime", cmd="StartupTime"}
   use { "williamboman/mason.nvim",
     cmd = {
