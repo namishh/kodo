@@ -9,6 +9,11 @@
 ![GitHub Repo stars](https://img.shields.io/github/stars/dark-Jedi2108/nvide?color=74be88&style=for-the-badge)
 
 </div>
+
+
+![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/h1.png)
+
+
 A neovim configuration that looks good and is fast (0.045s ~ 0.075ms).
 Has something like 26 plugins and but is still fast becuase of holy lazy loading.
 

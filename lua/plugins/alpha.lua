@@ -3,6 +3,7 @@ local dashboard = require("alpha.themes.dashboard")
 math.randomseed(os.time())
 
 
+
 local logo = {
 "███╗   ██╗██╗   ██╗      ██╗██████╗ ███████╗",
 "████╗  ██║██║   ██║      ██║██╔══██╗██╔════╝",

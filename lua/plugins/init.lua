@@ -44,7 +44,10 @@ return require('packer').startup( { function(use)
     event = "BufWinEnter",
     config = "require('plugins.which-key')"
   }
-  use 'nvim-lua/plenary.nvim'
+  use  {
+    'nvim-lua/plenary.nvim',
+    event="BufWinEnter",
+  }
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
     requires = { {'nvim-lua/plenary.nvim'}},
@@ -59,13 +62,12 @@ return require('packer').startup( { function(use)
       "Alpha",
       "AlphaRedraw"
     },
-    event="BufWinEnter",
+    event="BufWinEnter"
   }
   use {
     'neovim/nvim-lspconfig',
     config="require('plugins.lspconfig')",
     event="BufWinEnter"
-
   }
   use {
     'rafamadriz/friendly-snippets',
@@ -110,7 +112,6 @@ return require('packer').startup( { function(use)
       "MasonLog",
       },
     config="require('plugins.mason')",
-    event="BufWinEnter"
   }
   use {
     "akinsho/toggleterm.nvim",
@@ -118,8 +119,8 @@ return require('packer').startup( { function(use)
     event="BufWinEnter"
   }
   use {"lewis6991/gitsigns.nvim",
-  event="BufWinEnter",
-  config = function()
+    event="BufWinEnter",
+    config = function()
     require('gitsigns').setup()
   end }
 -- End Of Plugins
