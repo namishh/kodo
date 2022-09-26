@@ -46,7 +46,7 @@ I know it sucks but you will have to do it manually
 + Make a new color scheme  `/lua/themes/colorschemes/scheme.lua` (copy the default colorscheme and change the colors) 
 + change colorscheme name at `/lua/themes/init.lua` 
 
-```bash
+```lua
 local core = require('themes.colorschemes.scheme')
 ```
 
