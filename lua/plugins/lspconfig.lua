@@ -4,11 +4,9 @@ local lspconfig = require("lspconfig")
 local M = {}
 
 
-M.on_attach = function(client, bufnr)
-    client.server_capabilities.documentFormattingProvider = false
-    client.server_capabilities.documentRangeFormattingProvider = false
-    client.resolved_capabilities.document_formatting = false
-    client.resolved_capabilities.document_range_formatting = false
+M.on_attach = function(client, _)
+  client.server_capabilities.documentFormattingProvider = false
+  client.server_capabilities.documentRangeFormattingProvider = false
 end
 
 M.capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -30,6 +28,11 @@ M.capabilities.textDocument.completion.completionItem = {
     },
   },
 }
+
+lspconfig.html.setup {}
+lspconfig.pyright.setup {}
+lspconfig.tsserver.setup {}
+lspconfig.emmet_ls.setup{}
 
 lspconfig.sumneko_lua.setup {
   on_attach = M.on_attach,

@@ -3,6 +3,7 @@ local opt = vim.opt
 local diagnostic = vim.diagnostic
 local g = vim.g
 opt.hidden = true
+opt.ch = 0
 opt.pumheight = 2
 opt.fileencoding = 'utf-8'
 opt.splitbelow = true
@@ -40,8 +41,6 @@ opt.updatetime = 250
 opt.shadafile = "NONE"
 opt.shadafile = ""
 -- Disabling some built in plugins
-g.did_load_filetypes = 0
-g.do_filetype_lua = 1
 local builtins = {
     "2html_plugin",
     "getscript",

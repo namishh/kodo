@@ -163,7 +163,7 @@ M.highlights_base = function (colors)
     DiagnosticError = { fg = colors.color9 },
     DiagnosticWarn = { fg = colors.color11 },
     DiagnosticInfo = { fg = colors.color4 },
-    DiagnosticHint = { fg = colors.color14 },
+    DiagnosticHint = { fg = colors.color6 },
 
 
     -- diff
@@ -207,8 +207,8 @@ M.highlights_base = function (colors)
     TelescopeNormal = { bg = colors.cursorline },
 
     TelescopePreviewTitle = {
-      fg = colors.background,
-      bg = colors.color10,
+      fg = colors.cursorline,
+      bg = colors.cursorline,
     },
 
     TelescopePromptTitle = {

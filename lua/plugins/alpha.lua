@@ -3,7 +3,6 @@ local dashboard = require("alpha.themes.dashboard")
 math.randomseed(os.time())
 
 
-
 local logo = {
 "███╗   ██╗██╗   ██╗      ██╗██████╗ ███████╗",
 "████╗  ██║██║   ██║      ██║██╔══██╗██╔════╝",
@@ -12,6 +11,8 @@ local logo = {
 "██║ ╚████║ ╚████╔╝       ██║██████╔╝███████╗",
 "╚═╝  ╚═══╝  ╚═══╝        ╚═╝╚═════╝ ╚══════╝",
 }
+
+
 dashboard.section.header.val = logo
 dashboard.section.header.opts.hl = "AlphaHeader"
 local function button(sc, txt, keybind, keybind_opts)

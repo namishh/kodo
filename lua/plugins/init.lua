@@ -130,12 +130,4 @@ return require('packer').startup( { function(use)
   end }
 -- End Of Plugins
 end,
-config = {
-  display = {
-    open_fn = function()
-      return require('packer.util').float({ border = 'single' })
-    end
-  }
-}
 })
-
