@@ -35,11 +35,16 @@ opt.expandtab = true
 opt.fillchars:append('eob: ')
 cmd('set lazyredraw')
 opt.laststatus=3 -- Global Status
-diagnostic.config {signs=false} -- Removinfgdiagnostic column
-opt.shortmess:append "sI"
+diagnostic.config {signs=false} -- Removing diagnostic column
 opt.updatetime = 250
 opt.shadafile = "NONE"
 opt.shadafile = ""
+
+-- Formatting Code on Save
+vim.cmd[[
+ autocmd BufWritePost * lua vim.lsp.buf.format()
+]]
+
 -- Disabling some built in plugins
 local builtins = {
     "2html_plugin",
@@ -53,6 +58,7 @@ local builtins = {
     "netrwFileHandlers",
     "matchit",
     "tar",
+    "tutor",
     "tarPlugin",
     "rrhelper",
     "vimball",

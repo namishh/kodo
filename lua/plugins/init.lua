@@ -46,7 +46,7 @@ return require('packer').startup( { function(use)
   }
   use {
     "folke/which-key.nvim",
-    event = "BufWinEnter",
+    event = "UIEnter",
     config = "require('plugins.which-key')"
   }
   use  {
@@ -72,7 +72,7 @@ return require('packer').startup( { function(use)
   use {
     'neovim/nvim-lspconfig',
     config="require('plugins.lspconfig')",
-    event="BufWinEnter"
+    event="UIEnter"
   }
   use {
     'rafamadriz/friendly-snippets',

@@ -4,7 +4,8 @@ local M = function()
     if client.name == '' then
       return ""
     else
-      return "%#StalineLspIcon#" .. "   " .. "%#StalineLspName#" ..  " " .. client.name .. " " .. "%#StalineEmptySpace#" .. " "
+      return "%#StalineLspIcon#" ..
+          "   " .. "%#StalineLspName#" .. " " .. client.name .. " " .. "%#StalineEmptySpace#" .. " "
     end
   end
 end

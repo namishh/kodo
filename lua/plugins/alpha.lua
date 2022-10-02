@@ -4,12 +4,12 @@ math.randomseed(os.time())
 
 
 local logo = {
-"███╗   ██╗██╗   ██╗      ██╗██████╗ ███████╗",
-"████╗  ██║██║   ██║      ██║██╔══██╗██╔════╝",
-"██╔██╗ ██║██║   ██║█████╗██║██║  ██║█████╗",
-"██║╚██╗██║╚██╗ ██╔╝╚════╝██║██║  ██║██╔══╝",
-"██║ ╚████║ ╚████╔╝       ██║██████╔╝███████╗",
-"╚═╝  ╚═══╝  ╚═══╝        ╚═╝╚═════╝ ╚══════╝",
+  "███╗   ██╗██╗   ██╗      ██╗██████╗ ███████╗",
+  "████╗  ██║██║   ██║      ██║██╔══██╗██╔════╝",
+  "██╔██╗ ██║██║   ██║█████╗██║██║  ██║█████╗",
+  "██║╚██╗██║╚██╗ ██╔╝╚════╝██║██║  ██║██╔══╝",
+  "██║ ╚████║ ╚████╔╝       ██║██████╔╝███████╗",
+  "╚═╝  ╚═══╝  ╚═══╝        ╚═╝╚═════╝ ╚══════╝",
 }
 
 
@@ -17,10 +17,11 @@ dashboard.section.header.val = logo
 dashboard.section.header.opts.hl = "AlphaHeader"
 local function button(sc, txt, keybind, keybind_opts)
   local b = dashboard.button(sc, txt, keybind, keybind_opts)
-    b.opts.hl = "AlphaButton"
-    b.opts.hl_shortcut = "AlphaButton"
-    return b
-  end
+  b.opts.hl = "AlphaButton"
+  b.opts.hl_shortcut = "AlphaButton"
+  return b
+end
+
 dashboard.section.buttons.val = {
   button("Ctrl + B", "  File Explorer", ":NvimTreeToggle<cr>"),
   button("Leader + ff", "  Find File", ":Telescope find_files <cr>"),
@@ -29,9 +30,9 @@ dashboard.section.buttons.val = {
   button("q", "  Quit", ":qa<cr>")
 }
 local function footer()
-    local total_plugins = #vim.tbl_keys(packer_plugins)
+  local total_plugins = #vim.tbl_keys(packer_plugins)
 
-    return "Loaded " .. total_plugins .. " plugins  "
+  return "Loaded " .. total_plugins .. " plugins  "
 end
 
 local heading = {
@@ -47,13 +48,13 @@ dashboard.section.footer.val = footer()
 dashboard.section.footer.opts.hl = "AlphaFooter"
 local opts = {
   layout = {
-    {type = "padding", val = 5},
+    { type = "padding", val = 5 },
     dashboard.section.header,
-    {type = "padding", val = 3},
-   heading,
-    {type = "padding", val = 2},
+    { type = "padding", val = 3 },
+    heading,
+    { type = "padding", val = 2 },
     dashboard.section.buttons,
-    {type = "padding", val = 1},
+    { type = "padding", val = 1 },
     dashboard.section.footer,
   },
   opts = {
@@ -81,4 +82,3 @@ vim.api.nvim_create_autocmd("FileType", {
     })
   end,
 })
-
