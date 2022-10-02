@@ -1,5 +1,6 @@
 local cmd = vim.cmd
 local opt = vim.opt
+local autocmd = require("core.autocmds")
 local diagnostic = vim.diagnostic
 local g = vim.g
 opt.hidden = true
@@ -34,43 +35,52 @@ opt.autoindent = true
 opt.expandtab = true
 opt.fillchars:append('eob: ')
 cmd('set lazyredraw')
-opt.laststatus=3 -- Global Status
-diagnostic.config {signs=false} -- Removing diagnostic column
+opt.laststatus = 3 -- Global Status
+diagnostic.config { signs = false } -- Removing diagnostic column
 opt.updatetime = 250
 opt.shadafile = "NONE"
 opt.shadafile = ""
 
 -- Formatting Code on Save
-vim.cmd[[
- autocmd BufWritePost * lua vim.lsp.buf.format()
-]]
+autocmd.BufWritePost = {
+  '*',
+  function()
+    for _, client in ipairs(vim.lsp.get_active_clients()) do
+      if client.name == '' then
+        return ' '
+      else
+        vim.lsp.buf.format()
+        return
+      end
+    end
 
+  end,
+}
 -- Disabling some built in plugins
 local builtins = {
-    "2html_plugin",
-    "getscript",
-    "getscriptPlugin",
-    "gzip",
-    "logipat",
-    "netrw",
-    "netrwPlugin",
-    "netrwSettings",
-    "netrwFileHandlers",
-    "matchit",
-    "tar",
-    "tutor",
-    "tarPlugin",
-    "rrhelper",
-    "vimball",
-    "vimballPlugin",
-    "zip",
-    "zipPlugin",
-    "tutor_mode_plugin",
-    "fzf",
-    "spellfile_plugin",
+  "2html_plugin",
+  "getscript",
+  "getscriptPlugin",
+  "gzip",
+  "logipat",
+  "netrw",
+  "netrwPlugin",
+  "netrwSettings",
+  "netrwFileHandlers",
+  "matchit",
+  "tar",
+  "tutor",
+  "tarPlugin",
+  "rrhelper",
+  "vimball",
+  "vimballPlugin",
+  "zip",
+  "zipPlugin",
+  "tutor_mode_plugin",
+  "fzf",
+  "spellfile_plugin",
 }
 
 for _, plugin in ipairs(builtins) do
-    g["loaded_" .. plugin] = 1
+  g["loaded_" .. plugin] = 1
 end
-
