@@ -8,6 +8,7 @@ opt.ch = 0
 opt.pumheight = 2
 opt.fileencoding = 'utf-8'
 opt.splitbelow = true
+opt.list = true
 opt.splitright = true
 opt.termguicolors = true
 opt.conceallevel = 0
@@ -56,6 +57,7 @@ autocmd.BufWritePost = {
 
   end,
 }
+
 -- Disabling some built in plugins
 local builtins = {
   "2html_plugin",
