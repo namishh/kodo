@@ -32,6 +32,8 @@ Has something like 26 plugins and but is still fast becuase of holy lazy loading
 + Popup mappings keysheet [whichkey.nvim](https://github.com/folke/which-key.nvim)
 + Lsp Management with [Mason](https://github.com/williamboman/mason.nvim/)
 + Easy Package Managing with [Packer](https://github.com/wbthomason/packer.nvim)
++ Auto Formatting with inbuilt LSP (yes no plugin! , requires installing the lsp client)
++ [Indentlines](https://github.com/lukas-reineke/indent-blankline.nvim)
 
 ## Requirements
 + Neovim
