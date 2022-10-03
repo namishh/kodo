@@ -80,8 +80,8 @@ local core = require('themes.colorschemes.scheme')
 - [x]  ~~better screenshots~~
 - [ ]  more, MORE fast `how do i do it pls help uwu`
 - [x]  ~~custom statusline~~ (i am proud)
-- [ ]  learn markdown bcoz i suck at it
-- [ ]  fix autoformatting on save
+- [x]  ~~learn markdown bcoz i suck at it~~
+- [x]  ~~fix autoformatting on save~~
 
 ## Special Thanks 
 This config wouldn't have been possible without these chads!
