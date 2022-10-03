@@ -43,7 +43,7 @@ opt.shadafile = "NONE"
 opt.shadafile = ""
 
 -- Formatting Code on Save TODO
-autocmd.BufWritePost = {
+autocmd.BufWritePre = {
   '*',
   function()
     for _, client in ipairs(vim.lsp.get_active_clients()) do

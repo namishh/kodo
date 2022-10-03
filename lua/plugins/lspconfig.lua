@@ -29,7 +29,7 @@ M.capabilities.textDocument.completion.completionItem = {
   },
 }
 
-local servers = { "html", "pyright", "tsserver", "emmet_ls", "sumneko_lua" }
+local servers = { "html", "pyright", "tsserver", "emmet_ls", "bashls" }
 
 for _, k in ipairs(servers) do
   lspconfig[k].setup {
@@ -37,5 +37,27 @@ for _, k in ipairs(servers) do
     capabilities = M.capabilities,
   }
 end
+
+lspconfig.sumneko_lua.setup {
+  on_attach = M.on_attach,
+  capabilities = M.capabilities,
+
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = { "vim" },
+      },
+      workspace = {
+        library = {
+          [vim.fn.expand "$VIMRUNTIME/lua"] = true,
+          [vim.fn.expand "$VIMRUNTIME/lua/vim/lsp"] = true,
+        },
+        maxPreload = 100000,
+        preloadFileSize = 10000,
+      },
+    },
+  },
+}
+
 
 return M
