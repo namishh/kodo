@@ -42,19 +42,18 @@ opt.updatetime = 250
 opt.shadafile = "NONE"
 opt.shadafile = ""
 
--- Formatting Code on Save
+-- Formatting Code on Save TODO
 autocmd.BufWritePost = {
   '*',
   function()
     for _, client in ipairs(vim.lsp.get_active_clients()) do
-      if client.name == '' then
-        return ' '
-      else
+      if client.name ~= '' then
         vim.lsp.buf.format()
         return
+      else
+        return nil
       end
     end
-
   end,
 }
 

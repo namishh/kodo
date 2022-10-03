@@ -32,7 +32,7 @@ Has something like 26 plugins and but is still fast becuase of holy lazy loading
 + Popup mappings keysheet [whichkey.nvim](https://github.com/folke/which-key.nvim)
 + Lsp Management with [Mason](https://github.com/williamboman/mason.nvim/)
 + Easy Package Managing with [Packer](https://github.com/wbthomason/packer.nvim)
-+ Auto Formatting with inbuilt LSP (yes no plugin! , requires installing the lsp client)
++ Auto Formatting with inbuilt LSP (no plugin! , requires installing the lsp client)
 + [Indentlines](https://github.com/lukas-reineke/indent-blankline.nvim)
 
 ## Requirements
@@ -81,9 +81,10 @@ local core = require('themes.colorschemes.scheme')
 - [ ]  more, MORE fast `how do i do it pls help uwu`
 - [x]  ~~custom statusline~~ (i am proud)
 - [ ]  learn markdown bcoz i suck at it
+- [ ]  fix autoformatting on save
 
 ## Special Thanks 
 This config wouldn't have been possible without these chads!
-+ [dharmx](https://github.com/dharmx/KrakeNvim/) 
++ [dharmx](https://github.com/dharmx/KrakeNvim/)
 + [siduck](https://github.com/NvChad/NvChad)
 
