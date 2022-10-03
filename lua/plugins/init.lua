@@ -4,6 +4,7 @@ return require('packer').startup({ function(use)
     'akinsho/bufferline.nvim',
     requires = 'kyazdani42/nvim-web-devicons',
     event = "UIEnter",
+    branch = "dev",
     config = "require('plugins.bufferline')"
   }
   use {
