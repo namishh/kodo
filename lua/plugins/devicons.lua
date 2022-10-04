@@ -16,7 +16,6 @@ local config = {
     js = { icon = "", name = "JS" },
     kt = { icon = "", name = "Kt" },
     lock = { icon = "", name = "Lock" },
-    lua = { icon = "", name = "Lua" },
     mp3 = { icon = "", name = "MP3" },
     mp4 = { icon = "", name = "MP4" },
     out = { icon = "", name = "Out" },
@@ -51,5 +50,5 @@ local config = {
   default = true,
 }
 
-devicons.set_default_icon("")
+devicons.set_default_icon("")
 devicons.setup(config)

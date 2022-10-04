@@ -22,6 +22,7 @@ return require('packer').startup({ function(use)
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ":TSUpdate",
+    module = "nvim-treesitter",
     event = "BufRead",
     cmd = 'require("plugins.commands").treesitter',
     config = "require('plugins.treesitter')"
@@ -39,7 +40,8 @@ return require('packer').startup({ function(use)
     cmd = "NvimTreeToggle",
     config = "require('plugins.nvim-tree')"
   }
-  use { "kyazdani42/nvim-web-devicons", event = "BufWinEnter", config = "require('plugins.devicons')" }
+  use { "kyazdani42/nvim-web-devicons", event = "BufWinEnter", config = "require('plugins.devicons')",
+    module = "nvim-web-devicons", }
   use {
     'windwp/nvim-autopairs',
     config = "require('plugins.autopair')",
@@ -47,7 +49,8 @@ return require('packer').startup({ function(use)
   }
   use {
     "folke/which-key.nvim",
-    event = "UIEnter",
+    module = "which-key",
+    keys = { "<leader>", '"', "'", "`" },
     config = "require('plugins.which-key')"
   }
   use {
@@ -55,8 +58,7 @@ return require('packer').startup({ function(use)
     event = "BufWinEnter",
   }
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.0',
-    requires = { { 'nvim-lua/plenary.nvim' } },
+    'nvim-telescope/telescope.nvim',
     cmd = "Telescope",
     config = "require('plugins.telescope')"
   }
@@ -72,8 +74,9 @@ return require('packer').startup({ function(use)
   }
   use {
     'neovim/nvim-lspconfig',
+    opt = true,
     config = "require('plugins.lspconfig')",
-    event = "UIEnter"
+    event = "BufEnter"
   }
   use {
     'rafamadriz/friendly-snippets',
@@ -126,6 +129,7 @@ return require('packer').startup({ function(use)
   }
   use { "lewis6991/gitsigns.nvim",
     event = "BufWinEnter",
+    ft = "gitcommit",
     config = function()
       require('gitsigns').setup()
     end }

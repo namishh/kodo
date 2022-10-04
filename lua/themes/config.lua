@@ -345,7 +345,6 @@ M.highlights_base = function(colors)
     DevIconjs = { fg = colors.color11 },
     DevIconkt = { fg = colors.color4 },
     DevIconlock = { fg = colors.color4 },
-    DevIconlua = { fg = colors.color4 },
     DevIconmp3 = { fg = colors.color1 },
     DevIconmp4 = { fg = colors.color1 },
     DevIconout = { fg = colors.color1 },
