@@ -5,7 +5,7 @@ return require('packer').startup({ function(use)
     requires = 'kyazdani42/nvim-web-devicons',
     event = "UIEnter",
     branch = "dev",
-    config = "require('plugins.bufferline')"
+    config = "require('plugins.ui.bufferline')"
   }
   use {
     'wbthomason/packer.nvim',
@@ -16,7 +16,7 @@ return require('packer').startup({ function(use)
   }
   use {
     'norcalli/nvim-colorizer.lua',
-    config = "require('plugins.colorizer')",
+    config = "require('plugins.ui.colorizer')",
     event = { "UIEnter" }
   }
   use {
@@ -25,7 +25,7 @@ return require('packer').startup({ function(use)
     module = "nvim-treesitter",
     event = "BufRead",
     cmd = 'require("plugins.commands").treesitter',
-    config = "require('plugins.treesitter')"
+    config = "require('plugins.treesitter.treesitter')"
   }
   use {
     'windwp/nvim-ts-autotag',
@@ -34,24 +34,21 @@ return require('packer').startup({ function(use)
   }
   use {
     'kyazdani42/nvim-tree.lua',
-    requires = {
-      'kyazdani42/nvim-web-devicons', -- optional, for file icons
-    },
     cmd = "NvimTreeToggle",
-    config = "require('plugins.nvim-tree')"
+    config = "require('plugins.utils.nvim-tree')"
   }
-  use { "kyazdani42/nvim-web-devicons", event = "BufWinEnter", config = "require('plugins.devicons')",
+  use { "kyazdani42/nvim-web-devicons", event = "BufWinEnter", config = "require('plugins.ui.devicons')",
     module = "nvim-web-devicons", }
   use {
     'windwp/nvim-autopairs',
-    config = "require('plugins.autopair')",
+    config = "require('plugins.treesitter.autopair')",
     after = "nvim-cmp"
   }
   use {
     "folke/which-key.nvim",
     module = "which-key",
     keys = { "<leader>", '"', "'", "`" },
-    config = "require('plugins.which-key')"
+    config = "require('plugins.utils.which-key')"
   }
   use {
     'nvim-lua/plenary.nvim',
@@ -60,12 +57,12 @@ return require('packer').startup({ function(use)
   use {
     'nvim-telescope/telescope.nvim',
     cmd = "Telescope",
-    config = "require('plugins.telescope')"
+    config = "require('plugins.utils.telescope')"
   }
   use {
     "goolord/alpha-nvim",
     requires = { "kyazdani42/nvim-web-devicons" },
-    config = "require('plugins.alpha')",
+    config = "require('plugins.ui.alpha')",
     cmd = {
       "Alpha",
       "AlphaRedraw"
@@ -75,7 +72,7 @@ return require('packer').startup({ function(use)
   use {
     'neovim/nvim-lspconfig',
     opt = true,
-    config = "require('plugins.lspconfig')",
+    config = "require('plugins.lsp.lspconfig')",
     event = "BufEnter"
   }
   use {
@@ -84,12 +81,12 @@ return require('packer').startup({ function(use)
   }
   use { 'hrsh7th/nvim-cmp',
     after = "friendly-snippets",
-    config = "require('plugins.cmp')"
+    config = "require('plugins.lsp.cmp')"
   }
   use {
     'L3MON4D3/LuaSnip',
     after = "nvim-cmp",
-    config = "require('plugins.luasnip')"
+    config = "require('plugins.lsp.luasnip')"
   }
   use {
     'saadparwaiz1/cmp_luasnip',
@@ -120,11 +117,11 @@ return require('packer').startup({ function(use)
       "MasonUninstallAll",
       "MasonLog",
     },
-    config = "require('plugins.mason')",
+    config = "require('plugins.lsp.mason')",
   }
   use {
     "akinsho/toggleterm.nvim",
-    config = "require('plugins.toggleterm')",
+    config = "require('plugins.utils.toggleterm')",
     event = "BufWinEnter"
   }
   use { "lewis6991/gitsigns.nvim",
@@ -135,12 +132,12 @@ return require('packer').startup({ function(use)
     end }
   use {
     "lukas-reineke/indent-blankline.nvim",
-    config = "require('plugins.indentlines')",
+    config = "require('plugins.ui.indentlines')",
     event = "BufWinEnter"
   }
   use {
     "terrortylor/nvim-comment",
-    config = "require('plugins.comments')",
+    config = "require('plugins.utils.comments')",
     event = "BufWinEnter"
   }
   -- End Of Plugins
