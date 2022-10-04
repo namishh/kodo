@@ -41,6 +41,7 @@ diagnostic.config { signs = false } -- Removing diagnostic column
 opt.updatetime = 250
 opt.shadafile = "NONE"
 opt.shadafile = ""
+opt.formatoptions:remove { "c", "r", "o" }
 
 -- Formatting Code on Save TODO
 autocmd.BufWritePre = {
@@ -54,7 +55,7 @@ autocmd.BufWritePre = {
         return
       end
     end
-  end,
+  end
 }
 
 -- Disabling some built in plugins

@@ -39,7 +39,7 @@ return require('packer').startup({ function(use)
     cmd = "NvimTreeToggle",
     config = "require('plugins.nvim-tree')"
   }
-  use { "kyazdani42/nvim-web-devicons", event = "BufWinEnter" }
+  use { "kyazdani42/nvim-web-devicons", event = "BufWinEnter", config = "require('plugins.devicons')" }
   use {
     'windwp/nvim-autopairs',
     config = "require('plugins.autopair')",
