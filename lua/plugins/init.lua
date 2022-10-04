@@ -138,6 +138,11 @@ return require('packer').startup({ function(use)
     config = "require('plugins.indentlines')",
     event = "BufWinEnter"
   }
+  use {
+    "terrortylor/nvim-comment",
+    config = "require('plugins.comments')",
+    event = "BufWinEnter"
+  }
   -- End Of Plugins
 end,
 })

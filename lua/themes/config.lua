@@ -316,23 +316,6 @@ M.highlights_base = function(colors)
     Green = { fg = colors.color10 },
     Magenta = { fg = colors.color13 },
 
-    -- Notify
-    NotifyERRORBorder = { fg = colors.color9 },
-    NotifyERRORIcon = { fg = colors.color9 },
-    NotifyERRORTitle = { fg = colors.color9 },
-    NotifyWARNBorder = { fg = colors.color11 },
-    NotifyWARNIcon = { fg = colors.color11 },
-    NotifyWARNTitle = { fg = colors.color11 },
-    NotifyINFOBorder = { fg = colors.color10 },
-    NotifyINFOIcon = { fg = colors.color10 },
-    NotifyINFOTitle = { fg = colors.color10 },
-    NotifyDEBUGBorder = { fg = colors.color8 },
-    NotifyDEBUGIcon = { fg = colors.color8 },
-    NotifyDEBUGTitle = { fg = colors.color8 },
-    NotifyTRACEBorder = { fg = colors.color13 },
-    NotifyTRACEIcon = { fg = colors.color13 },
-    NotifyTRACETitle = { fg = colors.color13 },
-
     -- Devicons
     DevIconDefault = { fg = colors.color9 },
     DevIconc = { fg = colors.color12 },
