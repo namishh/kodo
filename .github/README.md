@@ -18,11 +18,13 @@
 A neovim configuration that looks good and is fast (startuptime < 0.1s).
 
 <div align="center">
+
 ```txt
 Tested on a pretty low end laptop
 On Power   : 0.040s - 0.075s
 On Battery : 0.060s - 0.095s
 ```
+
 </div>
 
 Has something like 28 plugins and but is still fast becuase of holy lazy loading.
