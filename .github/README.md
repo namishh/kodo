@@ -5,6 +5,7 @@
 
 ![GitHub top language](https://img.shields.io/github/languages/top/dark-Jedi2108/nvide?color=6d92bf&style=for-the-badge)
 ![Cool](https://img.shields.io/badge/Cool-Affirmative-da696f?style=for-the-badge)
+![Bloat](https://img.shields.io/badge/Bloat-None-c585cf?style=for-the-badge)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/dark-Jedi2108/nvide?color=e1b56a&style=for-the-badge)
 ![GitHub Repo stars](https://img.shields.io/github/stars/dark-Jedi2108/nvide?color=74be88&style=for-the-badge)
 
@@ -16,12 +17,15 @@
 
 A neovim configuration that looks good and is fast (startuptime < 0.1s).
 
+<div align="center">
 ```txt
 Tested on a pretty low end laptop
 On Power   : 0.040s - 0.075s
 On Battery : 0.060s - 0.095s
 ```
-Has something like 26 plugins and but is still fast becuase of holy lazy loading.
+</div>
+
+Has something like 28 plugins and but is still fast becuase of holy lazy loading.
 
 
 ## Plugins And Features
