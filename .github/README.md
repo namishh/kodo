@@ -14,7 +14,13 @@
 ![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/h1.png)
 
 
-A neovim configuration that looks good and is fast (0.045s ~ 0.075ms).
+A neovim configuration that looks good and is fast (startuptime < 0.1s).
+
+```txt
+Tested on a pretty low end laptop
+On Power   : 0.040s - 0.075s
+On Battery : 0.060s - 0.095s
+```
 Has something like 26 plugins and but is still fast becuase of holy lazy loading.
 
 
@@ -27,16 +33,16 @@ Has something like 26 plugins and but is still fast becuase of holy lazy loading
 + Fast file finding and more with [telescope](https://github.com/nvim-telescope/telescope.nvim/)
 + Dope dashboard with [alpha-nvim](https://github.com/goolord/alpha-nvim/)
 + Snippets with [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
-+ Terminalsssssss with [toggleterm](https://github.com/akinsho/toggleterm.nvim)
++ Toggle-able Terminals with [toggleterm](https://github.com/akinsho/toggleterm.nvim)
 + Color Hightlighting with [nvim-colorizer](https://github.com/norcalli/nvim-colorizer.lua)
 + Popup mappings keysheet [whichkey.nvim](https://github.com/folke/which-key.nvim)
 + Lsp Management with [Mason](https://github.com/williamboman/mason.nvim/)
 + Easy Package Managing with [Packer](https://github.com/wbthomason/packer.nvim)
 + Auto Formatting with inbuilt LSP (no plugin! , requires installing the lsp client)
-+ [Indentlines](https://github.com/lukas-reineke/indent-blankline.nvim)
++ [Indentlines](https://github.com/lukas-reineke/indent-blankline.nvim) to help you code better
 
 ## Requirements
-+ Neovim>=0.8
++ Neovim >= v0.8
 + ripgrep (optional)
 + nodejs and npm
 + a brain (mandatory)
@@ -47,6 +53,7 @@ Has something like 26 plugins and but is still fast becuase of holy lazy loading
 It's really easy , just a simple one liner with git!
 ```bash
 git clone --depth 1 https://github.com/dark-Jedi2108/nvide ~/.config/nvim
+nvim +PackerSync
 ```
 ## Custom Colorschemes
 I know it sucks but you will have to do it manually

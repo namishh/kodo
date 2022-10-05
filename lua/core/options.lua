@@ -42,6 +42,7 @@ opt.updatetime = 250
 opt.shadafile = "NONE"
 opt.shadafile = ""
 opt.formatoptions:remove { "c", "r", "o" }
+opt.swapfile = false
 
 -- Formatting Code on Save
 autocmd.BufWritePre = {
