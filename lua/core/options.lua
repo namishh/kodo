@@ -43,7 +43,7 @@ opt.shadafile = "NONE"
 opt.shadafile = ""
 opt.formatoptions:remove { "c", "r", "o" }
 
--- Formatting Code on Save TODO
+-- Formatting Code on Save
 autocmd.BufWritePre = {
   '*',
   function()

@@ -20,7 +20,7 @@ Has something like 26 plugins and but is still fast becuase of holy lazy loading
 
 ## Plugins And Features
 + Lazy loading done most of the time to get blazingly moderate startup times.
-+ A Minimal and Styline bufferline with [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
++ A Minimal and Stylish bufferline with [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
 + Cool Looking Custom [Statusline](https://github.com/dark-Jedi2108/nvide/tree/main/lua/staline)
 + Parsing with [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 + A File Tree with [nvim-tree](https://github.com/kyazdani42/nvim-tree.lua)
@@ -36,7 +36,7 @@ Has something like 26 plugins and but is still fast becuase of holy lazy loading
 + [Indentlines](https://github.com/lukas-reineke/indent-blankline.nvim)
 
 ## Requirements
-+ Neovim
++ Neovim>=0.8
 + ripgrep (optional)
 + nodejs and npm
 + a brain (mandatory)
