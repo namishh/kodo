@@ -5,6 +5,7 @@ function M.get_colors()
     comment = "#606372",
     contrast = "#1a1a1a",
     background = "#0f0f0f",
+    bgfixed = "#0f0f0f",
     foreground = "#dfdee0",
     cursorline = "#18181a",
     cursor = "#dfdee0",

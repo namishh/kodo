@@ -9,4 +9,6 @@ local function setup(opts)
   highlights.highlight_all(colors, opts)
 end
 
-setup()
+setup({
+  transparent_background = false
+})
