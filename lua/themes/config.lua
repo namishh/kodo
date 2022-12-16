@@ -55,7 +55,7 @@ M.highlights_base = function(colors)
     EndOfBuffer = { fg = colors.background },
     NonText = { fg = colors.color1 },
     Variable = { fg = colors.color5 },
-    String = { fg = colors.color2 },
+    String = { fg = colors.color10 },
     Character = { fg = colors.color12 },
     Constant = { fg = colors.color12 },
     Number = { fg = colors.color12 },
