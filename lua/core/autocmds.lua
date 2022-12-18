@@ -37,7 +37,6 @@ N.group = function(grp, cmds)
   cmd('augroup ' .. grp)
   cmd('autocmd!')
   if type(cmds) == 'function' then
-    sd
     cmds(M)
   else
     for _, au in ipairs(cmds) do
