@@ -3,11 +3,11 @@ local M = {}
 function M.get_colors()
   return {
     comment = "#5a5858",
-    contrast = "#1a1a1a",
+    contrast = "#191919",
     background = "#121111",
     bgfixed = "#121111",
     foreground = "#dfdddd",
-    cursorline = "#18181a",
+    cursorline = "#191919",
     cursor = "#dfdddd",
     color0 = "#1b1b1b",
     color1 = "#af575b",
@@ -17,7 +17,7 @@ function M.get_colors()
     color5 = "#a07ea7",
     color6 = "#6d8f8a",
     color7 = "#b7b7b7",
-    color8 = "#272727",
+    color8 = "#252525",
     color9 = "#c15a5e",
     color10 = "#8fa176",
     color11 = "#d8b170",

@@ -267,7 +267,7 @@ M.highlights_base = function(colors)
     StalineFolderIcon = { bg = colors.color1, fg = colors.bgfixed },
     StalineFolderSep = { bg = colors.bgfixed, fg = colors.color1 },
     StalineFolderText = { bg = colors.color8, fg = colors.color15 },
-    StalineFilename = { bg = colors.background, fg = colors.color15 },
+    StalineFilename = { bg = colors.background, fg = colors.color7 },
     StalineFilenameSep = { fg = colors.color8, bg = colors.bgfixed },
     StalineLogo = { bg = colors.bgfixed, fg = colors.color12 },
     StalineProgress = { bg = colors.color8, fg = colors.color15 },
