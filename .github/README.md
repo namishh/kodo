@@ -80,6 +80,7 @@ There are two prebuilt styles - `min` (minimal) and `fancy`
 ```lua
 local STYLE = 'min' -- min | fancy
 ```
++ Reload Neovim
 
 ## Some Points To be Noted
 + This is meant to be a simple base config which can be extended and customised very easily.
