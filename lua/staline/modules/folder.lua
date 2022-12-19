@@ -1,10 +1,16 @@
 local fn = vim.fn
 
-local M = function()
-  local icon = "%#StalineFolderIcon#" .. " DIR "
+local M = function(m)
   local directory = "%#StalineFolderText#" .. " " .. fn.fnamemodify(fn.getcwd(), ":t") .. " "
-  -- return "%#StalineFolderSep#" .. "" .. icon .. directory .. "%#StalineEmptySpace#" .. " "
-  return icon .. directory .. "%#StalineEmptySpace#" .. " "
+  if (m == 'min') then
+    local icon = "%#StalineFolderIcon#" .. " DIR "
+    return icon .. directory .. "%#StalineEmptySpace#" .. " "
+  elseif (m == 'fancy') then
+    local icon = "%#StalineFolderIcon#" .. " "
+    return "%#StalineFolderSep#" .. "" .. icon .. directory .. "%#StalineEmptySpace#" .. " "
+  else
+    return 'f'
+  end
 end
 
 return M

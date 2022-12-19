@@ -1,3 +1,5 @@
+local STYLE = 'min' -- fancy | min
+
 return {
   run = function()
     local mode = require("staline.modules.mode")
@@ -10,15 +12,15 @@ return {
     local lsp = require("staline.modules.lsp")
 
     return table.concat {
-      mode(),
+      mode(STYLE),
       filename(),
       branch(),
       diff(),
       "%=",
       diagnostics(),
-      folder(),
-      lsp() or "",
-      position(),
+      folder(STYLE),
+      lsp(STYLE) or "",
+      position(STYLE),
     }
   end,
 }

@@ -1,11 +1,16 @@
 local fn = vim.fn
-local M = function()
+local M = function(m)
   local current = fn.line "."
   local total = fn.line "$"
-  -- return "%#StalineProgressIcon#" .. "  " .. "%#StalineProgress#" .. " " .. current .. "/" .. total .. " " .. "%#StalineEmptySpace#"
-  return "%#StalineProgress#" ..
-      " " .. current .. "/" .. total .. " " .. "%#StalineProgressIcon#" .. " " .. "%#StalineEmptySpace#"
-
+  if (m == 'min') then
+    return "%#StalineProgress#" ..
+        " " .. current .. "/" .. total .. " " .. "%#StalineProgressIcon#" .. " " .. "%#StalineEmptySpace#"
+  elseif (m == 'fancy') then
+    return "%#StalineProgressIcon#" ..
+        "  " .. "%#StalineProgress#" .. " " .. current .. "/" .. total .. " " .. "%#StalineEmptySpace#"
+  else
+    return "F"
+  end
 end
 
 return M
