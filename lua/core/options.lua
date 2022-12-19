@@ -44,7 +44,7 @@ opt.shadafile = "NONE"
 opt.shadafile = ""
 opt.formatoptions:remove { "c", "r", "o" }
 opt.swapfile = false
-
+opt.shortmess:append "sI"
 -- Formatting Code on Save
 autocmd.BufWritePre = {
   '*',
