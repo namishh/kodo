@@ -1,4 +1,4 @@
-local STYLE = 'monochrome' -- fancy | min
+local STYLE = 'minimal' -- fancy | minimal | monochrome
 return {
   run = function()
     local mode = require("staline.modules.mode")
