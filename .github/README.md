@@ -72,13 +72,14 @@ local core = require('themes.colorschemes.scheme')
 
 + Reload Neovim
 
-## Statusline Styles
-There are two prebuilt styles - `min` (minimal) and `fancy`
+## Statusline Styles 
+**Warning:** This section contains the worst ever code written
+There are three prebuilt styles
 + To change the style edit `/lua/staline/init.lua`
 + Set the style in `STYLE` variable
 
 ```lua
-local STYLE = 'min' -- min | fancy
+local STYLE = 'minimal' -- minimal | fancy | monochrome
 ```
 + Reload Neovim
 

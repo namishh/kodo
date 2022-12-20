@@ -1,5 +1,4 @@
-local STYLE = 'min' -- fancy | min
-
+local STYLE = 'monochrome' -- fancy | min
 return {
   run = function()
     local mode = require("staline.modules.mode")
@@ -10,17 +9,16 @@ return {
     local position = require("staline.modules.position")
     local diagnostics = require("staline.modules.diagnostics")
     local lsp = require("staline.modules.lsp")
-
     return table.concat {
       mode(STYLE),
       filename(),
       branch(),
-      diff(),
+      diff(STYLE),
       "%=",
-      diagnostics(),
+      diagnostics(STYLE),
       folder(STYLE),
       lsp(STYLE) or "",
       position(STYLE),
-    }
+    };
   end,
 }
