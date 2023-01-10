@@ -3,6 +3,7 @@ local opt = vim.opt
 local autocmd = require("core.autocmds")
 local diagnostic = vim.diagnostic
 local g = vim.g
+local changeStatus = require("staline")
 opt.hidden = true
 opt.ch = 0
 opt.pumheight = 2
@@ -45,6 +46,7 @@ opt.shadafile = ""
 opt.formatoptions:remove { "c", "r", "o" }
 opt.swapfile = false
 opt.shortmess:append "sI"
+
 -- Formatting Code on Save
 autocmd.BufWritePre = {
   '*',
@@ -59,6 +61,36 @@ autocmd.BufWritePre = {
     end
   end
 }
+
+
+local has_value = function(tab, val)
+  for _, value in ipairs(tab) do
+    if value == val then
+      return true
+    end
+  end
+  return false
+end
+
+local available_themes = { 'minimal', 'fancy', 'monochrome' }
+
+vim.api.nvim_create_user_command(
+  'StatusStyle',
+  function(opts)
+    if has_value(available_themes, opts.args) then
+      opt.statusline = changeStatus(opts.args)
+    else
+      print 'Invalid Theme'
+    end
+  end,
+  {
+    nargs = 1,
+    complete = function()
+      -- return completion candidates as a list-like table
+      return available_themes
+    end,
+  }
+)
 
 -- Disabling some built in plugins
 local builtins = {
@@ -90,7 +122,8 @@ local builtins = {
   "bugreport",
   "ftplugin",
   "archlinux",
-  "fzf"
+  "fzf",
+  "vimgrep"
 }
 
 for _, plugin in ipairs(builtins) do

@@ -262,7 +262,6 @@ M.highlights_base = function(colors)
     -- BufferLine
     BufferLineIndicatorSelected = { fg = colors.color2 },
     BufferLineFill = { fg = colors.background, bg = colors.background },
-
     --Staline
     StalineFolderIcon = { bg = colors.color1, fg = colors.black },
     StalineFolderIconMono = { bg = colors.contrast, fg = colors.color7 },
@@ -326,8 +325,9 @@ M.highlights_base = function(colors)
     -- Alpha
     AlphaHeader = { fg = colors.color12 },
     AlphaButton = { fg = colors.color12 },
-    AlphaFooter = { fg = colors.color12 },
-    AlphaComment = { fg = colors.color12 },
+    AlphaShortcut = { bg = colors.color12, fg = colors.black, bold = true },
+    AlphaFooter = { fg = colors.color12, italic = true },
+    AlphaComment = { fg = colors.color12, italic = true },
 
     Blue = { fg = colors.color12 },
     Cyan = { fg = colors.color14 },

@@ -53,6 +53,7 @@ Has something like 28 plugins and but is still fast becuase of holy lazy loading
 + nodejs and npm
 + a brain (mandatory)
 + some xp with lua and neovim
++ ueberzug for image previews
 
 ## Installation
 
@@ -82,6 +83,8 @@ There are three prebuilt styles
 local STYLE = 'minimal' -- minimal | fancy | monochrome
 ```
 + Reload Neovim
+
++ **OR** To change the style without reloading for a temporary basis use the :StatusStyle command
 
 ## Some Points To be Noted
 + This is meant to be a simple base config which can be extended and customised very easily.

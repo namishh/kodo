@@ -2,32 +2,31 @@ local alpha = require("alpha")
 local dashboard = require("alpha.themes.dashboard")
 math.randomseed(os.time())
 
-
 local logo = {
-  "███╗   ██╗██╗   ██╗      ██╗██████╗ ███████╗",
-  "████╗  ██║██║   ██║      ██║██╔══██╗██╔════╝",
-  "██╔██╗ ██║██║   ██║█████╗██║██║  ██║█████╗",
-  "██║╚██╗██║╚██╗ ██╔╝╚════╝██║██║  ██║██╔══╝",
-  "██║ ╚████║ ╚████╔╝       ██║██████╔╝███████╗",
-  "╚═╝  ╚═══╝  ╚═══╝        ╚═╝╚═════╝ ╚══════╝",
+  ['text'] = {
+    '███╗   ██╗██╗   ██╗      ██╗██████╗ ███████╗',
+    '████╗  ██║██║   ██║      ██║██╔══██╗██╔════╝',
+    '██╔██╗ ██║██║   ██║█████╗██║██║  ██║█████╗',
+    '██║╚██╗██║╚██╗ ██╔╝╚════╝██║██║  ██║██╔══╝',
+    '██║ ╚████║ ╚████╔╝       ██║██████╔╝███████╗',
+    '╚═╝  ╚═══╝  ╚═══╝        ╚═╝╚═════╝ ╚══════╝',
+  },
 }
 
 
-dashboard.section.header.val = logo
+dashboard.section.header.val = logo.text
 dashboard.section.header.opts.hl = "AlphaHeader"
 local function button(sc, txt, keybind, keybind_opts)
   local b = dashboard.button(sc, txt, keybind, keybind_opts)
   b.opts.hl = "AlphaButton"
-  b.opts.hl_shortcut = "AlphaButton"
+  b.opts.hl_shortcut = "AlphaShortcut"
   return b
 end
 
 dashboard.section.buttons.val = {
-  button("Ctrl + B", "  Open File Explorer", ":NvimTreeToggle<cr>"),
-  button("Leader + ff", "  Find File", ":Telescope find_files <cr>"),
-  button("Leader + fr", "  Find String", ":Telescope live_grep<cr>"),
-  button("Leader + tt", "  Open Terminal", ":ToggleTerm<cr>"),
-  button("q", "  Quit", ":qa<cr>")
+  button(" LDR + FF ", "   Find File ", ":Telescope find_files <cr>"),
+  button(" LDR + FG ", "   Old Files ", ":Telescope oldfiles <cr>"),
+  button(" LDR + FF ", "   Find String ", ":Telescope live_grep<cr>"),
 }
 local function footer()
   local total_plugins = #vim.tbl_keys(packer_plugins)
@@ -37,7 +36,7 @@ end
 
 local heading = {
   type = "text",
-  val = "~ brain.exists() == null; ~",
+  val = "~ brain.exists() == nil; ~",
   opts = {
     position = "center",
     hl = "AlphaComment",
@@ -48,13 +47,13 @@ dashboard.section.footer.val = footer()
 dashboard.section.footer.opts.hl = "AlphaFooter"
 local opts = {
   layout = {
-    { type = "padding", val = 3 },
+    { type = "padding", val = 2 },
     dashboard.section.header,
     { type = "padding", val = 3 },
     heading,
     { type = "padding", val = 2 },
     dashboard.section.buttons,
-    { type = "padding", val = 1 },
+    { type = "padding", val = 3 },
     dashboard.section.footer,
   },
   opts = {

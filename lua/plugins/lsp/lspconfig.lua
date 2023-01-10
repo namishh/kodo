@@ -45,7 +45,7 @@ lspconfig.sumneko_lua.setup {
   settings = {
     Lua = {
       diagnostics = {
-        globals = { "vim", "awesome" },
+        globals = { "vim", "awesome", "client", "screen" },
       },
       workspace = {
         library = {

@@ -81,7 +81,7 @@ return require('packer').startup({ function(use)
   }
   use { 'hrsh7th/nvim-cmp',
     after = "friendly-snippets",
-    config = "require('plugins.lsp.cmp')"
+    config = function() require('plugins.lsp.cmp') end
   }
   use {
     'L3MON4D3/LuaSnip',
@@ -128,7 +128,16 @@ return require('packer').startup({ function(use)
     event = "BufWinEnter",
     ft = "gitcommit",
     config = function()
-      require('gitsigns').setup()
+      require('gitsigns').setup {
+        signs = {
+          add          = { hl = 'GitSignsAdd', text = '│', numhl = 'GitSignsAddNr', linehl = 'GitSignsAddLn' },
+          change       = { hl = 'GitSignsChange', text = '│', numhl = 'GitSignsChangeNr', linehl = 'GitSignsChangeLn' },
+          delete       = { hl = 'GitSignsDelete', text = '_', numhl = 'GitSignsDeleteNr', linehl = 'GitSignsDeleteLn' },
+          topdelete    = { hl = 'GitSignsDelete', text = '‾', numhl = 'GitSignsDeleteNr', linehl = 'GitSignsDeleteLn' },
+          changedelete = { hl = 'GitSignsChange', text = '~', numhl = 'GitSignsChangeNr', linehl = 'GitSignsChangeLn' },
+          untracked    = { hl = 'GitSignsAdd', text = '│', numhl = 'GitSignsAddNr', linehl = 'GitSignsDeleteLn' },
+        },
+      }
     end }
   use {
     "lukas-reineke/indent-blankline.nvim",
@@ -140,6 +149,17 @@ return require('packer').startup({ function(use)
     config = "require('plugins.utils.comments')",
     event = "BufWinEnter"
   }
+  use({
+    "dharmx/telescope-media.nvim",
+    config = function()
+      require("telescope").load_extension("media")
+    end,
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim",
+    },
+    after = "telescope.nvim",
+  })
   use {
     "elkowar/yuck.vim",
     ft = "yuck"

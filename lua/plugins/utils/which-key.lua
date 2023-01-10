@@ -22,6 +22,7 @@ local mappings = {
     f = { ":Telescope find_files<cr>", "Find Files" },
     g = { ":Telescope oldfiles<cr>", "Recently Opened" },
     r = { ":Telescope live_grep<cr>", "Find String" },
+    e = { ":Telescope media<cr>", "Find Media" },
   },
   t = {
     name = "Terminal",
@@ -42,4 +43,3 @@ local mappings = {
 
 local opts = { prefix = '<leader>' }
 wk.register(mappings, opts)
-
