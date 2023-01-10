@@ -84,7 +84,7 @@ local STYLE = 'minimal' -- minimal | fancy | monochrome
 ```
 + Reload Neovim
 
-+ **OR** To change the style without reloading for a temporary basis use the :StatusStyle command
++ **OR** To change the style without reloading for a temporary basis use the `:StatusStyle` command
 
 ## Some Points To be Noted
 + This is meant to be a simple base config which can be extended and customised very easily.
@@ -109,6 +109,8 @@ local STYLE = 'minimal' -- minimal | fancy | monochrome
 - [x]  ~~custom statusline~~ (i am proud)
 - [x]  ~~learn markdown bcoz i suck at it~~
 - [x]  ~~fix autoformatting on save~~
+- [ ] add some more themes
+- [ ] make more status styles
 
 ## Special Thanks 
 This config wouldn't have been possible without these chads!
