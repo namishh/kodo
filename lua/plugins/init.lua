@@ -71,9 +71,9 @@ return require('packer').startup({ function(use)
   }
   use {
     'neovim/nvim-lspconfig',
-    opt = true,
+    wants = "mason.nvim",
     config = "require('plugins.lsp.lspconfig')",
-    event = "BufEnter"
+    cmd = "LspStart"
   }
   use {
     'rafamadriz/friendly-snippets',
@@ -98,7 +98,7 @@ return require('packer').startup({ function(use)
   }
   use {
     'hrsh7th/cmp-nvim-lsp',
-    after = "cmp-nvim-lua"
+    after = 'cmp-nvim-lua',
   }
   use {
     'hrsh7th/cmp-buffer',

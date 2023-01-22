@@ -1,6 +1,9 @@
+vim.cmd.colorscheme("nirvana")
+
 require("impatient")
-require("plugins") -- All The Plugins
-require('themes') -- Lua Colorshceme
+-- All The Plugins
+require("plugins")
+
 -- Core Configuration
 require("core.options")
 require("core.keybinds")
