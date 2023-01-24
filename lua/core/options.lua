@@ -3,7 +3,7 @@ local opt = vim.opt
 local autocmd = require("core.autocmds")
 local diagnostic = vim.diagnostic
 local g = vim.g
-local changeStatus = require("staline")
+local changeStatus = require("staline").run
 opt.hidden = true
 opt.ch = 0
 opt.pumheight = 2
@@ -60,6 +60,13 @@ autocmd.BufWritePre = {
       end
     end
   end
+}
+autocmd.CursorHold = {
+  '*',
+  function()
+    require("staline").setup("minimal")
+  end,
+  once = true,
 }
 
 

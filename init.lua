@@ -7,6 +7,3 @@ require("plugins")
 -- Core Configuration
 require("core.options")
 require("core.keybinds")
-
--- Loading The Statusline
-require("staline").setup("minimal")
