@@ -36,7 +36,11 @@ require 'nvim-tree'.setup {
   filters = {
     exclude = { '.git', 'node_modules', '.cache' },
   },
-  update_focused_file = { enable = true },
+  update_focused_file = {
+    enable = true,
+    update_root = true,
+  },
+
   hijack_directories = { enable = true },
   view = {
     hide_root_folder = true,
@@ -57,4 +61,5 @@ require 'nvim-tree'.setup {
 }
 vim.cmd [[
 autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif
+nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
 ]]

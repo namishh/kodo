@@ -1,9 +1,6 @@
 vim.cmd.colorscheme("nirvana")
 
-require("impatient")
--- All The Plugins
 require("plugins")
-
--- Core Configuration
+require("impatient")
 require("core.options")
 require("core.keybinds")
