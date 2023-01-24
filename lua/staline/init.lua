@@ -20,8 +20,13 @@ local run = function(STYLE)
   };
 end
 
+local setup = function(STYLE)
+  vim.opt.statusline = run(STYLE)
+  vim.api.nvim_create_autocmd({ "ModeChanged", "LspAttach" }, {
+    callback = function()
+      vim.opt.statusline = run(STYLE)
+    end
+  })
+end
 
-local STYLE = 'minimal'
-vim.opt.statusline = run(STYLE)
-
-return run
+return { run = run, setup = setup }
