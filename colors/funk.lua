@@ -1,4 +1,4 @@
 require("themes").setup({
-  theme = "warm",
+  theme = "funk",
   transparent_background = false
 })
