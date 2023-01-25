@@ -1,9 +1,10 @@
 vim.cmd [[packadd packer.nvim]]
+
 return require('packer').startup({ function(use)
   use {
     'akinsho/bufferline.nvim',
     requires = 'kyazdani42/nvim-web-devicons',
-    event = "UIEnter",
+    event = 'CursorHold',
     branch = "dev",
     config = "require('plugins.ui.bufferline')"
   }
@@ -17,7 +18,7 @@ return require('packer').startup({ function(use)
   use {
     'norcalli/nvim-colorizer.lua',
     config = "require('plugins.ui.colorizer')",
-    event = { "UIEnter" }
+    event = 'CursorHold',
   }
   use {
     'nvim-treesitter/nvim-treesitter',
@@ -37,7 +38,7 @@ return require('packer').startup({ function(use)
     cmd = "NvimTreeToggle",
     config = "require('plugins.utils.nvim-tree')"
   }
-  use { "kyazdani42/nvim-web-devicons", event = "BufWinEnter", config = "require('plugins.ui.devicons')",
+  use { "kyazdani42/nvim-web-devicons", event = 'CursorHold', config = "require('plugins.ui.devicons')",
     module = "nvim-web-devicons", }
   use {
     'windwp/nvim-autopairs',
@@ -47,12 +48,13 @@ return require('packer').startup({ function(use)
   use {
     "folke/which-key.nvim",
     module = "which-key",
+    event = 'CursorHold',
     keys = { "<leader>", '"', "'", "`" },
     config = "require('plugins.utils.which-key')"
   }
   use {
     'nvim-lua/plenary.nvim',
-    event = "BufWinEnter",
+    event = 'CursorHold',
   }
   use {
     'nvim-telescope/telescope.nvim',
@@ -124,10 +126,10 @@ return require('packer').startup({ function(use)
   use {
     "akinsho/toggleterm.nvim",
     config = "require('plugins.utils.toggleterm')",
-    event = "BufWinEnter"
+    event = 'CursorHold',
   }
   use { "lewis6991/gitsigns.nvim",
-    event = "BufWinEnter",
+    event = 'CursorHold',
     ft = "gitcommit",
     config = function()
       require('gitsigns').setup {
@@ -144,7 +146,7 @@ return require('packer').startup({ function(use)
   use {
     "lukas-reineke/indent-blankline.nvim",
     config = "require('plugins.ui.indentlines')",
-    event = "BufWinEnter"
+    event = "CursorHold"
   }
   use {
     "terrortylor/nvim-comment",
