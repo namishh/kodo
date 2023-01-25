@@ -73,7 +73,8 @@ return require('packer').startup({ function(use)
     'neovim/nvim-lspconfig',
     wants = "mason.nvim",
     config = "require('plugins.lsp.lspconfig')",
-    cmd = "LspStart"
+    event = "BufWinEnter"
+    --cmd = "LspStart"
   }
   use {
     'rafamadriz/friendly-snippets',
