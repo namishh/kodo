@@ -72,8 +72,8 @@ return require('packer').startup({ function(use)
   use {
     'neovim/nvim-lspconfig',
     config = "require('plugins.lsp.lspconfig')",
-    event = "BufWinEnter",
-    cmd = "LspStart",
+    event = "CursorHold",
+    --cmd = "LspStart",
     opt = true,
   }
   use {
