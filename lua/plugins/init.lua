@@ -71,13 +71,14 @@ return require('packer').startup({ function(use)
   }
   use {
     'neovim/nvim-lspconfig',
-    wants = "mason.nvim",
     config = "require('plugins.lsp.lspconfig')",
-    event = "BufWinEnter"
-    --cmd = "LspStart"
+    event = "BufWinEnter",
+    cmd = "LspStart",
+    opt = true,
   }
   use {
     'rafamadriz/friendly-snippets',
+    module = { "cmp", "cmp_nvim_lsp" },
     event = "InsertEnter"
   }
   use { 'hrsh7th/nvim-cmp',

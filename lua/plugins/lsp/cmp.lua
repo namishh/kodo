@@ -1,7 +1,6 @@
 local cmp = require("cmp")
 vim.g.completeopt = "menu,menuone,noselect,noinsert"
 
-require("luasnip.loaders.from_vscode").lazy_load()
 
 local function border(hl_name)
   return {
@@ -15,6 +14,7 @@ local function border(hl_name)
     { "│", hl_name },
   }
 end
+
 local cmp_window = require "cmp.utils.window"
 
 cmp_window.info_ = cmp_window.info
@@ -57,7 +57,7 @@ local options = {
     completion = {
       border = border "CmpBorder",
       winhighlight = "Normal:CmpPmenu,CursorLine:PmenuSel,Search:None",
-},
+    },
     documentation = {
       border = border "CmpDocBorder",
     },
@@ -120,4 +120,3 @@ local options = {
 }
 
 cmp.setup(options)
-
