@@ -149,7 +149,7 @@ return require('packer').startup({ function(use)
   use {
     "terrortylor/nvim-comment",
     config = "require('plugins.utils.comments')",
-    event = "BufWinEnter"
+    event = "CursorHold"
   }
   use({
     "dharmx/telescope-media.nvim",

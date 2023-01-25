@@ -24,7 +24,7 @@ local function button(sc, txt, keybind, keybind_opts)
 end
 
 dashboard.section.buttons.val = {
-  button(" LDR + FF ", "   Find File ", ":Telescope find_files <cr>"),
+  button(" LDR + FF ", "   Find File ", ":Telescope media <cr>"),
   button(" LDR + FG ", "   Old Files ", ":Telescope oldfiles <cr>"),
   button(" LDR + FF ", "   Find String ", ":Telescope live_grep<cr>"),
 }

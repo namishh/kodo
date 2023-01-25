@@ -27,7 +27,7 @@ On Battery : 0.060s - 0.095s
 
 </div>
 
-Has something like 28 plugins and but is still fast becuase of holy lazy loading.
+Has something like 30 plugins and but is still fast becuase of holy lazy loading.
 
 
 ## Plugins And Features
@@ -45,6 +45,8 @@ Has something like 28 plugins and but is still fast becuase of holy lazy loading
 + Lsp Management with [Mason](https://github.com/williamboman/mason.nvim/)
 + Easy Package Managing with [Packer](https://github.com/wbthomason/packer.nvim)
 + Auto Formatting with inbuilt LSP (no plugin! , requires installing the lsp client)
++ Quick Commenting with [comment-nvim](https://github.com/terrortylor/nvim-comment)
++ Telescope file previews with [telecope-media (dharmx rewrite)](https://github.com/dharmx/telescope-media.nvim)
 + [Indentlines](https://github.com/lukas-reineke/indent-blankline.nvim) to help you code better
 
 ## Requirements
@@ -59,16 +61,37 @@ Has something like 28 plugins and but is still fast becuase of holy lazy loading
 
 It's really easy , just a simple one liner with git!
 ```bash
-git clone --depth 1 https://github.com/dark-Jedi2108/nvide ~/.config/nvim
-nvim +PackerSync
+~ $ git clone --depth 1 https://github.com/dark-Jedi2108/nvide ~/.config/nvim
+~ $ nvim +PackerSync
 ```
+
+## Adding mason to path
+Add this to your shell config
+```zsh
+# this is for zsh
+export PATH=$PATH:~/.local/share/nvim/mason/bin
+```
+```zsh
+~ $ source ~/.zshrc
+```
+
 ## Custom Colorschemes
 I know it sucks but you will have to do it manually
 + Make a new color scheme  `/lua/themes/colorschemes/scheme.lua` (copy the default colorscheme and change the colors) 
-+ change colorscheme name at `/lua/themes/init.lua` 
++ Make a colors file for it `/colors/scheme.lua`
 
 ```lua
-local core = require('themes.colorschemes.scheme')
+-- /colors/scheme.lua
+require("themes").setup({
+  theme = "scheme",
+  transparent_background = false
+})
+```
+
++ Set the color scheme in `init.lua`
+
+```lua
+vim.cmd.colorscheme("scheme")
 ```
 
 + Reload Neovim
@@ -76,11 +99,11 @@ local core = require('themes.colorschemes.scheme')
 ## Statusline Styles 
 **Warning:** This section contains the worst ever code written
 There are three prebuilt styles
-+ To change the style edit `/lua/staline/init.lua`
-+ Set the style in `STYLE` variable
++ To change the style edit `/lua/core/options.lua`
++ Set the style in `DEFAULT_STATUS_STYLE` variable in line 65
 
 ```lua
-local STYLE = 'minimal' -- minimal | fancy | monochrome
+local DEFAULT_STATUS_STYLE = 'minimal' -- minimal | fancy | monochrome
 ```
 + Reload Neovim
 

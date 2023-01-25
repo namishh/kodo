@@ -61,10 +61,13 @@ autocmd.BufWritePre = {
     end
   end
 }
+
+local DEFAULT_STATUS_STYLE = 'minimal'
+
 autocmd.CursorHold = {
   '*',
   function()
-    require("staline").setup("minimal")
+    require("staline").setup(DEFAULT_STATUS_STYLE)
   end,
   once = true,
 }
