@@ -15,14 +15,16 @@
 ![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/h1.png)
 
 
-A neovim configuration that looks good and is fast (startuptime < 0.1s).
+A neovim configuration that looks good and is fast (startuptime < 0.5s).
 
 <div align="center">
 
 ```txt
 Tested on a pretty low end laptop
-On Power   : 0.040s - 0.075s
-On Battery : 0.060s - 0.095s
+On Power                              : 0.020s - 0.025s
+On Battery                            : 0.025s - 0.045s
+On Power (with firefox and discord)   : 0.020s - 0.035s
+On Battery (with firefox and discord) : 0.025s - 0.050s
 ```
 
 </div>
@@ -106,8 +108,6 @@ There are three prebuilt styles
 local DEFAULT_STATUS_STYLE = 'minimal' -- minimal | fancy | monochrome
 ```
 + Reload Neovim
-
-+ **OR** To change the style without reloading for a temporary basis use the `:StatusStyle` command
 
 ## Some Points To be Noted
 + This is meant to be a simple base config which can be extended and customised very easily.
