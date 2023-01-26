@@ -70,16 +70,6 @@ return require('packer').startup({ function(use)
     config = "require('plugins.utils.telescope')"
   }
   use {
-    "goolord/alpha-nvim",
-    requires = { "kyazdani42/nvim-web-devicons" },
-    config = "require('plugins.ui.alpha')",
-    cmd = {
-      "Alpha",
-      "AlphaRedraw"
-    },
-    event = "BufWinEnter"
-  }
-  use {
     'neovim/nvim-lspconfig',
     config = "require('plugins.lsp.lspconfig')",
     event = "CursorHold",

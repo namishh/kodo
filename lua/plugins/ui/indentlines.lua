@@ -4,7 +4,7 @@ require("indent_blankline").setup {
   filetype_exclude = {
     "help",
     "terminal",
-    "alpha",
+    "dashboard",
     "packer",
     "lspinfo",
     "TelescopePrompt",

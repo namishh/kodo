@@ -21,10 +21,10 @@ A neovim configuration that looks good and is fast (startuptime < 0.5s).
 
 ```txt
 Tested on a pretty low end laptop
-On Power                              : 0.020s - 0.025s
+On Power                              : 0.015s - 0.025s
 On Battery                            : 0.025s - 0.045s
 On Power (with firefox and discord)   : 0.020s - 0.035s
-On Battery (with firefox and discord) : 0.025s - 0.040s
+On Battery (with firefox and discord) : 0.025s - 0.045s
 ```
 
 </div>
@@ -124,16 +124,20 @@ local DEFAULT_STATUS_STYLE = 'minimal' -- minimal | fancy | monochrome
 
 ![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/n4.png)
 
+## FAQ
 
++ __Will you switch to lazy.nvim?__
+No I wont
 
 ## Todo
 - [x]  ~~better screenshots~~
-- [ ]  more, MORE fast `how do i do it pls help uwu`
+- [x]  more, MORE fast (15 ms is fine ig)
 - [x]  ~~custom statusline~~ (i am proud)
 - [x]  ~~learn markdown bcoz i suck at it~~
 - [x]  ~~fix autoformatting on save~~
 - [ ] add some more themes
-- [ ] make more status styles
+- [ ] fix custom dashboard
+- [ ] make custom tabline
 
 ## Special Thanks 
 This config wouldn't have been possible without these chads!
