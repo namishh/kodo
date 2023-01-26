@@ -24,7 +24,7 @@ Tested on a pretty low end laptop
 On Power                              : 0.020s - 0.025s
 On Battery                            : 0.025s - 0.045s
 On Power (with firefox and discord)   : 0.020s - 0.035s
-On Battery (with firefox and discord) : 0.025s - 0.050s
+On Battery (with firefox and discord) : 0.025s - 0.040s
 ```
 
 </div>
@@ -137,6 +137,6 @@ local DEFAULT_STATUS_STYLE = 'minimal' -- minimal | fancy | monochrome
 
 ## Special Thanks 
 This config wouldn't have been possible without these chads!
-+ [dharmx](https://github.com/dharmx/KrakeNvim/)
++ [dharmx](https://github.com/dharmx/nvim/)
 + [siduck](https://github.com/NvChad/NvChad)
 

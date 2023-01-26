@@ -4,16 +4,23 @@ return require('packer').startup({ function(use)
   use {
     'akinsho/bufferline.nvim',
     requires = 'kyazdani42/nvim-web-devicons',
-    event = 'CursorHold',
+    event = { "BufNewFile", "TabEnter" },
+    setup = function()
+      vim.api.nvim_create_autocmd("FileType", {
+        callback = function()
+          if #vim.fn.getbufinfo { buflisted = 1 } >= 1 then
+            require("packer").loader "bufferline.nvim"
+          end
+        end
+      })
+    end,
+
     branch = "dev",
     config = "require('plugins.ui.bufferline')"
   }
   use {
     'wbthomason/packer.nvim',
     cmd = 'require("plugins.commands").packer'
-  }
-  use {
-    'lewis6991/impatient.nvim'
   }
   use {
     'norcalli/nvim-colorizer.lua',
@@ -49,6 +56,7 @@ return require('packer').startup({ function(use)
     "folke/which-key.nvim",
     module = "which-key",
     event = 'CursorHold',
+    wants = "toggleterm.nvim",
     keys = { "<leader>", '"', "'", "`" },
     config = "require('plugins.utils.which-key')"
   }

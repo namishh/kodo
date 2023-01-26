@@ -1,6 +1,5 @@
 local cmd = vim.cmd
 local opt = vim.opt
-local autocmd = require("core.autocmds")
 local diagnostic = vim.diagnostic
 local g = vim.g
 
@@ -43,14 +42,11 @@ diagnostic.config { signs = false } -- Removing diagnostic column
 opt.updatetime = 250
 opt.shadafile = "NONE"
 opt.shadafile = ""
-opt.formatoptions:remove { "c", "r", "o" }
 opt.swapfile = false
 opt.shortmess:append "sI"
 
--- Formatting Code on Save
-autocmd.BufWritePre = {
-  '*',
-  function()
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+  callback = function()
     for _, client in ipairs(vim.lsp.get_active_clients()) do
       if client.attached_buffers[vim.api.nvim_get_current_buf()] then
         vim.lsp.buf.format()
@@ -60,17 +56,18 @@ autocmd.BufWritePre = {
       end
     end
   end
-}
+})
 
 local DEFAULT_STATUS_STYLE = 'minimal'
 
-autocmd.CursorHold = {
-  '*',
-  function()
+-- Formatting Code on Save
+vim.api.nvim_create_autocmd({ "CursorHold" }, {
+  callback = function()
     require("staline").setup(DEFAULT_STATUS_STYLE)
-  end,
-  once = true,
-}
+  end
+})
+
+
 
 -- Disabling some built in plugins
 local builtins = {
@@ -93,6 +90,8 @@ local builtins = {
   "vimballPlugin",
   "zip",
   "zipPlugin",
+  "logipat",
+  "matchit",
   "tutor",
   "rplugin",
   "syntax",
@@ -103,6 +102,8 @@ local builtins = {
   "ftplugin",
   "archlinux",
   "fzf",
+  "tutor_mode_plugin",
+  "sleuth",
   "vimgrep"
 }
 
