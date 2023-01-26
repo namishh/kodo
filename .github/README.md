@@ -29,7 +29,7 @@ On Battery (with firefox and discord) : 0.025s - 0.040s
 
 </div>
 
-Has something like 30 plugins and but is still fast becuase of holy lazy loading.
+Has something like 29 plugins and but is still fast becuase of holy lazy loading.
 
 
 ## Plugins And Features
