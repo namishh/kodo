@@ -36,8 +36,7 @@ for _, k in ipairs(servers) do
     capabilities = M.capabilities,
   }
 end
-
-lspconfig.sumneko_lua.setup {
+lspconfig.lua_ls.setup {
   on_attach = M.on_attach,
   capabilities = M.capabilities,
 

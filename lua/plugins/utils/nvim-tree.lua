@@ -46,18 +46,17 @@ require 'nvim-tree'.setup {
     hide_root_folder = true,
     mappings = {
       list = {
-        { key = 'l', action = "edit" },
-        { key = 'o', action = "edit" },
+        { key = 'l',    action = "edit" },
+        { key = 'o',    action = "edit" },
         { key = '<cr>', action = "edit" },
-        { key = 'I', action = "toggle_ignored" },
-        { key = 'H', action = "toggle_dotfiles" },
-        { key = 'R', action = "refresh" },
-        { key = '=', action = "preview" },
-        { key = 'X', action = "xdg_open", action_cb = xdg_open }
+        { key = 'I',    action = "toggle_ignored" },
+        { key = 'H',    action = "toggle_dotfiles" },
+        { key = 'R',    action = "refresh" },
+        { key = '=',    action = "preview" },
+        { key = 'X',    action = "xdg_open",       action_cb = xdg_open }
       }
     }
   },
-  open_on_setup = true,
 }
 vim.cmd [[
 autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif

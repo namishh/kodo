@@ -1,5 +1,5 @@
-vim.cmd.colorscheme("nirvana")
+vim.cmd.colorscheme("pop")
 require("plugins")
 require("core.options")
 require("core.keybinds")
-require("dash").open()
+require("ui")

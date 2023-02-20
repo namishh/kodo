@@ -25,59 +25,79 @@ cmp_window.info = function(self)
 end
 
 local kind_icons = {
-  Text = "",
-  Method = "m",
-  Function = "",
-  Constructor = "",
-  Field = "",
-  Variable = "",
-  Class = "",
-  Interface = "",
-  Module = "",
-  Property = "",
-  Unit = "",
-  Value = "",
-  Enum = "",
-  Keyword = "",
-  Snippet = "",
-  Color = "",
-  File = "",
-  Reference = "",
-  Folder = "",
-  EnumMember = "",
-  Constant = "",
-  Struct = "",
-  Event = "",
-  Operator = "",
-  TypeParameter = "",
+  Namespace = " ",
+  Text = " ",
+  Method = " ",
+  Function = " ",
+  Constructor = " ",
+  Field = " ",
+  Variable = " ",
+  Class = " ",
+  Interface = " ",
+  Module = " ",
+  Property = " ",
+  Unit = " ",
+  Number = " ",
+  Constant = " ",
+  Enum = " ",
+  EnumMember = " ",
+  Keyword = " ",
+  Snippet = " ",
+  Color = " ",
+  File = " ",
+  Reference = " ",
+  Folder = " ",
+  Struct = " ",
+  Event = " ",
+  Operator = " ",
+  TypeParameter = " ",
+  Table = " ",
+  Object = " ",
+  Tag = " ",
+  Array = " ",
+  Boolean = " ",
+  Value = " ",
+  Null = " ",
+  String = " ",
+  Calendar = " ",
+  Watch = " ",
+  Package = " ",
+  Copilot = " ",
 }
 
 local options = {
-  window = {
-    completion = {
-      border = border "CmpBorder",
-      winhighlight = "Normal:CmpPmenu,CursorLine:PmenuSel,Search:None",
-    },
-    documentation = {
-      border = border "CmpDocBorder",
-    },
-  },
   snippet = {
     expand = function(args)
       require("luasnip").lsp_expand(args.body)
     end,
   },
+  preselect = cmp.PreselectMode.Item,
+  window = {
+    documentation = {
+      border = "solid",
+    },
+    completion = {
+      border = "none",
+      completeopt = "menu,menuone,noinsert",
+      keyword_length = 1,
+    },
+  },
+  view = {
+    entries = {
+      name = "custom",
+    },
+  },
   formatting = {
-    format = function(_, vim_item)
-      local icons = kind_icons
-      vim_item.kind = string.format("%s %s", icons[vim_item.kind], vim_item.kind)
-      return vim_item
+    fields = { "abbr", "kind", "menu" },
+    format = function(_, item)
+      item.kind = kind_icons[item.kind] .. " " .. item.kind
+      return item
     end,
   },
   mapping = {
     ["<C-p>"] = cmp.mapping.select_prev_item(),
     ["<C-n>"] = cmp.mapping.select_next_item(),
-    ["<C-d>"] = cmp.mapping.scroll_docs(-4),
+    ["<C-d>"] = cmp.mapping.scroll_docs( -4),
     ["<C-f>"] = cmp.mapping.scroll_docs(4),
     ["<C-Space>"] = cmp.mapping.complete(),
     ["<C-e>"] = cmp.mapping.close(),
@@ -100,7 +120,7 @@ local options = {
     ["<S-Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
-      elseif require("luasnip").jumpable(-1) then
+      elseif require("luasnip").jumpable( -1) then
         vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<Plug>luasnip-jump-prev", true, true, true), "")
       else
         fallback()

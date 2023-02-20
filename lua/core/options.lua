@@ -12,7 +12,7 @@ opt.list = true
 opt.splitright = true
 opt.termguicolors = true
 opt.conceallevel = 0
-opt.showtabline = 2
+opt.showtabline = 0
 opt.showmode = false
 opt.backup = false
 opt.number = true
@@ -37,7 +37,7 @@ opt.expandtab = true
 opt.fillchars:append('eob: ')
 opt.listchars:append "space: "
 cmd('set lazyredraw')
-opt.laststatus = 3 -- Global Status
+opt.laststatus = 0 -- Global Status
 diagnostic.config { signs = false } -- Removing diagnostic column
 opt.updatetime = 250
 opt.shadafile = "NONE"
@@ -45,6 +45,7 @@ opt.shadafile = ""
 opt.swapfile = false
 opt.shortmess:append "sI"
 
+-- Formatting Code on Save
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   callback = function()
     for _, client in ipairs(vim.lsp.get_active_clients()) do
@@ -57,17 +58,6 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
     end
   end
 })
-
-local DEFAULT_STATUS_STYLE = 'minimal'
-
--- Formatting Code on Save
-vim.api.nvim_create_autocmd({ "CursorHold" }, {
-  callback = function()
-    require("staline").setup(DEFAULT_STATUS_STYLE)
-  end
-})
-
-
 
 -- Disabling some built in plugins
 local builtins = {

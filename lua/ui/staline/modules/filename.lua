@@ -15,6 +15,8 @@ local M = function()
     local devicons = require("nvim-web-devicons")
     local ft_icon = devicons.get_icon(filename)
     icon = (ft_icon ~= nil and " " .. ft_icon) or ""
+  else
+    filename = 'Nvide'
   end
   return "%#StalineFilename#" .. " " .. icon .. "  " .. filename .. "  "
 end

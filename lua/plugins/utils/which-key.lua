@@ -19,7 +19,7 @@ local mappings = {
   },
   f = {
     name = 'Telescope',
-    f = { ":Telescope media<cr>", "Find Files" },
+    f = { ":Telescope find_files<cr>", "Find Files" },
     g = { ":Telescope oldfiles<cr>", "Recently Opened" },
     r = { ":Telescope live_grep<cr>", "Find String" },
   },

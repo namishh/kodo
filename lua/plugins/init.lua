@@ -1,23 +1,7 @@
 vim.cmd [[packadd packer.nvim]]
-
-return require('packer').startup({ function(use)
-  use {
-    'akinsho/bufferline.nvim',
-    requires = 'kyazdani42/nvim-web-devicons',
-    event = { "BufNewFile", "TabEnter" },
-    setup = function()
-      vim.api.nvim_create_autocmd("FileType", {
-        callback = function()
-          if #vim.fn.getbufinfo { buflisted = 1 } >= 1 then
-            require("packer").loader "bufferline.nvim"
-          end
-        end
-      })
-    end,
-
-    branch = "dev",
-    config = "require('plugins.ui.bufferline')"
-  }
+local packer = require("packer")
+packer.config.compile_path = vim.fn.stdpath("config") .. "/lua/packer_compiled.lua"
+return packer.startup({ function(use)
   use {
     'wbthomason/packer.nvim',
     cmd = 'require("plugins.commands").packer'
@@ -162,10 +146,6 @@ return require('packer').startup({ function(use)
     },
     after = "telescope.nvim",
   })
-  use {
-    "elkowar/yuck.vim",
-    ft = "yuck"
-  }
   -- End Of Plugins
 end,
 })

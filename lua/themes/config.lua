@@ -91,6 +91,18 @@ M.highlights_base = function(colors)
     TabLine = { fg = colors.color2, bg = colors.background },
     TabLineSel = { fg = colors.foreground, bg = colors.background },
     TabLineFill = { fg = colors.foreground, bg = colors.background },
+    CmpItemKindClass = { link = "Type" },
+    CmpItemKindConstant = { link = "Constant" },
+    CmpItemKindConstructor = { link = "TSConstructor" },
+    CmpItemKindFunction = { link = "Function" },
+    CmpItemKindKeyword = { link = "Keyword" },
+    CmpItemKindOperator = { link = "Operator" },
+    CmpItemKindProperty = { link = "TSProperty" },
+    CmpItemKindStruct = { link = "Structure" },
+    CmpItemKindTypeParameter = { link = "TSParameter" },
+    CmpItemKindUnit = { link = "Number" },
+    CmpItemKindValue = { link = "String" },
+    CmpItemKindVariable = { link = "Identifier" },
     CmpDocumentationBorder = { fg = colors.foreground, bg = colors.background },
     CmpItemAbbr = { fg = colors.foreground, bg = colors.background },
     CmpItemAbbrDeprecated = { fg = colors.color2, bg = colors.background },
@@ -98,7 +110,6 @@ M.highlights_base = function(colors)
     CmpItemAbbrMatchFuzzy = { fg = colors.color7, bg = colors.background },
     CmpItemKind = { fg = colors.color12, bg = colors.background },
     CmpItemMenu = { fg = colors.color2, bg = colors.background },
-
     -- treesitter
     TSAttribute = { fg = colors.color4 },
     TSBoolean = { fg = colors.color12 },
@@ -158,14 +169,11 @@ M.highlights_base = function(colors)
     TSTypeBuiltin = { fg = colors.color3 },
     TSVariable = { fg = colors.color7 },
     TSVariableBuiltin = { fg = colors.color4 },
-
     -- Diagnostic
     DiagnosticError = { fg = colors.color9 },
     DiagnosticWarn = { fg = colors.color11 },
     DiagnosticInfo = { fg = colors.color4 },
     DiagnosticHint = { fg = colors.color6 },
-
-
     -- diff
     diffAdded = { fg = colors.color4 },
     diffRemoved = { fg = colors.color1 },
@@ -175,68 +183,53 @@ M.highlights_base = function(colors)
     diffFile = { fg = colors.color7 },
     diffLine = { fg = colors.color1 },
     diffIndexLine = { fg = colors.color12 },
-
-
     -- GitSigns
     GitSignsAdd = { fg = colors.color4 }, -- diff mode: Added line |diff.txt|
     GitSignsChange = { fg = colors.color5 }, -- diff mode: Changed line |diff.txt|
     GitSignsDelete = { fg = colors.color1 }, -- diff mode: Deleted line |diff.txt|
-
     -- Telescope
 
     TelescopeBorder = {
       fg = colors.cursorline,
       bg = colors.cursorline,
     },
-
     TelescopePromptBorder = {
       fg = colors.color8,
       bg = colors.color8,
     },
-
     TelescopePromptNormal = {
       fg = colors.foreground,
       bg = colors.color8,
     },
-
     TelescopePromptPrefix = {
       fg = colors.color1,
       bg = colors.color8,
     },
-
     TelescopeNormal = { bg = colors.cursorline },
-
     TelescopePreviewTitle = {
       fg = colors.cursorline,
       bg = colors.cursorline,
     },
-
     TelescopePromptTitle = {
       fg = colors.background,
       bg = colors.color9,
     },
-
     TelescopeResultsTitle = {
       fg = colors.cursorline,
       bg = colors.cursorline,
     },
-
     TelescopeSelection = { bg = colors.color0, fg = colors.foreground },
-
     TelescopeResultsDiffAdd = {
       fg = colors.color10,
     },
-
     TelescopeResultsDiffChange = {
       fg = colors.color11,
     },
-
     TelescopeResultsDiffDelete = {
       fg = colors.color9,
     },
     -- Indent Blank Line
     IndentBlanklineChar = { fg = colors.color0, bg = colors.background },
-
     -- NvimTree
     NvimTreeNormal = { fg = colors.foreground, bg = colors.background },
     NvimTreeNormalNC = { fg = colors.foreground, bg = colors.background },
@@ -253,12 +246,10 @@ M.highlights_base = function(colors)
     NvimTreeOpenedFolderName = { fg = colors.foreground },
     NvimTreeEmptyFolderName = { fg = colors.foreground },
     NvimTreeStatusLineNC = { bg = colors.background, fg = colors.background },
-
     -- NeoVim
     healthError = { fg = colors.color1 },
     healthSuccess = { fg = colors.color4 },
     healthWarning = { fg = colors.color5 },
-
     -- BufferLine
     BufferLineIndicatorSelected = { fg = colors.color2 },
     BufferLineFill = { fg = colors.background, bg = colors.background },
@@ -319,23 +310,21 @@ M.highlights_base = function(colors)
     StalineLspInfoIconMono = { bg = colors.black, fg = colors.color7 },
     StalineLspHintsIconMono = { bg = colors.black, fg = colors.color7 },
     StalineLspWarningIconMono = { bg = colors.black, fg = colors.color7 },
-
     StalineMonoMode = { bg = colors.contrast, fg = colors.color7 },
-
-    -- Alpha
-    AlphaHeader = { fg = colors.color12 },
-    AlphaButton = { fg = colors.color12 },
-    AlphaShortcut = { bg = colors.color12, fg = colors.black, bold = true },
-    AlphaFooter = { fg = colors.color12, italic = true },
-    AlphaComment = { fg = colors.color12, italic = true },
-
+    -- UI
+    BufflineBufOnActive = { italic = true, bold = true },
+    BuffLineBufOnModified = { fg = colors.color10 },
+    DashAscii = { fg = colors.color12, bg = colors.background },
+    DashButtons = { fg = colors.color12, bg = colors.background },
+    DashMessage = { fg = colors.color12, bg = colors.background, italic = true },
+    DashFooter = { fg = colors.comment, bg = colors.background },
+    --colors
     Blue = { fg = colors.color12 },
     Cyan = { fg = colors.color14 },
     Red = { fg = colors.color9 },
     Yellow = { fg = colors.color11 },
     Green = { fg = colors.color10 },
     Magenta = { fg = colors.color13 },
-
     -- Devicons
     DevIconDefault = { fg = colors.color9 },
     DevIconc = { fg = colors.color12 },
@@ -364,7 +353,6 @@ M.highlights_base = function(colors)
     DevIconxz = { fg = colors.color11 },
     DevIconzip = { fg = colors.color11 },
     DevIconZig = { fg = colors.color9 },
-
     PackerPackageName = { fg = colors.color1 },
     PackerSuccess = { fg = colors.color2 },
     PackerStatusSuccess = { fg = colors.color1 },
