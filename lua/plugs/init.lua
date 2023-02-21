@@ -1,14 +1,15 @@
 vim.cmd [[packadd packer.nvim]]
 local packer = require("packer")
+
 packer.config.compile_path = vim.fn.stdpath("config") .. "/lua/packer_compiled.lua"
 return packer.startup({ function(use)
   use {
     'wbthomason/packer.nvim',
-    cmd = 'require("plugins.commands").packer'
+    cmd = 'require("plugs.cmds").packer'
   }
   use {
     'norcalli/nvim-colorizer.lua',
-    config = "require('plugins.ui.colorizer')",
+    config = "require('plugs.ui.colorizer')",
     event = 'CursorHold',
   }
   use {
@@ -16,8 +17,8 @@ return packer.startup({ function(use)
     run = ":TSUpdate",
     module = "nvim-treesitter",
     event = "BufRead",
-    cmd = 'require("plugins.commands").treesitter',
-    config = "require('plugins.treesitter.treesitter')"
+    cmd = 'require("plugs.cmds").treesitter',
+    config = "require('plugs.ts.treesitter')"
   }
   use {
     'windwp/nvim-ts-autotag',
@@ -27,13 +28,13 @@ return packer.startup({ function(use)
   use {
     'kyazdani42/nvim-tree.lua',
     cmd = "NvimTreeToggle",
-    config = "require('plugins.utils.nvim-tree')"
+    config = "require('plugs.util.nvim-tree')"
   }
-  use { "kyazdani42/nvim-web-devicons", event = 'CursorHold', config = "require('plugins.ui.devicons')",
+  use { "kyazdani42/nvim-web-devicons", event = 'CursorHold', config = "require('plugs.ui.devicons')",
     module = "nvim-web-devicons", }
   use {
     'windwp/nvim-autopairs',
-    config = "require('plugins.treesitter.autopair')",
+    config = "require('plugs.ts.autopair')",
     after = "nvim-cmp"
   }
   use {
@@ -42,7 +43,7 @@ return packer.startup({ function(use)
     event = 'CursorHold',
     wants = "toggleterm.nvim",
     keys = { "<leader>", '"', "'", "`" },
-    config = "require('plugins.utils.which-key')"
+    config = "require('plugs.util.which-key')"
   }
   use {
     'nvim-lua/plenary.nvim',
@@ -51,11 +52,11 @@ return packer.startup({ function(use)
   use {
     'nvim-telescope/telescope.nvim',
     cmd = "Telescope",
-    config = "require('plugins.utils.telescope')"
+    config = "require('plugs.util.telescope')"
   }
   use {
     'neovim/nvim-lspconfig',
-    config = "require('plugins.lsp.lspconfig')",
+    config = "require('plugs.lsp.lspconfig')",
     event = "CursorHold",
     --cmd = "LspStart",
     opt = true,
@@ -67,12 +68,12 @@ return packer.startup({ function(use)
   }
   use { 'hrsh7th/nvim-cmp',
     after = "friendly-snippets",
-    config = function() require('plugins.lsp.cmp') end
+    config = function() require('plugs.lsp.cmp') end
   }
   use {
     'L3MON4D3/LuaSnip',
     after = "nvim-cmp",
-    config = "require('plugins.lsp.luasnip')"
+    config = "require('plugs.lsp.luasnip')"
   }
   use {
     'saadparwaiz1/cmp_luasnip',
@@ -94,7 +95,6 @@ return packer.startup({ function(use)
     'hrsh7th/cmp-path',
     after = "cmp-buffer"
   }
-  use { "dstein64/vim-startuptime", cmd = "StartupTime" }
   use { "williamboman/mason.nvim",
     cmd = {
       "MasonInstall",
@@ -103,11 +103,11 @@ return packer.startup({ function(use)
       "MasonUninstallAll",
       "MasonLog",
     },
-    config = "require('plugins.lsp.mason')",
+    config = "require('plugs.lsp.mason')",
   }
   use {
     "akinsho/toggleterm.nvim",
-    config = "require('plugins.utils.toggleterm')",
+    config = "require('plugs.util.toggleterm')",
     event = 'CursorHold',
   }
   use { "lewis6991/gitsigns.nvim",
@@ -127,12 +127,12 @@ return packer.startup({ function(use)
     end }
   use {
     "lukas-reineke/indent-blankline.nvim",
-    config = "require('plugins.ui.indentlines')",
+    config = "require('plugs.ui.indentlines')",
     event = "CursorHold"
   }
   use {
     "terrortylor/nvim-comment",
-    config = "require('plugins.utils.comments')",
+    config = "require('plugs.util.comments')",
     event = "CursorHold"
   }
   use({
@@ -146,6 +146,6 @@ return packer.startup({ function(use)
     },
     after = "telescope.nvim",
   })
-  -- End Of Plugins
+  -- End Of plugs
 end,
 })

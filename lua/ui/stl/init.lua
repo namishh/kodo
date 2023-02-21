@@ -1,12 +1,12 @@
 local run = function(STYLE)
-  local mode = require("ui.staline.modules.mode")
-  local filename = require("ui.staline.modules.filename")
-  local branch = require("ui.staline.modules.branch")
-  local diff = require("ui.staline.modules.diff")
-  local folder = require("ui.staline.modules.folder")
-  local position = require("ui.staline.modules.position")
-  local diagnostics = require("ui.staline.modules.diagnostics")
-  local lsp = require("ui.staline.modules.lsp")
+  local mode = require("ui.stl.modules.mode")
+  local filename = require("ui.stl.modules.filename")
+  local branch = require("ui.stl.modules.branch")
+  local diff = require("ui.stl.modules.diff")
+  local folder = require("ui.stl.modules.folder")
+  local position = require("ui.stl.modules.position")
+  local diagnostics = require("ui.stl.modules.diagnostics")
+  local lsp = require("ui.stl.modules.lsp")
   return table.concat {
     mode(STYLE),
     filename(),

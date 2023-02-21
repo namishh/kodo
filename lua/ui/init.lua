@@ -1,23 +1,16 @@
-local DEFAULT_STATUS_STYLE = 'minimal'
+local DEFAULT_STATUS_STYLE = "minimal"
 
-local ispcthere, _ = pcall(require, "packer_compiled")
-
-if not ispcthere then
-  vim.cmd [[
-    :PackerSync
-  ]]
-end
 
 vim.api.nvim_create_autocmd({ "CursorHold" }, {
   callback = function()
     vim.opt.laststatus = 3 -- Global Status
-    require("ui.staline").setup(DEFAULT_STATUS_STYLE)
+    require("ui.stl").setup(DEFAULT_STATUS_STYLE)
   end
 })
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   pattern = "*",
   callback = function()
-    require("ui.buff").setup()
+    require("ui.buf").setup()
   end,
 })
 

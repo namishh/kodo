@@ -40,7 +40,7 @@ M.close_buffer = function(bufnr)
     vim.cmd(vim.bo.buflisted and "set nobl | enew" or "hide")
   else
     bufnr = bufnr or vim.api.nvim_get_current_buf()
-    require("ui.buff.fn").tabuflinePrev()
+    require("ui.buf.fn").tabuflinePrev()
     vim.cmd("confirm bd" .. bufnr)
   end
 end

@@ -57,7 +57,7 @@ require('telescope').setup {
     media = {
       backend = "ueberzug", -- "ueberzug"|"viu"|"chafa"|"jp2a"|catimg
       cache_path = "/tmp/tele.media.cache",
-      hidden = true
+      hidden = false
     }
   }
 }

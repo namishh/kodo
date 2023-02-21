@@ -1,17 +1,18 @@
 -- so after a very unsucessful attempt at ripping off nvchad, i am making my own shit
 local devicons = require("nvim-web-devicons")
+local config = require("core.cfg").bufferline
 local M = {}
 -- creating commands
 vim.cmd "function! BufflineGoToBuf(bufnr,b,c,d) \n execute 'b'..a:bufnr \n endfunction"
 vim.cmd [[
    function! BufflineKillBuf(bufnr,b,c,d)
-        call luaeval('require("ui.buff.fn").close_buffer(_A)', a:bufnr)
+        call luaeval('require("ui.buf.fn").close_buffer(_A)', a:bufnr)
   endfunction]]
 vim.api.nvim_create_user_command("BufflinePrev", function()
-  require("ui.buff.fn").tabuflinePrev()
+  require("ui.buf.fn").tabuflinePrev()
 end, {})
 vim.api.nvim_create_user_command("BufflineNext", function()
-  require("ui.buff.fn").tabuflineNext()
+  require("ui.buf.fn").tabuflineNext()
 end, {})
 local createTab = function(buf)
   local close_btn = "%" .. buf .. "@BufflineKillBuf@  %X"
@@ -88,11 +89,14 @@ M.getTabline = function()
       if not icon then
         icon, icon_hl = devicons.get_icon "default_icon"
       end
-
-      icon = (
-          vim.api.nvim_get_current_buf() == buf and new_hl(icon_hl, "BuffLineBufOn") .. " " .. icon
-          or new_hl(icon_hl, "BuffLineBufOff") .. " " .. icon
-          )
+      if config.icons then
+        icon = (
+            vim.api.nvim_get_current_buf() == buf and new_hl(icon_hl, "BuffLineBufOn") .. " " .. icon
+            or new_hl(icon_hl, "BuffLineBufOff") .. " " .. icon
+            )
+      else
+        icon = ''
+      end
       local conditions = vim.tbl_contains(excludedFileTypes, vim.bo[buf].ft)
       if conditions then goto do_nothing else filename = "  " .. icon .. " %#BufflineEmpty#" .. createTab(buf) end
       buffline = buffline .. filename
@@ -113,7 +117,7 @@ end
 M.setup = function()
   if #vim.fn.getbufinfo { buflisted = 1 } >= 1 then
     vim.o.showtabline = 2
-    vim.o.tabline = '%!v:lua.require("ui.buff").getTabline()'
+    vim.o.tabline = '%!v:lua.require("ui.buf").getTabline()'
   end
 end
 vim.cmd [[

@@ -1,6 +1,6 @@
 local M = {}
 local hi = vim.api.nvim_set_hl
-local config = require('themes.config')
+local config = require('themes.cfg')
 
 function M.highlight_all(colors, opts)
   if opts.transparent_background == true then

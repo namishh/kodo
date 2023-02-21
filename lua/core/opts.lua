@@ -45,6 +45,8 @@ opt.shadafile = ""
 opt.swapfile = false
 opt.shortmess:append "sI"
 
+local color = require("core.cfg").colorscheme
+vim.cmd.colorscheme(color)
 -- Formatting Code on Save
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   callback = function()
