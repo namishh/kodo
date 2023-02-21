@@ -32,8 +32,8 @@ Has something like 26 plugins and but is still fast becuase of holy lazy loading
 
 ## Plugins And Features
 + Lazy loading done most of the time to get blazingly moderate startup times.
-+ A Minimal Custom [Bufferline](https://github.com/chadcat5207/nvide/tree/main/lua/ui/buff)
-+ Cool Looking Custom [Statusline](https://github.com/chadcat5207/nvide/tree/main/lua/ui/staline)
++ A Minimal Custom [Bufferline](https://github.com/chadcat5207/nvide/tree/main/lua/ui/buf)
++ Cool Looking Custom [Statusline](https://github.com/chadcat5207/nvide/tree/main/lua/ui/stl)
 + Parsing with [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 + A File Tree with [nvim-tree](https://github.com/kyazdani42/nvim-tree.lua)
 + Fast file finding and more with [telescope](https://github.com/nvim-telescope/telescope.nvim/)
