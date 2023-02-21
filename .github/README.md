@@ -77,7 +77,7 @@ export PATH=$PATH:~/.local/share/nvim/mason/bin
 
 ## Custom Colorschemes
 I know it sucks but you will have to do it manually
-+ Make a new color scheme  `/lua/themes/colorschemes/scheme.lua` (copy the default colorscheme and change the colors) 
++ Make a new color scheme  `/lua/themes/schemes/scheme.lua` (copy the default colorscheme and change the colors) 
 + Make a colors file for it `/colors/scheme.lua`
 
 ```lua
@@ -88,10 +88,10 @@ require("themes").setup({
 })
 ```
 
-+ Set the color scheme in `init.lua`
++ Set the color scheme in `lua/core/cfg.lua`
 
 ```lua
-vim.cmd.colorscheme("scheme")
+M.colorscheme = 'pop'
 ```
 
 + Reload Neovim
@@ -99,11 +99,10 @@ vim.cmd.colorscheme("scheme")
 ## Statusline Styles 
 **Warning:** This section contains the worst ever code written
 There are three prebuilt styles
-+ To change the style edit `/lua/core/options.lua`
-+ Set the style in `DEFAULT_STATUS_STYLE` variable in line 65
++ To change the style edit `/lua/core/cfg.lua`
 
 ```lua
-local DEFAULT_STATUS_STYLE = 'minimal' -- minimal | fancy | monochrome
+M.statusstyle = 'minimal' -- minimal | fancy | monochrome
 ```
 + Reload Neovim
 
