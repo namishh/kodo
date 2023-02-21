@@ -15,7 +15,7 @@
 ![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/h1.png)
 
 
-A neovim configuration that looks good and is fast (startuptime < 0.5s).
+A neovim configuration that looks good and is fast (startuptime < 0.05s).
 
 <div align="center">
 
@@ -23,23 +23,21 @@ A neovim configuration that looks good and is fast (startuptime < 0.5s).
 Tested on a pretty low end laptop
 On Power                              : 0.015s - 0.025s
 On Battery                            : 0.025s - 0.045s
-On Power (with firefox and discord)   : 0.020s - 0.035s
-On Battery (with firefox and discord) : 0.025s - 0.045s
 ```
 
 </div>
 
-Has something like 29 plugins and but is still fast becuase of holy lazy loading.
+Has something like 26 plugins and but is still fast becuase of holy lazy loading.
 
 
 ## Plugins And Features
 + Lazy loading done most of the time to get blazingly moderate startup times.
-+ A Minimal and Stylish bufferline with [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
-+ Cool Looking Custom [Statusline](https://github.com/dark-Jedi2108/nvide/tree/main/lua/staline)
++ A Minimal Custom [Bufferline](https://github.com/chadcat5207/nvide/tree/main/lua/ui/buff)
++ Cool Looking Custom [Statusline](https://github.com/chadcat5207/nvide/tree/main/lua/ui/staline)
 + Parsing with [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 + A File Tree with [nvim-tree](https://github.com/kyazdani42/nvim-tree.lua)
 + Fast file finding and more with [telescope](https://github.com/nvim-telescope/telescope.nvim/)
-+ Dope dashboard with [alpha-nvim](https://github.com/goolord/alpha-nvim/)
++ Dope [dashboard](https://github.com/chadcat5207/nvide/tree/main/lua/ui/dash) inspired by nvchad
 + Snippets with [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
 + Toggle-able Terminals with [toggleterm](https://github.com/akinsho/toggleterm.nvim)
 + Color Hightlighting with [nvim-colorizer](https://github.com/norcalli/nvim-colorizer.lua)
@@ -116,17 +114,17 @@ local DEFAULT_STATUS_STYLE = 'minimal' -- minimal | fancy | monochrome
 
 ## Screenshots
 
-![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/n1.png)
+![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/1.png)
 
-![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/n2.png)
+![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/2.png)
 
-![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/n3.png)
+![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/3.png)
 
-![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/n4.png)
+![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/4.png)
 
 ## FAQ
 
-+ __Will you switch to lazy.nvim?__
++ __Will you switch to lazy.nvim?__ <br>
 No I wont
 
 ## Todo
@@ -135,9 +133,10 @@ No I wont
 - [x]  ~~custom statusline~~ (i am proud)
 - [x]  ~~learn markdown bcoz i suck at it~~
 - [x]  ~~fix autoformatting on save~~
-- [ ] add some more themes
-- [ ] fix custom dashboard
-- [ ] make custom tabline
+- [x] make custom tabline
+- [x] fix custom dashboard
+- [ ] add some more themes (currently 3)
+- [ ] fix custom tabline
 
 ## Special Thanks 
 This config wouldn't have been possible without these chads!
