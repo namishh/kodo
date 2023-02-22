@@ -1,4 +1,4 @@
-local DEFAULT_STATUS_STYLE = "minimal"
+local DEFAULT_STATUS_STYLE = require('core.cfg').statusstyle
 
 
 vim.api.nvim_create_autocmd({ "CursorHold" }, {

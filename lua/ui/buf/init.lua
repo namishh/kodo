@@ -48,24 +48,18 @@ local createTab = function(buf)
     end
   end
   if buf == vim.api.nvim_get_current_buf() then
-    filename = "%#BufflineBufOnActive#" .. filename .. "%#BufflineEmpty#"
+    filename = "%#BufflineBufOnActive#" .. "  " .. filename
     close_btn = (vim.bo[0].modified and "%" .. buf .. "@BufflineKillBuf@%#BuffLineBufOnModified# ")
-        or ("%#BuffLineBufOnClose#" .. close_btn)
+        or ("%#BuffLineBufOnClose#" .. close_btn) .. " "
   else
+    filename = "%#BufflineBufOnInactive#" .. "  " .. filename
     close_btn = (vim.bo[buf].modified and "%" .. buf .. "@BufflineKillBuf@%#BuffLineBufOffModified# ")
-        or ("%#BuffLineBufOffClose#" .. close_btn)
+        or ("%#BuffLineBufOffClose#" .. close_btn) .. " "
   end
-  return "%" .. buf .. "@BufflineGoToBuf@" .. filename .. "  " .. close_btn .. '  %X'
+  return "%" .. buf .. "@BufflineGoToBuf@" .. filename .. " " .. close_btn .. '%X' .. "%#BufflineEmpty#"
 end
 
 local excludedFileTypes = { 'NvimTree', 'help', 'dasher', 'lir', 'alpha', "toggleterm" }
-
-local new_hl = function(group1, group2)
-  local fg = vim.fn.synIDattr(vim.fn.synIDtrans(vim.fn.hlID(group1)), "fg#")
-  local bg = vim.fn.synIDattr(vim.fn.synIDtrans(vim.fn.hlID(group2)), "bg#")
-  vim.api.nvim_set_hl(0, "Buffline" .. group1 .. group2, { fg = fg, bg = bg })
-  return "%#" .. "Buffline" .. group1 .. group2 .. "#"
-end
 
 local treeWidth = function()
   for _, win in pairs(vim.api.nvim_tabpage_list_wins(0)) do
@@ -77,28 +71,15 @@ local treeWidth = function()
 end
 
 M.getTabline = function()
-  local buffline = "%#BufflineEmpty# "
+  local buffline = "%#BufflineEmpty#"
 
   local counter = 1
   for _, buf in pairs(vim.api.nvim_list_bufs()) do
     if vim.api.nvim_buf_is_valid(buf) and vim.api.nvim_buf_is_loaded(buf) and vim.bo[buf].buflisted then
       local filename = vim.api.nvim_buf_get_name(buf):match("^.+/(.+)$") or ""
 
-      local icon, icon_hl = devicons.get_icon(filename, string.match(filename, "%a+$"))
-
-      if not icon then
-        icon, icon_hl = devicons.get_icon "default_icon"
-      end
-      if config.icons then
-        icon = (
-            vim.api.nvim_get_current_buf() == buf and new_hl(icon_hl, "BuffLineBufOn") .. " " .. icon
-            or new_hl(icon_hl, "BuffLineBufOff") .. " " .. icon
-            )
-      else
-        icon = ''
-      end
       local conditions = vim.tbl_contains(excludedFileTypes, vim.bo[buf].ft)
-      if conditions then goto do_nothing else filename = "  " .. icon .. " %#BufflineEmpty#" .. createTab(buf) end
+      if conditions then goto do_nothing else filename = "%#BufflineEmpty#" .. createTab(buf) end
       buffline = buffline .. filename
       counter = counter + 1
     end
@@ -106,10 +87,10 @@ M.getTabline = function()
   end
   local treespace
   if treeWidth() > 2 then
-    treespace = "%#NvimTreeNormal#" ..
-        string.rep(" ", treeWidth() / 2 - 5) .. "File Explorer" .. string.rep(" ", treeWidth() / 2 - 5)
+    treespace = "%#BufflineTree#" ..
+        string.rep(" ", treeWidth() / 2 - 3) .. "Browse" .. string.rep(" ", treeWidth() / 2 - 2)
   else
-    treespace = "%#NvimTreeNormal#" .. string.rep(" ", treeWidth())
+    treespace = "%#BufflineTree#" .. string.rep(" ", treeWidth())
   end
   return treespace .. buffline
 end

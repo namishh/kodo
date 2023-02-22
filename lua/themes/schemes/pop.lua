@@ -4,9 +4,9 @@ function M.get_colors()
   return {
     comment = "#5a5858",
     comment_light = "#838383",
-    contrast = "#0c0c0c",
-    background = "#111111",
-    black = "#111111",
+    contrast = "#111111",
+    background = "#0c0c0c",
+    black = "#0c0c0c",
     foreground = "#dbdfdf",
     cursorline = "#191919",
     cursor = "#dbdfdf",
