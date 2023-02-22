@@ -1,12 +1,11 @@
 require("plugs")
 
-local ispcthere, _ = pcall(require, "packer_compiled")
+local ispcthere, _ = pcall(require, "plugs.compiled")
 if not ispcthere then
   vim.cmd [[
     :PackerSync
   ]]
 end
-
 require("core.opts")
 require("core.keys")
 require("ui")

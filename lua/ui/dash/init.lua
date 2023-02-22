@@ -105,13 +105,15 @@ M.open = function()
     for i = start + #header + #message - 2, start + #header + #buttons * 2 + 1 do
       vim.api.nvim_buf_add_highlight(buf, dashspace, "DashButtons", i, horiz_pad_index, -1)
     end
+
+    -- adding highlights for keys and icons
     for i = start + #header + #message - 1, start + #header + #buttons * 2 + 1, 2 do
       vim.api.nvim_buf_add_highlight(buf, dashspace, "DashButtonsSpl", i, horiz_pad_index + 40,
         horiz_pad_index + 42 + string.len(buttons[1][2]))
-    end
-    for i = start + #header + #message - 1, start + #header + #buttons * 2 + 1, 2 do
       vim.api.nvim_buf_add_highlight(buf, dashspace, "DashButtonsIco", i, horiz_pad_index + 3, horiz_pad_index + 7)
     end
+
+
     for i = start + #header + #message + #buttons * 2 + #footer - 2, start + #header + #buttons * 2 + 1 + #footer do
       vim.api.nvim_buf_add_highlight(buf, dashspace, "DashFooter", i, horiz_pad_index, -1)
     end

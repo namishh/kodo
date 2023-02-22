@@ -1,6 +1,4 @@
 -- so after a very unsucessful attempt at ripping off nvchad, i am making my own shit
-local devicons = require("nvim-web-devicons")
-local config = require("core.cfg").bufferline
 local M = {}
 -- creating commands
 vim.cmd "function! BufflineGoToBuf(bufnr,b,c,d) \n execute 'b'..a:bufnr \n endfunction"

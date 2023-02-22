@@ -1,7 +1,7 @@
 vim.cmd [[packadd packer.nvim]]
 local packer = require("packer")
+packer.config.compile_path = vim.fn.stdpath("config") .. "/lua/plugs/compiled.lua"
 
-packer.config.compile_path = vim.fn.stdpath("config") .. "/lua/packer_compiled.lua"
 return packer.startup({ function(use)
   use {
     'wbthomason/packer.nvim',

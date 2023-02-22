@@ -1,4 +1,4 @@
-require('packer_compiled')
+require('plugs.compiled')
 local M = {}
 
 M.statusstyle = 'minimal'
@@ -53,8 +53,4 @@ M.dashboard = {
 }
 
 M.colorscheme = 'pop'
-
-M.bufferline = {
-}
-
 return M

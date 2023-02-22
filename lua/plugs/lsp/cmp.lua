@@ -64,7 +64,6 @@ local kind_icons = {
   Package = " ",
   Copilot = " ",
 }
-
 local options = {
   snippet = {
     expand = function(args)
@@ -113,10 +112,11 @@ local options = {
       else
         fallback()
       end
-    end, {
-      "i",
-      "s",
-    }),
+    end,
+      {
+        "i",
+        "s",
+      }),
     ["<S-Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
