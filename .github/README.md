@@ -27,10 +27,11 @@ On Battery                            : 0.025s - 0.045s
 
 </div>
 
-Has something like 26 plugins and but is still fast becuase of holy lazy loading.
+Has something like 25 plugins and but is still fast becuase of holy lazy loading.
 
 
 ## Plugins And Features
++ Comes with 10 premade colourschemes!
 + Lazy loading done most of the time to get blazingly moderate startup times.
 + A Minimal Custom [Bufferline](https://github.com/chadcat5207/nvide/tree/main/lua/ui/buf)
 + Cool Looking Custom [Statusline](https://github.com/chadcat5207/nvide/tree/main/lua/ui/stl)
@@ -132,9 +133,9 @@ No I wont
 - [x]  ~~custom statusline~~ (i am proud)
 - [x]  ~~learn markdown bcoz i suck at it~~
 - [x]  ~~fix autoformatting on save~~
-- [x] make custom tabline
-- [x] fix custom dashboard
-- [ ] add some more themes (currently 3)
+- [x] ~~make custom tabline~~
+- [x] ~~fix custom dashboard~~
+- [ ] add some more themes (currently 10)
 - [ ] fix custom tabline
 
 ## Special Thanks 

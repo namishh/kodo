@@ -151,7 +151,6 @@ M.open = function()
       local target_line = vim.tbl_contains(keybinds, cur) and cur - 2 or keybinds[#keybinds]
       vim.api.nvim_win_set_cursor(0, { target_line, math.floor(vim.o.columns / 2) - 18 })
     end, { buffer = true })
-
     vim.keymap.set("n", "<Down>", function()
       local cur = vim.fn.line "."
       local target_line = vim.tbl_contains(keybinds, cur) and cur + 2 or keybinds[1]
