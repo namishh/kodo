@@ -31,7 +31,7 @@ Has something like 25 plugins and but is still fast becuase of holy lazy loading
 
 
 ## Plugins And Features
-+ Comes with 10 premade colourschemes!
++ Comes with 14 premade colourschemes!
 + Lazy loading done most of the time to get blazingly moderate startup times.
 + A Minimal Custom [Bufferline](https://github.com/chadcat5207/nvide/tree/main/lua/ui/buf)
 + Cool Looking Custom [Statusline](https://github.com/chadcat5207/nvide/tree/main/lua/ui/stl)

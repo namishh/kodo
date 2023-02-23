@@ -10,7 +10,6 @@ function M.get_colors()
     foreground = "#d4d4d4",
     cursorline = "#191919",
     cursor = "#dbdfdf",
-    orange = "#eaac79",
     color0 = "#1e1e1e",
     color1 = "#f44747",
     color2 = "#608b4e",

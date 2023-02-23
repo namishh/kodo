@@ -38,7 +38,7 @@ local logos = setmetatable({
 )
 
 M.dashboard = {
-  header = logos.TEXT,
+  header = logos.UWU,
   buttons = {
     { "  Find File",    "LDR f f", "Telescope find_files" },
     { "  Recent Files", "LDR f g", "Telescope oldfiles" },

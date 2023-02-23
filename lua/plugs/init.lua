@@ -51,7 +51,8 @@ return packer.startup({ function(use)
   }
   use {
     'nvim-telescope/telescope.nvim',
-    cmd = "Telescope",
+    event = 'CursorHold',
+    wants = 'plenary.nvim',
     config = "require('plugs.util.telescope')"
   }
   use {

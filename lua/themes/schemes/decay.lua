@@ -28,7 +28,6 @@ function M.get_colors()
     color14 = "#98d3ee",
     color15 = "#d0d3d8",
     comment_light = "#838383",
-    orange = "#eaac79",
   }
 end
 

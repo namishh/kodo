@@ -25,7 +25,6 @@ function M.get_colors()
     black = '#141b1e',
     foreground = '#dadada',
     cursorline = '#2c3333',
-    orange = "#eaac79",
   }
 end
 
