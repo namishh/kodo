@@ -1,1 +1,0 @@
--- making a custom terminal for neovim cause why not?

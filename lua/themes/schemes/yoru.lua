@@ -1,3 +1,5 @@
+-- theme by rxyhn  https://github.com/rxyhn/yoru
+
 local M = {}
 
 function M.get_colors()

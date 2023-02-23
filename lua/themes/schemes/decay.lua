@@ -1,3 +1,4 @@
+-- theme by AlphaTechnolog https://github.com/decaycs/
 local M = {}
 
 function M.get_colors()
