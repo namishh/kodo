@@ -1,6 +1,6 @@
-require('plugs.compiled')
 local M = {}
-
+local stats = require("lazy").stats()
+local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
 M.statusstyle = 'minimal'
 
 local logos = setmetatable({
@@ -48,9 +48,9 @@ M.dashboard = {
     "[ ━━━━━━ ❖  ━━━━━━ ]",
   },
   footer = {
-    "Loaded " .. #vim.tbl_keys(_G.packer_plugins) .. " plugins",
+    "Loaded " .. stats.count .. " plugins in " .. ms .. " ms!",
   }
 }
 
-M.colorscheme = 'pop'
+M.colorscheme = 'decay'
 return M

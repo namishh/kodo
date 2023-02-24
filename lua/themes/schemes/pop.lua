@@ -3,7 +3,6 @@ local M = {}
 function M.get_colors()
   return {
     comment = "#5a5858",
-    comment_light = "#838383",
     contrast = "#111111",
     background = "#0c0c0c",
     black = "#0c0c0c",

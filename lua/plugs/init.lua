@@ -1,118 +1,64 @@
-vim.cmd [[packadd packer.nvim]]
-local packer = require("packer")
-packer.config.compile_path = vim.fn.stdpath("config") .. "/lua/plugs/compiled.lua"
+local lazy = require("lazy")
 
-return packer.startup({ function(use)
-  use {
-    'wbthomason/packer.nvim',
-    cmd = 'require("plugs.cmds").packer'
-  }
-  use {
-    'norcalli/nvim-colorizer.lua',
-    config = "require('plugs.ui.colorizer')",
-    event = 'CursorHold',
-  }
-  use {
+lazy.setup({
+  {
     'nvim-treesitter/nvim-treesitter',
     run = ":TSUpdate",
-    module = "nvim-treesitter",
-    event = "BufRead",
-    cmd = 'require("plugs.cmds").treesitter',
-    config = "require('plugs.ts.treesitter')"
-  }
-  use {
+    event = "VeryLazy",
+    cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
+    config = function() require('plugs.ts.treesitter') end
+  },
+  {
     'windwp/nvim-ts-autotag',
-    event = "InsertEnter",
-    after = "nvim-treesitter"
-  }
-  use {
+    event = "VeryLazy",
+    lazy = true
+  },
+  {
+    'norcalli/nvim-colorizer.lua',
+    event = "VeryLazy",
+    config = function() require('plugs.ui.colorizer') end,
+    lazy = true
+  },
+  {
     'kyazdani42/nvim-tree.lua',
+    event = "VeryLazy",
     cmd = "NvimTreeToggle",
-    config = "require('plugs.util.nvim-tree')"
-  }
-  use { "kyazdani42/nvim-web-devicons", event = 'CursorHold', config = "require('plugs.ui.devicons')",
-    module = "nvim-web-devicons", }
-  use {
-    'windwp/nvim-autopairs',
-    config = "require('plugs.ts.autopair')",
-    after = "nvim-cmp"
-  }
-  use {
+    lazy = true,
+    config = function() require('plugs.util.nvim-tree') end
+  },
+  { 
+    "kyazdani42/nvim-web-devicons",
+    event = "VeryLazy",
+    config = function() require('plugs.ui.devicons') end,
+    lazy = true,
+  },
+  {
     "folke/which-key.nvim",
-    module = "which-key",
-    event = 'CursorHold',
-    wants = "toggleterm.nvim",
+    lazy = true,
+    event = "VeryLazy",
     keys = { "<leader>", '"', "'", "`" },
-    config = "require('plugs.util.which-key')"
-  }
-  use {
+    config = function() require('plugs.util.which-key') end
+  },
+  {
     'nvim-lua/plenary.nvim',
+    event = "VeryLazy",
     event = 'CursorHold',
-  }
-  use {
+  },
+  {
     'nvim-telescope/telescope.nvim',
-    event = 'CursorHold',
-    wants = 'plenary.nvim',
-    config = "require('plugs.util.telescope')"
-  }
-  use {
-    'neovim/nvim-lspconfig',
-    config = "require('plugs.lsp.lspconfig')",
-    event = "CursorHold",
-    --cmd = "LspStart",
-    opt = true,
-  }
-  use {
-    'rafamadriz/friendly-snippets',
-    module = { "cmp", "cmp_nvim_lsp" },
-    event = "InsertEnter"
-  }
-  use { 'hrsh7th/nvim-cmp',
-    after = "friendly-snippets",
-    config = function() require('plugs.lsp.cmp') end
-  }
-  use {
-    'L3MON4D3/LuaSnip',
-    after = "nvim-cmp",
-    config = "require('plugs.lsp.luasnip')"
-  }
-  use {
-    'saadparwaiz1/cmp_luasnip',
-    after = "LuaSnip"
-  }
-  use {
-    'hrsh7th/cmp-nvim-lua',
-    after = "cmp_luasnip"
-  }
-  use {
-    'hrsh7th/cmp-nvim-lsp',
-    after = 'cmp-nvim-lua',
-  }
-  use {
-    'hrsh7th/cmp-buffer',
-    after = "cmp-nvim-lsp"
-  }
-  use {
-    'hrsh7th/cmp-path',
-    after = "cmp-buffer"
-  }
-  use { "williamboman/mason.nvim",
-    cmd = {
-      "MasonInstall",
-      "MasonUninstall",
-      "Mason",
-      "MasonUninstallAll",
-      "MasonLog",
-    },
-    config = "require('plugs.lsp.mason')",
-  }
-  use {
+    event = "VeryLazy",
+    dependencies = {'plenary.nvim'},
+
+    config = function() require('plugs.util.telescope')end
+  },
+  {
     "akinsho/toggleterm.nvim",
-    config = "require('plugs.util.toggleterm')",
-    event = 'CursorHold',
-  }
-  use { "lewis6991/gitsigns.nvim",
-    event = 'CursorHold',
+    config = function() require('plugs.util.toggleterm') end,
+    event = "VeryLazy",
+  },
+  {
+    "lewis6991/gitsigns.nvim",
+    event = "VeryLazy",
     ft = "gitcommit",
     config = function()
       require('gitsigns').setup {
@@ -125,28 +71,90 @@ return packer.startup({ function(use)
           untracked    = { hl = 'GitSignsAdd', text = '│', numhl = 'GitSignsAddNr', linehl = 'GitSignsDeleteLn' },
         },
       }
-    end }
-  use {
+    end
+  },
+  {
     "lukas-reineke/indent-blankline.nvim",
-    config = "require('plugs.ui.indentlines')",
-    event = "CursorHold"
-  }
-  use {
-    "terrortylor/nvim-comment",
-    config = "require('plugs.util.comments')",
-    event = "CursorHold"
-  }
-  use({
-    "dharmx/telescope-media.nvim",
+    config = function() require('plugs.ui.indentlines') end,
+    event = "VeryLazy",
+  },
+  {
+      "dharmx/telescope-media.nvim",
     config = function()
       require("telescope").load_extension("media")
     end,
+    event = "VeryLazy",
     requires = {
       "nvim-lua/plenary.nvim",
       "nvim-telescope/telescope.nvim",
     },
-    after = "telescope.nvim",
-  })
-  -- End Of plugs
-end,
+  },
+  { "williamboman/mason.nvim",
+    cmd = {
+      "MasonInstall",
+      "MasonUninstall",
+      "Mason",
+      "MasonUninstallAll",
+      "MasonLog",
+    },
+    event = "VeryLazy",
+    config = function() require('plugs.lsp.mason') end,
+  },
+  {
+    "terrortylor/nvim-comment",
+    config = function() require('plugs.util.comments') end,
+    event = "VeryLazy",
+  },
+  -- The funs begins
+{
+    "neovim/nvim-lspconfig",
+    event = "CursorHold",
+    config = function()
+      require "plugs.lsp.lspconfig"
+    end,
+  },
+
+  -- load luasnips + cmp related in insert mode only
+  {
+    "hrsh7th/nvim-cmp",
+    event = "InsertEnter",
+    dependencies = {
+      {
+        -- snippet plugin
+        "L3MON4D3/LuaSnip",
+        dependencies = "rafamadriz/friendly-snippets",
+        config = function()
+          require("plugs.lsp.luasnip")
+        end,
+      },
+
+      -- autopairing of (){}[] etc
+      {
+        "windwp/nvim-autopairs",
+        opts = {
+          fast_wrap = {},
+          disable_filetype = { "TelescopePrompt", "vim" },
+        },
+        config = function(_, opts)
+          require("nvim-autopairs").setup(opts)
+
+          -- setup cmp for autopairs
+          local cmp_autopairs = require "nvim-autopairs.completion.cmp"
+          require("cmp").event:on("confirm_done", cmp_autopairs.on_confirm_done())
+        end,
+      },
+
+      -- cmp sources plugins
+      {
+        "saadparwaiz1/cmp_luasnip",
+        "hrsh7th/cmp-nvim-lua",
+        "hrsh7th/cmp-nvim-lsp",
+        "hrsh7th/cmp-buffer",
+        "hrsh7th/cmp-path",
+      },
+    },
+    config = function()
+      require("plugs.lsp.cmp")
+    end,
+  },
 })

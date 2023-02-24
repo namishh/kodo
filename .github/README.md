@@ -31,7 +31,7 @@ Has something like 25 plugins and but is still fast becuase of holy lazy loading
 
 
 ## Plugins And Features
-+ Comes with 14 premade colourschemes!
++ Comes with 14 premade colourschemes (and xresources as a bonus)!
 + Lazy loading done most of the time to get blazingly moderate startup times.
 + A Minimal Custom [Bufferline](https://github.com/chadcat5207/nvide/tree/main/lua/ui/buf)
 + Cool Looking Custom [Statusline](https://github.com/chadcat5207/nvide/tree/main/lua/ui/stl)
@@ -44,7 +44,7 @@ Has something like 25 plugins and but is still fast becuase of holy lazy loading
 + Color Hightlighting with [nvim-colorizer](https://github.com/norcalli/nvim-colorizer.lua)
 + Popup mappings keysheet [whichkey.nvim](https://github.com/folke/which-key.nvim)
 + Lsp Management with [Mason](https://github.com/williamboman/mason.nvim/)
-+ Easy Package Managing with [Packer](https://github.com/wbthomason/packer.nvim)
++ Easy Package Managing with [Lazy](https://github.com/wbthomason/packer.nvim)
 + Auto Formatting with inbuilt LSP (no plugin! , requires installing the lsp client)
 + Quick Commenting with [comment-nvim](https://github.com/terrortylor/nvim-comment)
 + Telescope file previews with [telecope-media (dharmx rewrite)](https://github.com/dharmx/telescope-media.nvim)
@@ -55,6 +55,7 @@ Has something like 25 plugins and but is still fast becuase of holy lazy loading
 + ripgrep (optional)
 + nodejs and npm
 + a brain (mandatory)
++ xrdb for xresources
 + some xp with lua and neovim
 + ueberzug for image previews
 
@@ -95,6 +96,13 @@ require("themes").setup({
 M.colorscheme = 'pop'
 ```
 
+### Using Xresources
+
+```lua
+M.colorscheme = 'xrdb'
+```
+Keep in mind that using xrdb increases startuptime by 100ms
+
 + Reload Neovim
 
 ## Statusline Styles 
@@ -122,21 +130,17 @@ M.statusstyle = 'minimal' -- minimal | fancy | monochrome
 
 ![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/4.png)
 
-## FAQ
-
-+ __Will you switch to lazy.nvim?__ <br>
-No I wont
 
 ## Todo
 - [x]  ~~better screenshots~~
-- [x]  more, MORE fast (15 ms is fine ig)
+- [ ]  more, MORE fast (bring back to 15ms)
 - [x]  ~~custom statusline~~ (i am proud)
 - [x]  ~~learn markdown bcoz i suck at it~~
 - [x]  ~~fix autoformatting on save~~
 - [x] ~~make custom tabline~~
 - [x] ~~fix custom dashboard~~
-- [ ] add some more themes (currently 10)
-- [ ] fix custom tabline
+- [x] add some more themes (currently 10)
+- [x] fix custom tabline
 
 ## Special Thanks 
 This config wouldn't have been possible without these chads!
