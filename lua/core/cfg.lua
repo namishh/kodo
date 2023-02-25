@@ -45,5 +45,5 @@ M.dashboard = {
   }
 }
 
-M.colorscheme = 'decay'
+M.colorscheme = 'xrdb'
 return M

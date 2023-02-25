@@ -44,7 +44,7 @@ Has something like 25 plugins and but is still fast becuase of holy lazy loading
 + Color Hightlighting with [nvim-colorizer](https://github.com/norcalli/nvim-colorizer.lua)
 + Popup mappings keysheet [whichkey.nvim](https://github.com/folke/which-key.nvim)
 + Lsp Management with [Mason](https://github.com/williamboman/mason.nvim/)
-+ Easy Package Managing with [Lazy](https://github.com/wbthomason/packer.nvim)
++ Easy Package Managing with [Lazy](https://github.com/folke/lazy.nvim)
 + Auto Formatting with inbuilt LSP (no plugin! , requires installing the lsp client)
 + Quick Commenting with [comment-nvim](https://github.com/terrortylor/nvim-comment)
 + Telescope file previews with [telecope-media (dharmx rewrite)](https://github.com/dharmx/telescope-media.nvim)
@@ -60,14 +60,15 @@ Has something like 25 plugins and but is still fast becuase of holy lazy loading
 + ueberzug for image previews
 
 ## Installation
-
+Warning: You may / may not get a bunch of errors during the first time you run this config
 It's really easy , just a simple one liner with git!
+
 ```bash
-~ $ git clone --depth 1 https://github.com/dark-Jedi2108/nvide ~/.config/nvim
-~ $ nvim +PackerSync
+~ $ git clone --depth 1 https://github.com/chadcat5207/nvide ~/.config/nvim
 ```
 
 ## Adding mason to path
+Warning: This step is important for installing LSP
 Add this to your shell config
 ```zsh
 # this is for zsh
@@ -98,10 +99,16 @@ M.colorscheme = 'pop'
 
 ### Using Xresources
 
+First use a xresources file
+
+```bash
+~ $ xrdb -merge ./path/to/xresources
+```
+
 ```lua
 M.colorscheme = 'xrdb'
 ```
-Keep in mind that using xrdb increases startuptime by 100ms
+Keep in mind that using xrdb increases startuptime by 100ms, I am looking to make this more faster
 
 + Reload Neovim
 
