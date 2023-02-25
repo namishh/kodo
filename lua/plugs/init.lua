@@ -4,6 +4,7 @@ lazy.setup({
   {
     'nvim-treesitter/nvim-treesitter',
     run = ":TSUpdate",
+    lazy = true,
     event = "VeryLazy",
     cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
     config = function() require('plugs.ts.treesitter') end
@@ -14,7 +15,7 @@ lazy.setup({
     lazy = true
   },
   {
-    'norcalli/nvim-colorizer.lua',
+    'NvChad/nvim-colorizer.lua',
     event = "VeryLazy",
     config = function() require('plugs.ui.colorizer') end,
     lazy = true
@@ -26,7 +27,7 @@ lazy.setup({
     lazy = true,
     config = function() require('plugs.util.nvim-tree') end
   },
-  { 
+  {
     "kyazdani42/nvim-web-devicons",
     event = "VeryLazy",
     config = function() require('plugs.ui.devicons') end,
@@ -42,23 +43,26 @@ lazy.setup({
   {
     'nvim-lua/plenary.nvim',
     event = "VeryLazy",
-    event = 'CursorHold',
+    lazy = true,
   },
   {
     'nvim-telescope/telescope.nvim',
     event = "VeryLazy",
-    dependencies = {'plenary.nvim'},
+    dependencies = { 'plenary.nvim' },
+    lazy = true,
 
-    config = function() require('plugs.util.telescope')end
+    config = function() require('plugs.util.telescope') end
   },
   {
     "akinsho/toggleterm.nvim",
     config = function() require('plugs.util.toggleterm') end,
     event = "VeryLazy",
+    lazy = true,
   },
   {
     "lewis6991/gitsigns.nvim",
     event = "VeryLazy",
+    lazy = true,
     ft = "gitcommit",
     config = function()
       require('gitsigns').setup {
@@ -76,14 +80,16 @@ lazy.setup({
   {
     "lukas-reineke/indent-blankline.nvim",
     config = function() require('plugs.ui.indentlines') end,
+    lazy = true,
     event = "VeryLazy",
   },
   {
-      "dharmx/telescope-media.nvim",
+    "dharmx/telescope-media.nvim",
     config = function()
       require("telescope").load_extension("media")
     end,
     event = "VeryLazy",
+    lazy = true,
     requires = {
       "nvim-lua/plenary.nvim",
       "nvim-telescope/telescope.nvim",
@@ -98,17 +104,20 @@ lazy.setup({
       "MasonLog",
     },
     event = "VeryLazy",
+    lazy = true,
     config = function() require('plugs.lsp.mason') end,
   },
   {
     "terrortylor/nvim-comment",
     config = function() require('plugs.util.comments') end,
     event = "VeryLazy",
+    lazy = true,
   },
   -- The funs begins
-{
+  {
     "neovim/nvim-lspconfig",
-    event = "CursorHold",
+    lazy = true,
+    event = "VeryLazy",
     config = function()
       require "plugs.lsp.lspconfig"
     end,
@@ -117,11 +126,13 @@ lazy.setup({
   -- load luasnips + cmp related in insert mode only
   {
     "hrsh7th/nvim-cmp",
-    event = "InsertEnter",
+    event = "VeryLazy",
+    lazy = true,
     dependencies = {
       {
         -- snippet plugin
         "L3MON4D3/LuaSnip",
+        lazy = true,
         dependencies = "rafamadriz/friendly-snippets",
         config = function()
           require("plugs.lsp.luasnip")
@@ -135,6 +146,7 @@ lazy.setup({
           fast_wrap = {},
           disable_filetype = { "TelescopePrompt", "vim" },
         },
+        lazy = true,
         config = function(_, opts)
           require("nvim-autopairs").setup(opts)
 
