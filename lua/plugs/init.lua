@@ -1,3 +1,4 @@
+require("plugs.strap")
 local lazy = require("lazy")
 
 lazy.setup({

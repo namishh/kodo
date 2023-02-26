@@ -60,7 +60,7 @@ Has something like 25 plugins and but is still fast becuase of holy lazy loading
 + ueberzug for image previews
 
 ## Installation
-Warning: You may / may not get a bunch of errors during the first time you run this config
+Warning: You may / may not get a bunch of errors during the first time you run this config<br>
 It's really easy , just a simple one liner with git!
 
 ```bash
