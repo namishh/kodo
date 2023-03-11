@@ -12,7 +12,7 @@
 </div>
 
 
-![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/h1.png)
+![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/1.png)
 
 
 A neovim configuration that looks good and is fast (startuptime < 0.05s).
@@ -129,14 +129,15 @@ M.statusstyle = 'minimal' -- minimal | fancy | monochrome
 
 ## Screenshots
 
-![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/1.png)
+![Screenshot1](https://preview.redd.it/9tb78fedhrja1.png)
 
-![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/2.png)
+![Screenshot1](https://preview.redd.it/7v508nedhrja1.png)
 
-![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/3.png)
+![Screenshot1](https://preview.redd.it/27m7doedhrja1.png)
 
-![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/4.png)
+![Screenshot1](https://preview.redd.it/wyk9tkedhrja1.png)
 
+![Screenshot1](https://preview.redd.it/3expaeedhrja1.png)
 
 ## Todo
 - [x]  ~~better screenshots~~

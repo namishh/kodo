@@ -170,4 +170,14 @@ lazy.setup({
       require("plugs.lsp.cmp")
     end,
   },
+  {
+    "LnL7/vim-nix",
+    lazy = true,
+    ft = 'nix',
+  },
+  {
+    "elkowar/yuck.vim",
+    lazy = true,
+    ft = 'yuck',
+  },
 })

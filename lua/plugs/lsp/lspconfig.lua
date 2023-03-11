@@ -28,7 +28,7 @@ M.capabilities.textDocument.completion.completionItem = {
 }
 
 
-local servers = { "html", "pyright", "tsserver", "emmet_ls", "clangd", "cssls" }
+local servers = { "html", "pyright", "tsserver", "emmet_ls", "clangd", "cssls", "rnix", "hls" }
 
 for _, k in ipairs(servers) do
   lspconfig[k].setup {
