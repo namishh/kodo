@@ -44,5 +44,5 @@ M.dashboard = {
   }
 }
 
-M.colorscheme = 'everforest'
+M.colorscheme = 'xrdb'
 return M

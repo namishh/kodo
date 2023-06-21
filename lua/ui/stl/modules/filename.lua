@@ -2,6 +2,11 @@ local fn = vim.fn
 local M = function()
   local icon = "  "
   local filename = (fn.expand "%" == "" and "Empty ") or fn.expand "%:t"
+  local devicons = require("nvim-web-devicons")
+  local ft_icon, icon_hl = devicons.get_icon(filename)
+  if not icon_hl then
+    icon_hl = "nothing"
+  end
   if filename == "NvimTree_1" then
     filename = "File Explorer"
   end
@@ -12,12 +17,10 @@ local M = function()
     filename = "Terminal"
   end
   if filename ~= "Empty " then
-    local devicons = require("nvim-web-devicons")
-    local ft_icon = devicons.get_icon(filename)
     icon = (ft_icon ~= nil and " " .. ft_icon) or ""
   else
-    filename = 'Nvide'
+    filename = 'Kodo'
   end
-  return "%#StalineFilename#" .. " " .. icon .. "  " .. filename .. "  "
+  return "%#" .. icon_hl .. "# " .. icon .. " %#StalineFilename#" .. filename .. "  "
 end
 return M

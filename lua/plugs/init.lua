@@ -124,6 +124,21 @@ lazy.setup({
     end,
   },
 
+  {
+    "utilyre/barbecue.nvim",
+    event = { "BufReadPost", "BufNewFile" },
+    dependencies = {
+      "SmiteshP/nvim-navic",
+    "kyazdani42/nvim-web-devicons",
+    },
+    opts = {
+      attach_navic = false,
+      theme = "auto",
+      include_buftypes = { "" },
+      exclude_filetypes = { "gitcommit", "Trouble", "toggleterm" },
+      show_modified = false,
+    },
+  },
   -- load luasnips + cmp related in insert mode only
   {
     "hrsh7th/nvim-cmp",

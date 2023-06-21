@@ -4,7 +4,7 @@ local M = function(m)
     if client.attached_buffers[vim.api.nvim_get_current_buf()] then
       if (m == 'minimal') then
         return "%#StalineLspIcon#" ..
-            " LSP " .. "%#StalineEmptySpace#" .. " "
+            " LSP " .. "%#StalineLspNameNormal#" .. " " .. client.name .. " %#StalineEmptySpace#" .. " "
       elseif (m == 'fancy') then
         return "%#StalineLspIcon#" ..
             "   " .. "%#StalineLspName#" .. " " .. client.name .. " " .. "%#StalineEmptySpace#" .. " "
