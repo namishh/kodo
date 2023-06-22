@@ -1,7 +1,7 @@
 return function(colors)
   return {
     BufflineBufOnActive = { bg = colors.color4, fg = colors.background },
-    BufflineBufOnInactive = { fg = colors.color7, bg = colors.contrast },
+    BufflineBufOnInactive = { fg = colors.color7, bg = colors.cursorline },
     BuffLineBufOnModified = { bg = colors.color4, fg = colors.background },
     BuffLineBufOnClose = { bg = colors.color4, fg = colors.background },
     BuffLineBufOffClose = { fg = colors.color9, bg = colors.contrast },
