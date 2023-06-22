@@ -3,15 +3,15 @@ require('telescope').setup {
   defaults = {
     layout_config = {
       horizontal = {
-        prompt_position = "top",
+        prompt_position = "bottom",
         preview_width = 0.55,
         results_width = 0.8,
       },
       vertical = {
         mirror = false,
       },
-      width = 0.87,
-      height = 0.9,
+      width = 0.8,
+      height = 0.75,
       preview_cutoff = 120,
     },
     find_command = {
@@ -54,11 +54,7 @@ require('telescope').setup {
     }
   },
   extensions = {
-    media = {
-      backend = "ueberzug", -- "ueberzug"|"viu"|"chafa"|"jp2a"|catimg
-      cache_path = "/tmp/tele.media.cache",
-      hidden = false,
-      move = true,
-    }
   }
 }
+
+require("telescope").load_extension("ui-select")

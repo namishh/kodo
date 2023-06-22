@@ -14,6 +14,7 @@ M.get_colors = function()
     black = get_xresources_color('background'),
     comment = get_xresources_color('comment'),
     cursorline = get_xresources_color('cursorline'),
+    darker = get_xresources_color('darker'),
     contrast = get_xresources_color('cursorline'),
     color0 = get_xresources_color('color0'),
     color1 = get_xresources_color('color1'),

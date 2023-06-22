@@ -6,6 +6,7 @@ function M.get_colors()
   return {
     comment = "#606372",
     contrast = "#171b20",
+    darker = "#0f1215",
     background = "#13171b",
     black = "#13171b",
     foreground = "#b6beca",

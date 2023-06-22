@@ -6,6 +6,7 @@ function M.get_colors()
     contrast = "#1f1d2e",
     background = "#151722",
     black = "#191724",
+    darker = "#0f1119",
     foreground = "#dee1e6",
     cursorline = "#1f1d2e",
     orange = "#de8f78",

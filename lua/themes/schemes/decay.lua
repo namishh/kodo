@@ -4,6 +4,7 @@ local M = {}
 function M.get_colors()
   return {
     background = "#0d0f18",
+    darker = "#0a0b12",
     contrast = '#0b0d16',
     lighter = '#11131c',
     foreground = "#a5b6cf",

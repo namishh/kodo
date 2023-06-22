@@ -21,6 +21,6 @@ local M = function()
   else
     filename = 'Kodo'
   end
-  return "%#" .. icon_hl .. "# " .. icon .. " %#StalineFilename#" .. filename .. "  "
+  return "%#StalineFilenameIcon#" .. "%#" .. icon_hl .. "# " .. icon .. "  %#StalineFilename#" .. filename .. "  "
 end
 return M

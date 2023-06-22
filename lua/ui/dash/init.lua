@@ -13,6 +13,7 @@ local emptyLine = string.rep(" ", vim.fn.strwidth(header[1]))
 -- adding two lines above and below the art
 table.insert(header, 1, emptyLine)
 table.insert(header, 2, emptyLine)
+table.insert(header, 3, emptyLine)
 
 header[#header + 1] = emptyLine
 header[#header + 1] = emptyLine
@@ -89,7 +90,7 @@ M.open = function()
     vim.api.nvim_buf_set_lines(buf, 0, -1, false, result)
 
     -- setting the cursor
-    vim.api.nvim_win_set_cursor(0, { start + #header + #message, math.floor(vim.o.columns / 2) - 18 })
+    vim.api.nvim_win_set_cursor(0, { start + #header + #message, math.floor(vim.o.columns / 2) - 17 })
 
     -- setting highlihgts
     local dashspace = vim.api.nvim_create_namespace "dasher"
@@ -110,7 +111,7 @@ M.open = function()
     for i = start + #header + #message - 1, start + #header + #buttons * 2 + 1, 2 do
       vim.api.nvim_buf_add_highlight(buf, dashspace, "DashButtonsSpl", i, horiz_pad_index + 40,
         horiz_pad_index + 42 + string.len(buttons[1][2]))
-      vim.api.nvim_buf_add_highlight(buf, dashspace, "DashButtonsIco", i, horiz_pad_index + 3, horiz_pad_index + 7)
+      vim.api.nvim_buf_add_highlight(buf, dashspace, "DashButtonsIco", i, horiz_pad_index + 2, horiz_pad_index + 8)
     end
 
 
@@ -133,13 +134,13 @@ M.open = function()
     vim.keymap.set("n", "k", function()
       local cur = vim.fn.line "."
       local target_line = vim.tbl_contains(keybinds, cur) and cur - 2 or keybinds[#keybinds]
-      vim.api.nvim_win_set_cursor(0, { target_line, math.floor(vim.o.columns / 2) - 18 })
+      vim.api.nvim_win_set_cursor(0, { target_line, math.floor(vim.o.columns / 2) - 17 })
     end, { buffer = true })
 
     vim.keymap.set("n", "j", function()
       local cur = vim.fn.line "."
       local target_line = vim.tbl_contains(keybinds, cur) and cur + 2 or keybinds[1]
-      vim.api.nvim_win_set_cursor(0, { target_line, math.floor(vim.o.columns / 2) - 18 })
+      vim.api.nvim_win_set_cursor(0, { target_line, math.floor(vim.o.columns / 2) - 17 })
     end, { buffer = true })
 
 
@@ -149,12 +150,12 @@ M.open = function()
     vim.keymap.set("n", "<Up>", function()
       local cur = vim.fn.line "."
       local target_line = vim.tbl_contains(keybinds, cur) and cur - 2 or keybinds[#keybinds]
-      vim.api.nvim_win_set_cursor(0, { target_line, math.floor(vim.o.columns / 2) - 18 })
+      vim.api.nvim_win_set_cursor(0, { target_line, math.floor(vim.o.columns / 2) - 17 })
     end, { buffer = true })
     vim.keymap.set("n", "<Down>", function()
       local cur = vim.fn.line "."
       local target_line = vim.tbl_contains(keybinds, cur) and cur + 2 or keybinds[1]
-      vim.api.nvim_win_set_cursor(0, { target_line, math.floor(vim.o.columns / 2) - 18 })
+      vim.api.nvim_win_set_cursor(0, { target_line, math.floor(vim.o.columns / 2) - 17 })
     end, { buffer = true })
 
     -- on enter

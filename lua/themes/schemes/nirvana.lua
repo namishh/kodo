@@ -6,6 +6,7 @@ function M.get_colors()
     comment_light = "#838383",
     contrast = "#191919",
     background = "#121111",
+    darker = "#0e0d0d",
     black = "#121111",
     foreground = "#dfdddd",
     cursorline = "#191919",

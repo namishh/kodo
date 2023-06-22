@@ -84,18 +84,6 @@ lazy.setup({
     lazy = true,
     event = "VeryLazy",
   },
-  {
-    "dharmx/telescope-media.nvim",
-    config = function()
-      require("telescope").load_extension("media")
-    end,
-    event = "VeryLazy",
-    lazy = true,
-    requires = {
-      "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope.nvim",
-    },
-  },
   { "williamboman/mason.nvim",
     cmd = {
       "MasonInstall",
@@ -129,7 +117,7 @@ lazy.setup({
     event = { "BufReadPost", "BufNewFile" },
     dependencies = {
       "SmiteshP/nvim-navic",
-    "kyazdani42/nvim-web-devicons",
+      "kyazdani42/nvim-web-devicons",
     },
     opts = {
       attach_navic = false,
@@ -186,9 +174,23 @@ lazy.setup({
     end,
   },
   {
+    "rcarriga/nvim-notify",
+    config = function() require("plugs.ui.notify") end,
+    event = { "CursorMoved", "CursorHold", "InsertEnter", "CmdlineEnter" },
+  },
+  {
+    "kosayoda/nvim-lightbulb",
+    event = { "CursorMoved", "CursorHold", },
+    config = function() require("plugs.lsp.lightbulb") end,
+  },
+  {
     "LnL7/vim-nix",
     lazy = true,
     ft = 'nix',
+  },
+  {
+    "nvim-telescope/telescope-ui-select.nvim",
+    lazy = true
   },
   {
     "elkowar/yuck.vim",

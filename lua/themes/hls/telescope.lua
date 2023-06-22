@@ -1,25 +1,25 @@
 return function(colors)
   return {
     TelescopeBorder = {
-      fg = colors.cursorline,
-      bg = colors.cursorline,
+      fg = colors.darker,
+      bg = colors.darker,
     },
     TelescopePromptBorder = {
-      fg = colors.color8,
-      bg = colors.color8,
+      fg = colors.cursorline,
+      bg = colors.cursorline,
     },
     TelescopePromptNormal = {
       fg = colors.foreground,
-      bg = colors.color8,
+      bg = colors.cursorline,
     },
     TelescopePromptPrefix = {
       fg = colors.color1,
-      bg = colors.color8,
+      bg = colors.cursorline,
     },
-    TelescopeNormal = { bg = colors.cursorline },
+    TelescopeNormal = { bg = colors.darker },
     TelescopePreviewTitle = {
       fg = colors.cursorline,
-      bg = colors.cursorline,
+      bg = colors.color12,
     },
     TelescopePromptTitle = {
       fg = colors.background,
@@ -27,9 +27,9 @@ return function(colors)
     },
     TelescopeResultsTitle = {
       fg = colors.cursorline,
-      bg = colors.cursorline,
+      bg = colors.color10,
     },
-    TelescopeSelection = { bg = colors.color0, fg = colors.foreground },
+    TelescopeSelection = { bg = colors.cursorline, fg = colors.foreground },
     TelescopeResultsDiffAdd = {
       fg = colors.color10,
     },

@@ -47,17 +47,15 @@ Has something like 25 plugins and but is still fast becuase of holy lazy loading
 + Easy Package Managing with [Lazy](https://github.com/folke/lazy.nvim)
 + Auto Formatting with inbuilt LSP (no plugin! , requires installing the lsp client)
 + Quick Commenting with [comment-nvim](https://github.com/terrortylor/nvim-comment)
-+ Telescope file previews with [telecope-media (dharmx rewrite)](https://github.com/dharmx/telescope-media.nvim)
 + [Indentlines](https://github.com/lukas-reineke/indent-blankline.nvim) to help you code better
 
 ## Requirements
-+ Neovim >= v0.8
++ Neovim >= v0.9
 + ripgrep (optional)
 + nodejs and npm
 + a brain (mandatory)
 + xrdb for xresources
 + some xp with lua and neovim
-+ ueberzug for image previews
 
 ## Installation
 Warning: You may / may not get a bunch of errors during the first time you run this config<br>

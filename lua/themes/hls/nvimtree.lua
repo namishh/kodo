@@ -1,7 +1,7 @@
 return function(colors)
   return {
-    NvimTreeNormal = { fg = colors.foreground, bg = colors.background },
-    NvimTreeNormalNC = { fg = colors.foreground, bg = colors.background },
+    NvimTreeNormal = { fg = colors.foreground, bg = colors.darker },
+    NvimTreeNormalNC = { fg = colors.foreground, bg = colors.darker },
     NvimTreeRootFolder = { fg = colors.color1 },
     NvimTreeGitDirty = { fg = colors.color1 },
     NvimTreeGitNew = { fg = colors.color12 },
@@ -10,10 +10,10 @@ return function(colors)
     NvimTreeIndentMarker = { fg = colors.color0 },
     NvimTreeImageFile = { fg = colors.foreground },
     NvimTreeSymlink = { fg = colors.color12 },
-    NvimTreeFolderIcon = { fg = colors.color11, bg = colors.background },
+    NvimTreeFolderIcon = { fg = colors.color11, bg = colors.darker },
     NvimTreeFolderName = { fg = colors.foreground },
     NvimTreeOpenedFolderName = { fg = colors.foreground },
     NvimTreeEmptyFolderName = { fg = colors.foreground },
-    NvimTreeStatusLineNC = { bg = colors.background, fg = colors.background },
+    NvimTreeStatusLineNC = { bg = colors.background, fg = colors.darker },
   }
 end

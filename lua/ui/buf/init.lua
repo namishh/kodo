@@ -6,6 +6,9 @@ vim.cmd [[
    function! BufflineKillBuf(bufnr,b,c,d)
         call luaeval('require("ui.buf.fn").close_buffer(_A)', a:bufnr)
   endfunction]]
+
+vim.cmd "function! ToggleTheme(a,b,c,d) \n lua require('themes.switch').toggleTheme() \n endfunction"
+vim.cmd "function! CloseAll(a,b,c,d) \n q \n endfunction"
 vim.api.nvim_create_user_command("BufflinePrev", function()
   require("ui.buf.fn").tabuflinePrev()
 end, {})
@@ -54,7 +57,7 @@ local createTab = function(buf)
     close_btn = (vim.bo[buf].modified and "%" .. buf .. "@BufflineKillBuf@%#BuffLineBufOffModified#   ")
         or ("%#BuffLineBufOffClose#" .. close_btn) .. " "
   end
-  return "%" .. buf .. "@BufflineGoToBuf@" .. filename .. " " .. close_btn .. '%X' .. "%#BufflineEmpty#"
+  return "%" .. buf .. "@BufflineGoToBuf@" .. filename .. " " .. close_btn .. '%X' .. "%#BufflineEmptyColor#"
 end
 
 local excludedFileTypes = { 'NvimTree', 'help', 'dasher', 'lir', 'alpha', "toggleterm" }
@@ -62,26 +65,31 @@ local excludedFileTypes = { 'NvimTree', 'help', 'dasher', 'lir', 'alpha', "toggl
 local treeWidth = function()
   for _, win in pairs(vim.api.nvim_tabpage_list_wins(0)) do
     if vim.bo[vim.api.nvim_win_get_buf(win)].ft == "NvimTree" then
-      return vim.api.nvim_win_get_width(win) + 1
+      return vim.api.nvim_win_get_width(win)
     end
   end
   return 0
 end
 
 M.getTabline = function()
-  local buffline = "%#BufflineEmpty#"
-
-  local counter = 1
+  local buffline = ""
+  local buffstart = "%#BuffLineEmpty#"
+  local button = "%#BufflineButton# %@ToggleTheme@" .. "  "
+  local closebutton = "%#BufflineCloseButton# %@CloseAll@" .. " "
+  local counter = 0
   for _, buf in pairs(vim.api.nvim_list_bufs()) do
     if vim.api.nvim_buf_is_valid(buf) and vim.api.nvim_buf_is_loaded(buf) and vim.bo[buf].buflisted then
       local filename = vim.api.nvim_buf_get_name(buf):match("^.+/(.+)$") or ""
 
       local conditions = vim.tbl_contains(excludedFileTypes, vim.bo[buf].ft)
-      if conditions then goto do_nothing else filename = "%#BufflineEmpty#" .. createTab(buf) end
+      if conditions then goto do_nothing else filename = "%#BufflineEmptyColor#" .. createTab(buf) end
       buffline = buffline .. filename
       counter = counter + 1
     end
     ::do_nothing::
+  end
+  if counter > 0 then
+    buffstart = "%#BufflineEmptyColor#"
   end
   local treespace
   if treeWidth() > 2 then
@@ -90,7 +98,7 @@ M.getTabline = function()
   else
     treespace = "%#BufflineTree#" .. string.rep(" ", treeWidth())
   end
-  return treespace .. buffline
+  return treespace .. buffstart .. buffline .. "%=" .. button .. closebutton
 end
 
 M.setup = function()

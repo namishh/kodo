@@ -23,6 +23,7 @@ function M.get_colors()
     contrast = '#161d1f',
     background = '#141b1e',
     black = '#141b1e',
+    darker = "#111619",
     foreground = '#dadada',
     cursorline = '#2c3333',
   }

@@ -1,6 +1,6 @@
 return function(colors)
   return {
-    DevIconDefault = { fg = colors.color9 },
+    DevIconDefault = { fg = colors.color7 },
     DevIconc = { fg = colors.color12 },
     DevIconcss = { fg = colors.color12 },
     DevIcondeb = { fg = colors.color6 },

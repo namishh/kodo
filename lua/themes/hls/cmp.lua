@@ -19,5 +19,9 @@ return function(colors)
     CmpItemAbbrMatchFuzzy = { fg = colors.color7, bg = colors.background },
     CmpItemKind = { fg = colors.color12, bg = colors.background },
     CmpItemMenu = { fg = colors.color2, bg = colors.background },
+    Pmenu = { fg = colors.foreground, bg = colors.background },
+    PmenuSel = { fg = colors.black, bg = colors.color4 },
+    PmenuSbar = { bg = colors.background },
+    PmenuThumb = { bg = colors.color2 },
   }
 end

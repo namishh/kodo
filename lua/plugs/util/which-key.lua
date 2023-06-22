@@ -17,12 +17,15 @@ local mappings = {
     s = { ":w<cr>", "Save" },
     x = { ":bdelete<cr>", "Close" },
   },
+  c = {
+    name = "Completion",
+    c = { ":lua vim.lsp.buf.code_action()<cr>", "Show Code Actions" }
+  },
   f = {
     name = 'Telescope',
     f = { ":Telescope find_files<cr>", "Find Files" },
     g = { ":Telescope oldfiles<cr>", "Recently Opened" },
     r = { ":Telescope live_grep<cr>", "Find String" },
-    e = { ":Telescope media<cr>", "Find Media" },
   },
   t = {
     name = "Terminal",

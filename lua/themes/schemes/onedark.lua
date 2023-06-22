@@ -7,6 +7,7 @@ function M.get_colors()
     foreground = "#dcdee6",
     cursorline = '#1e2127',
     comment = '#79818f',
+    darker = '#14161a',
     cursor = "#dcdee6",
     black = "#1b1d22",
     color0 = "#272b33",
