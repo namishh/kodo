@@ -62,6 +62,7 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   end
 })
 
+
 -- Disabling some built in plugins
 local builtins = {
   "2html_plugin",

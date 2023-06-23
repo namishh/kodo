@@ -3,6 +3,7 @@ return function(colors)
     BufflineBufOnActive = { bg = colors.color4, fg = colors.background },
     BufflineBufOnInactive = { fg = colors.color7, bg = colors.cursorline },
     BuffLineBufOnModified = { bg = colors.color4, fg = colors.background },
+    BuffLineBufOffModified = { fg = colors.color2, bg = colors.cursorline },
     BuffLineBufOnClose = { bg = colors.color4, fg = colors.background },
     BuffLineBufOffClose = { fg = colors.color9, bg = colors.contrast },
     BuffLineTree = { bg = colors.darker, fg = colors.white },

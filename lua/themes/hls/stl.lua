@@ -58,5 +58,6 @@ return function(colors)
     StalineLspHintsIconMono = { bg = colors.black, fg = colors.color7 },
     StalineLspWarningIconMono = { bg = colors.black, fg = colors.color7 },
     StalineMonoMode = { bg = colors.contrast, fg = colors.color7 },
+    StalineDefaultFile = {bg = colors.background, fg = colors.foreground},
   }
 end

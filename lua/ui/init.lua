@@ -1,14 +1,14 @@
 local DEFAULT_STATUS_STYLE = require('core.cfg').statusstyle
 
 
-vim.api.nvim_create_autocmd({ "CursorHold", "VimEnter" }, {
+vim.api.nvim_create_autocmd({ "CursorHold" }, {
   callback = function()
     vim.opt.laststatus = 3 -- Global Status
     require("ui.stl").setup(DEFAULT_STATUS_STYLE)
   end
 })
 
-vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile", "VimEnter" }, {
+vim.api.nvim_create_autocmd({ "CursorHold" }, {
   pattern = "*",
   callback = function()
     require("ui.buf").setup()

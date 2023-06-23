@@ -44,7 +44,7 @@ lspconfig.lua_ls.setup {
   settings = {
     Lua = {
       diagnostics = {
-        globals = { "vim", "awesome", "client", "screen" },
+        globals = { "vim", "awesome", "client", "screen", "mouse" },
       },
     },
   }

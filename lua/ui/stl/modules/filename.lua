@@ -5,7 +5,7 @@ local M = function()
   local devicons = require("nvim-web-devicons")
   local ft_icon, icon_hl = devicons.get_icon(filename)
   if not icon_hl then
-    icon_hl = "nothing"
+    icon_hl = "StalineDefaultFile"
   end
   if filename == "NvimTree_1" then
     filename = "File Explorer"

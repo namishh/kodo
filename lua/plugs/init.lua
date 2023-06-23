@@ -5,64 +5,53 @@ lazy.setup({
   {
     'nvim-treesitter/nvim-treesitter',
     run = ":TSUpdate",
-    lazy = true,
-    event = "VeryLazy",
     cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
     config = function() require('plugs.ts.treesitter') end
   },
   {
     'windwp/nvim-ts-autotag',
-    event = "VeryLazy",
+    event = "InsertEnter",
     lazy = true
   },
   {
     'NvChad/nvim-colorizer.lua',
-    event = "VeryLazy",
+    event = 'BufRead',
     config = function() require('plugs.ui.colorizer') end,
     lazy = true
   },
   {
     'kyazdani42/nvim-tree.lua',
-    event = "VeryLazy",
     cmd = "NvimTreeToggle",
-    lazy = true,
     config = function() require('plugs.util.nvim-tree') end
   },
   {
-    "kyazdani42/nvim-web-devicons",
-    event = "VeryLazy",
+    "nvim-tree/nvim-web-devicons",
+    event = 'BufRead',
     config = function() require('plugs.ui.devicons') end,
     lazy = true,
   },
   {
     "folke/which-key.nvim",
-    lazy = true,
-    event = "VeryLazy",
-    keys = { "<leader>", '"', "'", "`" },
+    keys = { "<leader>", ' ', "'", "`" },
     config = function() require('plugs.util.which-key') end
   },
   {
     'nvim-lua/plenary.nvim',
-    event = "VeryLazy",
     lazy = true,
   },
   {
     'nvim-telescope/telescope.nvim',
-    event = "VeryLazy",
+    cmd = "Telescope",
     dependencies = { 'plenary.nvim' },
-    lazy = true,
-
     config = function() require('plugs.util.telescope') end
   },
   {
     "akinsho/toggleterm.nvim",
     config = function() require('plugs.util.toggleterm') end,
-    event = "VeryLazy",
-    lazy = true,
+    cmd = "ToggleTerm",
   },
   {
     "lewis6991/gitsigns.nvim",
-    event = "VeryLazy",
     lazy = true,
     ft = "gitcommit",
     config = function()
@@ -82,7 +71,6 @@ lazy.setup({
     "lukas-reineke/indent-blankline.nvim",
     config = function() require('plugs.ui.indentlines') end,
     lazy = true,
-    event = "VeryLazy",
   },
   { "williamboman/mason.nvim",
     cmd = {
@@ -92,21 +80,18 @@ lazy.setup({
       "MasonUninstallAll",
       "MasonLog",
     },
-    event = "VeryLazy",
-    lazy = true,
     config = function() require('plugs.lsp.mason') end,
   },
   {
     "terrortylor/nvim-comment",
     config = function() require('plugs.util.comments') end,
-    event = "VeryLazy",
     lazy = true,
   },
   -- The funs begins
   {
     "neovim/nvim-lspconfig",
-    lazy = true,
-    event = "VeryLazy",
+    event = { "BufReadPost", "BufNewFile" },
+    cmd = { "LspInfo", "LspInstall", "LspUninstall" },
     config = function()
       require "plugs.lsp.lspconfig"
     end,
@@ -114,24 +99,23 @@ lazy.setup({
 
   {
     "utilyre/barbecue.nvim",
-    event = { "BufReadPost", "BufNewFile" },
+    event = { "BufRead", "BufNewFile" },
     dependencies = {
       "SmiteshP/nvim-navic",
-      "kyazdani42/nvim-web-devicons",
+      "nvim-tree/nvim-web-devicons",
     },
     opts = {
-      attach_navic = false,
+      attach_navic = true,
       theme = "auto",
       include_buftypes = { "" },
-      exclude_filetypes = { "gitcommit", "Trouble", "toggleterm" },
+      exclude_filetypes = { "markdown", "gitcommit", "Trouble", "toggleterm" },
       show_modified = false,
     },
   },
   -- load luasnips + cmp related in insert mode only
   {
     "hrsh7th/nvim-cmp",
-    event = "VeryLazy",
-    lazy = true,
+    event = "InsertEnter",
     dependencies = {
       {
         -- snippet plugin
@@ -174,13 +158,8 @@ lazy.setup({
     end,
   },
   {
-    "rcarriga/nvim-notify",
-    config = function() require("plugs.ui.notify") end,
-    event = { "CursorMoved", "CursorHold", "InsertEnter", "CmdlineEnter" },
-  },
-  {
     "kosayoda/nvim-lightbulb",
-    event = { "CursorMoved", "CursorHold", },
+    event = { event = 'BufRead', },
     config = function() require("plugs.lsp.lightbulb") end,
   },
   {

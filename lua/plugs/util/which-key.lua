@@ -17,10 +17,6 @@ local mappings = {
     s = { ":w<cr>", "Save" },
     x = { ":bdelete<cr>", "Close" },
   },
-  c = {
-    name = "Completion",
-    c = { ":lua vim.lsp.buf.code_action()<cr>", "Show Code Actions" }
-  },
   f = {
     name = 'Telescope',
     f = { ":Telescope find_files<cr>", "Find Files" },
@@ -32,15 +28,11 @@ local mappings = {
     t = { ":ToggleTerm<cr>", "Split Below" },
     f = { toggle_float, "Floating Terminal" },
   },
-  p = {
-    name = "Packer",
-    r = { ":PackerClean<cr>", "Remove Unused Plugins" },
-    c = { ":PackerCompile profile=true<cr>", "Recompile Plugins" },
-    i = { ":PackerInstall<cr>", "Install Plugins" },
-    p = { ":PackerProfile<cr>", "Packer Profile" },
-    s = { ":PackerSync<cr>", "Sync Plugins" },
-    S = { ":PackerStatus<cr>", "Packer Status" },
-    u = { ":PackerUpdate<cr>", "Update Plugins" }
+  l = {
+    name = "Misc",
+    l = { ":Lazy<cr>", "Open Lazy" },
+    c = { ":lua vim.lsp.buf.code_action()<cr>", "Show Code Actions" },
+    m = { ":Mason<cr>", "Open Mason" },
   },
 }
 

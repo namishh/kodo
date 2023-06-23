@@ -21,17 +21,17 @@ A neovim configuration that looks good and is fast (startuptime < 0.05s).
 
 ```txt
 Tested on a pretty low end laptop
-On Power                              : 0.015s - 0.025s
-On Battery                            : 0.025s - 0.045s
+On Power                              : 0.022s - 0.028s
+On Battery                            : 0.030s - 0.045s
 ```
 
 </div>
 
-Has something like 25 plugins and but is still fast becuase of holy lazy loading.
+Has something like 30 plugins and but is still fast becuase of holy lazy loading.
 
 
 ## Plugins And Features
-+ Comes with 14 premade colourschemes (and xresources as a bonus)!
++ Comes with 13 premade colourschemes (and xresources as a bonus)!
 + Lazy loading done most of the time to get blazingly moderate startup times.
 + A Minimal Custom [Bufferline](https://github.com/chadcat5207/nvide/tree/main/lua/ui/buf)
 + Cool Looking Custom [Statusline](https://github.com/chadcat5207/nvide/tree/main/lua/ui/stl)
@@ -138,6 +138,7 @@ M.statusstyle = 'minimal' -- minimal | fancy | monochrome
 ![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/6.png)
 
 ![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/7.png)
+
 ## Todo
 - [x]  ~~better screenshots~~
 - [ ]  more, MORE fast (bring back to 15ms)
@@ -146,8 +147,8 @@ M.statusstyle = 'minimal' -- minimal | fancy | monochrome
 - [x]  ~~fix autoformatting on save~~
 - [x] ~~make custom tabline~~
 - [x] ~~fix custom dashboard~~
-- [x] add some more themes (currently 10)
-- [x] fix custom tabline
+- [x] ~~add some more themes (currently 13)~~
+- [x] ~~fix custom tabline~~
 
 ## Special Thanks 
 This config wouldn't have been possible without these chads!
