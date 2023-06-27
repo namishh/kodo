@@ -18,10 +18,10 @@ end, {})
 local createTab = function(buf)
   local close_btn = "%" .. buf .. "@BufflineKillBuf@  %X"
   local filename = (#vim.api.nvim_buf_get_name(buf) ~= 0) and vim.fn.fnamemodify(vim.api.nvim_buf_get_name(buf), ":t") or
-      ""
+      "New File"
 
   for _, buffer in pairs(vim.api.nvim_list_bufs()) do
-    if vim.api.nvim_buf_is_valid(buffer) and vim.api.nvim_buf_is_loaded(buffer) then
+    if vim.api.nvim_buf_is_valid(buffer) and vim.api.nvim_buf_is_loaded(buffer) and vim.bo[buffer].buflisted then
       if filename == vim.fn.fnamemodify(vim.api.nvim_buf_get_name(buffer), ":t") and buffer ~= buf then
         local other = {}
         for match in (vim.api.nvim_buf_get_name(buffer) .. "/"):gmatch("(.-)" .. "/") do
@@ -49,15 +49,15 @@ local createTab = function(buf)
     end
   end
   if buf == vim.api.nvim_get_current_buf() then
-    filename = "%#BufflineBufOnActive#" .. "  " .. filename
+    filename = "%#BufflineBufOnActive#  " .. "  " .. filename
     close_btn = (vim.bo[0].modified and "%" .. buf .. "@BufflineKillBuf@%#BuffLineBufOnModified#   ")
         or ("%#BuffLineBufOnClose#" .. close_btn) .. " "
   else
-    filename = "%#BufflineBufOnInactive#" .. "  " .. filename
+    filename = "%#BufflineBufOnInactive#  " .. "  " .. filename
     close_btn = (vim.bo[buf].modified and "%" .. buf .. "@BufflineKillBuf@%#BuffLineBufOffModified#   ")
         or ("%#BuffLineBufOffClose#" .. close_btn) .. " "
   end
-  return "%" .. buf .. "@BufflineGoToBuf@" .. filename .. " " .. close_btn .. '%X' .. "%#BufflineEmptyColor#"
+  return "%" .. buf .. "@BufflineGoToBuf@" .. filename .. "  " .. close_btn .. '%X' .. "%#BufflineEmptyColor#"
 end
 
 local excludedFileTypes = { 'NvimTree', 'help', 'dasher', 'lir', 'alpha', "toggleterm" }

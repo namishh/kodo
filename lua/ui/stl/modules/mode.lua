@@ -37,8 +37,6 @@ local M = function(m)
     return "%#" .. modes[mode][2] .. "#" .. " " .. modes[mode][1] .. " ";
   elseif (m == 'fancy') then
     return "%#" .. modes[mode][2] .. "#" .. "  " .. modes[mode][1] .. " " .. sep .. septwo .. " ";
-  elseif (m == 'monochrome') then
-    return "%#" .. "StalineMonoMode" .. "#" .. " " .. modes[mode][1] .. " " .. "%#StalineEmptySpace#" .. " ";
   else
     return "F"
   end

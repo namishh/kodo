@@ -12,18 +12,9 @@ local M = function(m)
     return " " .. "%#StalineDiffAdd#" .. added .. "%#StalineDiffChange#" .. changed .. "%#StalineDiffRemove#" .. removed
   elseif (m == 'fancy') then
     return " " .. "%#StalineDiffAdd#" .. added .. "%#StalineDiffChange#" .. changed .. "%#StalineDiffRemove#" .. removed
-  elseif (m == 'monochrome') then
-    added = (git_status.added and git_status.added ~= 0) and (" +" .. git_status.added) or ""
-    changed = (git_status.changed and git_status.changed ~= 0) and (" ~" .. git_status.changed) or ""
-    removed = (git_status.removed and git_status.removed ~= 0) and (" -" .. git_status.removed) or ""
-    return " " ..
-        "%#StalineDiffAddMono#" ..
-        added ..
-        "%#StalineDiffChangeMono#" .. changed .. "%#StalineDiffRemoveMono#" .. removed .. "%#StalineEmptySpace#" .. " "
   else
     return "F"
   end
-
 end
 
 return M

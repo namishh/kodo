@@ -93,5 +93,4 @@ M.dashboard = {
 }
 
 M.colorscheme = 'xrdb'
-M.colorscheme2 = 'nirvana'
 return M

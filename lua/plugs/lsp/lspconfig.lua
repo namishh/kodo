@@ -10,6 +10,11 @@ end
 
 M.capabilities = vim.lsp.protocol.make_client_capabilities()
 
+M.capabilities.textDocument.foldingRange = {
+  dynamicRegistration = false,
+  lineFoldingOnly = true
+}
+
 M.capabilities.textDocument.completion.completionItem = {
   documentationFormat = { "markdown", "plaintext" },
   snippetSupport = true,
@@ -30,7 +35,6 @@ M.capabilities.textDocument.completion.completionItem = {
 
 
 local servers = { "html", "pyright", "tsserver", "emmet_ls", "clangd", "cssls", "rnix", "hls" }
-
 for _, k in ipairs(servers) do
   lspconfig[k].setup {
     on_attach = M.on_attach,
@@ -43,11 +47,14 @@ lspconfig.lua_ls.setup {
 
   settings = {
     Lua = {
+      completion = {
+        callSnippet = "Replace"
+      },
       diagnostics = {
         globals = { "vim", "awesome", "client", "screen", "mouse" },
       },
     },
   }
 }
-
+require('ufo').setup()
 return M

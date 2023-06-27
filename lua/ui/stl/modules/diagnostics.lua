@@ -22,15 +22,6 @@ local M = function(m)
         ("%#StalineLspHintsIcon#" .. "@" .. "%#StalineLspHints#" .. hints) or ""
     INFO = (info and info > 0) and ("%#StalineLspInfoIcon#" .. "i" .. "%#StalineLspInfo#" .. info)
         or ""
-  elseif (m == 'monochrome') then
-    ERROR = (errors and errors > 0) and
-        ("%#StalineLspErrorIconMono#" .. "X" .. "%#StalineLspErrorMono#" .. errors) or ""
-    WARNING = (warnings and warnings > 0) and
-        ("%#StalineLspWarningIconMono#" .. "!" .. "%#StalineLspWarningMono#" .. warnings) or ""
-    HINT = (hints and hints > 0) and
-        ("%#StalineLspHintsIconMono#" .. "@" .. "%#StalineLspHintsMono#" .. hints) or ""
-    INFO = (info and info > 0) and ("%#StalineLspInfoIconMono#" .. "i" .. "%#StalineLspInfoMono#" .. info)
-        or ""
   else
     return "F"
   end

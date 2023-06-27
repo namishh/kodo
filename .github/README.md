@@ -27,7 +27,7 @@ On Battery                            : 0.030s - 0.045s
 
 </div>
 
-Has something like 30 plugins and but is still fast becuase of holy lazy loading.
+Has something like 35 plugins and but is still fast becuase of holy lazy loading.
 
 
 ## Plugins And Features
@@ -51,7 +51,7 @@ Has something like 30 plugins and but is still fast becuase of holy lazy loading
 
 ## Requirements
 + Neovim >= v0.9
-+ ripgrep (optional)
++ ripgrep
 + nodejs and npm
 + a brain (mandatory)
 + xrdb for xresources
@@ -97,8 +97,33 @@ M.colorscheme = 'pop'
 
 ### Using Xresources
 
-First use a xresources file
+Sample Xresources file for my config
+```bash
+*.color0: #1b1b1b
+*.color1: #c14d53
+*.color10: #57a274
+*.color11: #e1956c
+*.color12: #6fadea
+*.color13: #d466e9
+*.color14: #63b4b5
+*.color15: #a4b5b5
+*.color2: #56966e
+*.color3: #dc8c61
+*.color4: #6e95bd
+*.color5: #a56db1
+*.color6: #6a9f98
+*.color7: #b7b7b7
+*.color8: #272727
+*.color9: #da4b52
+*.comment: #5a5858
+*.background: #0c0c0c
+*.contrast: #111111
+*.cursorline: #191919
+*.darker: #070707
+*.foreground: #dfdddd
+```
 
+Don't forget to merge the Xresources
 ```bash
 ~ $ xrdb -merge ./path/to/xresources
 ```
@@ -116,7 +141,7 @@ There are three prebuilt styles
 + To change the style edit `/lua/core/cfg.lua`
 
 ```lua
-M.statusstyle = 'minimal' -- minimal | fancy | monochrome
+M.statusstyle = 'minimal' -- minimal | fancy
 ```
 + Reload Neovim
 
@@ -142,7 +167,7 @@ M.statusstyle = 'minimal' -- minimal | fancy | monochrome
 ## Todo
 - [x]  ~~better screenshots~~
 - [ ]  more, MORE fast (bring back to 15ms)
-- [x]  ~~custom statusline~~ (i am proud)
+- [x]  ~~custom statusline (i am proud)~~
 - [x]  ~~learn markdown bcoz i suck at it~~
 - [x]  ~~fix autoformatting on save~~
 - [x] ~~make custom tabline~~

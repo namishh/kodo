@@ -8,9 +8,6 @@ local M = function(m)
   elseif (m == 'fancy') then
     return "%#StalineProgressIcon#" ..
         "  " .. "%#StalineProgress#" .. " " .. current .. "/" .. total .. " " .. "%#StalineEmptySpace#"
-  elseif (m == 'monochrome') then
-    return "%#StalineProgressIconMono#" ..
-        " " .. "%#StalineProgressMono#" .. " " .. current .. "/" .. total .. " " .. "%#StalineEmptySpace#"
   else
     return "F"
   end

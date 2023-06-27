@@ -8,9 +8,6 @@ local M = function(m)
       elseif (m == 'fancy') then
         return "%#StalineLspIcon#" ..
             "   " .. "%#StalineLspName#" .. " " .. client.name .. " " .. "%#StalineEmptySpace#" .. " "
-      elseif (m == 'monochrome') then
-        return "%#StalineLspIconMono#" ..
-            "   " .. "%#StalineLspNameMono#" .. " " .. client.name .. " " .. "%#StalineEmptySpace#" .. " "
       else
         return 'f'
       end

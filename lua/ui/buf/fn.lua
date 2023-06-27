@@ -14,6 +14,7 @@ M.bufilter = function()
 
   return bufs
 end
+
 M.tabuflinePrev = function()
   local bufs = M.bufilter()
   for i, v in ipairs(bufs) do

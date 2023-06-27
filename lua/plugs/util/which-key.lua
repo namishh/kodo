@@ -2,13 +2,6 @@ local wk = require("which-key")
 wk.setup {
 }
 
-local Terminal = require('toggleterm.terminal').Terminal
-local toggle_float = function()
-  local float = Terminal:new({ direction = "float" })
-  return float:toggle()
-end
-
-
 local mappings = {
   q = {
     name = 'File',
@@ -23,16 +16,23 @@ local mappings = {
     g = { ":Telescope oldfiles<cr>", "Recently Opened" },
     r = { ":Telescope live_grep<cr>", "Find String" },
   },
+  g = {
+    name = "Grapple",
+    a = { ":GrappleTag<cr>", "Add A Bookmark" },
+    t = { ":GrappleToggle<cr>", "Toggle Bookmark" },
+    r = { ":GrappleUntag<cr>", "Remove Bookmark" },
+    g = { ":GrapplePopup tags<cr>", "Show All Bookmarks" }
+  },
   t = {
     name = "Terminal",
     t = { ":ToggleTerm<cr>", "Split Below" },
-    f = { toggle_float, "Floating Terminal" },
   },
   l = {
     name = "Misc",
     l = { ":Lazy<cr>", "Open Lazy" },
     c = { ":lua vim.lsp.buf.code_action()<cr>", "Show Code Actions" },
     m = { ":Mason<cr>", "Open Mason" },
+    s = { ":SymbolsOutline<cr>", "Overview of file" },
   },
 }
 

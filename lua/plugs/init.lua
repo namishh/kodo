@@ -53,7 +53,7 @@ lazy.setup({
   {
     "lewis6991/gitsigns.nvim",
     lazy = true,
-    ft = "gitcommit",
+    event = "BufRead",
     config = function()
       require('gitsigns').setup {
         signs = {
@@ -159,7 +159,7 @@ lazy.setup({
   },
   {
     "kosayoda/nvim-lightbulb",
-    event = { event = 'BufRead', },
+    event = 'BufRead',
     config = function() require("plugs.lsp.lightbulb") end,
   },
   {
@@ -176,4 +176,37 @@ lazy.setup({
     lazy = true,
     ft = 'yuck',
   },
+  {
+    'kevinhwang91/nvim-ufo',
+    event = "BufRead",
+    dependencies = 'kevinhwang91/promise-async'
+  },
+  {
+    'simrat39/symbols-outline.nvim',
+    event = "BufRead",
+    config = function() require("plugs.util.symbols") end
+  },
+  {
+    'code-biscuits/nvim-biscuits',
+    dependencies = {
+      'nvim-treesitter/nvim-treesitter',
+    },
+    config = function() require("plugs.lsp.biscuits") end,
+    event = "BufRead",
+  },
+  {
+    "cbochs/grapple.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function() require("plugs.util.grapple") end,
+    cmd = {
+      "GrappleCycle",
+      "GrapplePopup",
+      "GrappleReset",
+      "GrappleSelect",
+      "GrappleTag",
+      "GrappleTags",
+      "GrappleToggle",
+      "GrappleUntag"
+    }
+  }
 })
