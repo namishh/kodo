@@ -131,7 +131,7 @@ Don't forget to merge the Xresources
 ```lua
 M.colorscheme = 'xrdb'
 ```
-Keep in mind that using xrdb increases startuptime by 100ms, I am looking to make this more faster
+Keep in mind that using xrdb increases startuptime by 5-15ms, I am looking to make this more faster
 
 + Reload Neovim
 
