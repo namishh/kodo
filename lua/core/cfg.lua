@@ -80,9 +80,9 @@ local logos = setmetatable({
 M.dashboard = {
   header = logos.TEXT,
   buttons = {
-    { "   Find File",    "LDR f f", "Telescope find_files" },
-    { "   Recent Files", "LDR f g", "Telescope oldfiles" },
-    { "   Find Word",    "LDR f r", "Telescope live_grep" },
+    { "   Find File",    "LDR f f", ":Telescope find_files<cr>" },
+    { "   Recent Files", "LDR f g", ":Telescope oldfiles<cr>" },
+    { "   Find Word",    "LDR f r", ":Telescope live_grep<cr>" },
   },
   message = {
     "[ ━━━━━━ ❖  ━━━━━━ ]",

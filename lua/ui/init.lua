@@ -8,21 +8,9 @@ vim.api.nvim_create_autocmd({ "CursorHold", "UIEnter" }, {
   end
 })
 
-vim.api.nvim_create_autocmd({ "UIEnter" }, {
+vim.api.nvim_create_autocmd({ "VimEnter" }, {
   pattern = "*",
   callback = function()
     require("ui.buf").setup()
-  end,
-})
-
-require("ui.dash").open()
--- Resize dashboard
-vim.api.nvim_create_autocmd("VimResized", {
-  callback = function()
-    if vim.bo.filetype == "dasher" then
-      vim.opt_local.modifiable = true
-      vim.api.nvim_buf_set_lines(0, 0, -1, false, { "" })
-      require("ui.dash").open()
-    end
   end,
 })

@@ -18,10 +18,10 @@ end, {})
 local createTab = function(buf)
   local close_btn = "%" .. buf .. "@BufflineKillBuf@  %X"
   local filename = (#vim.api.nvim_buf_get_name(buf) ~= 0) and vim.fn.fnamemodify(vim.api.nvim_buf_get_name(buf), ":t") or
-      "New File"
+      ""
 
   for _, buffer in pairs(vim.api.nvim_list_bufs()) do
-    if vim.api.nvim_buf_is_valid(buffer) and vim.api.nvim_buf_is_loaded(buffer) and vim.bo[buffer].buflisted then
+    if vim.api.nvim_buf_is_valid(buffer) and vim.api.nvim_buf_is_loaded(buffer) and vim.bo[buffer].buflisted and filename ~= "" then
       if filename == vim.fn.fnamemodify(vim.api.nvim_buf_get_name(buffer), ":t") and buffer ~= buf then
         local other = {}
         for match in (vim.api.nvim_buf_get_name(buffer) .. "/"):gmatch("(.-)" .. "/") do
@@ -78,9 +78,8 @@ M.getTabline = function()
   local closebutton = "%#BufflineCloseButton# %@CloseAll@" .. " "
   local counter = 0
   for _, buf in pairs(vim.api.nvim_list_bufs()) do
-    if vim.api.nvim_buf_is_valid(buf) and vim.api.nvim_buf_is_loaded(buf) and vim.bo[buf].buflisted then
-      local filename = vim.api.nvim_buf_get_name(buf):match("^.+/(.+)$") or ""
-
+    local filename = vim.api.nvim_buf_get_name(buf):match("^.+/(.+)$") or ""
+    if vim.api.nvim_buf_is_valid(buf) and vim.api.nvim_buf_is_loaded(buf) and vim.bo[buf].buflisted and filename ~= "" then
       local conditions = vim.tbl_contains(excludedFileTypes, vim.bo[buf].ft)
       if conditions then goto do_nothing else filename = "%#BufflineEmptyColor#" .. createTab(buf) end
       buffline = buffline .. filename

@@ -53,13 +53,13 @@ Has something like 34 plugins and but is still fast becuase of holy lazy loading
 | [cbochs/grapple.nvim](https://github.com/cbochs/grapple.nvim) | bookmark important files to move to them instantly | `true` |
 | [L3MON4D3/LuaSnip](https://github.com/L3MON4D3/LuaSnip) | very simple and easy to use snippet engine | `true` |
 | [simrat39/symbols-outline.nvim](https://github.com/simrat39/symbols-outline.nvim) | a tree like view for symbols via lsp | `true` |
+| [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim) | a very minimal and good looking dashboard | `true` |
 
 #### And Also...
 + Comes with 13 premade colourschemes (and xresources as a bonus)!
 + Lazy loading done most of the time to get blazingly moderate startup times.
 + A Minimal Custom [Bufferline](https://github.com/chadcat5207/nvide/tree/main/lua/ui/buf)
 + Cool Looking Custom [Statusline](https://github.com/chadcat5207/nvide/tree/main/lua/ui/stl)
-+ Dope [dashboard](https://github.com/chadcat5207/nvide/tree/main/lua/ui/dash) inspired by nvchad
 + Auto Formatting with inbuilt LSP (no plugin! , requires installing the lsp client)
 
 ## Requirements

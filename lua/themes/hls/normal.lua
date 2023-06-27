@@ -11,6 +11,8 @@ return function(colors)
     SpellRare = { fg = colors.color4 },
     NormalNC = { fg = colors.foreground, bg = colors.background },
     WildMenu = { fg = colors.color7, bg = colors.color4 },
+    AbsoluteDark = { bg = colors.darker, fg = colors.foreground },
+    AbsoluteCursor = { bg = colors.cursorline, fg = colors.foreground },
     CursorLineNr = { fg = colors.fg },
     Comment = { fg = colors.comment, italic = true },
     Folded = { fg = colors.color4, bg = colors.background },

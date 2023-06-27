@@ -7,6 +7,7 @@ require("indent_blankline").setup {
     "dasher",
     "packer",
     "lspinfo",
+    "alpha",
     "TelescopePrompt",
     "TelescopeResults",
     "mason",

@@ -34,6 +34,17 @@ local mappings = {
     m = { ":Mason<cr>", "Open Mason" },
     s = { ":SymbolsOutline<cr>", "Overview of file" },
   },
+  h = {
+    name = "Hop",
+    c = { ":HopChar1<cr>", "Single Character" },
+    C = { ":HopChar2<cr>", "Double Characters" },
+    a = { ":HopAnywhere<cr>", "Anywhere" },
+    l = { ":HopLine<cr>", "Line" },
+    L = { ":HopLineStart<cr>", "Line Start" },
+    v = { ":HopVertical<cr>", "Vertically" },
+    w = { ":HopWord<cr>", "Word" },
+
+  }
 }
 
 local opts = { prefix = '<leader>' }

@@ -20,15 +20,16 @@ lazy.setup({
     lazy = true
   },
   {
-    'kyazdani42/nvim-tree.lua',
-    cmd = "NvimTreeToggle",
-    config = function() require('plugs.util.nvim-tree') end
-  },
-  {
     "nvim-tree/nvim-web-devicons",
     event = 'BufRead',
     config = function() require('plugs.ui.devicons') end,
     lazy = true,
+  },
+
+  {
+    'kyazdani42/nvim-tree.lua',
+    cmd = "NvimTreeToggle",
+    config = function() require('plugs.util.nvim-tree') end
   },
   {
     "folke/which-key.nvim",
@@ -53,7 +54,7 @@ lazy.setup({
   {
     "lewis6991/gitsigns.nvim",
     lazy = true,
-    event = "BufRead",
+    event = { "CmdlineEnter", "InsertEnter", "CursorHold", "CursorMoved" },
     config = function()
       require('gitsigns').setup {
         signs = {
@@ -70,7 +71,7 @@ lazy.setup({
   {
     "lukas-reineke/indent-blankline.nvim",
     config = function() require('plugs.ui.indentlines') end,
-    lazy = true,
+    event = { "CursorMoved", "CursorHold", "InsertEnter" },
   },
   { "williamboman/mason.nvim",
     cmd = {
@@ -134,6 +135,7 @@ lazy.setup({
           fast_wrap = {},
           disable_filetype = { "TelescopePrompt", "vim" },
         },
+        event = "InsertEnter",
         lazy = true,
         config = function(_, opts)
           require("nvim-autopairs").setup(opts)
@@ -205,8 +207,29 @@ lazy.setup({
     }
   },
   {
-    "ggandor/leap.nvim",
-    event = "BufRead",
-    config = function() require("plugs.util.leap") end
+    'phaazon/hop.nvim',
+    branch = 'v2',
+    cmd = {
+      "HopAnywhere",
+      "HopChar1",
+      "HopChar2",
+      "HopLine",
+      "HopLineStart",
+      "HopVertical",
+      "HopWord"
+    },
+    config = function() require("plugs.util.hop") end
+  },
+  {
+    'andweeb/presence.nvim',
+    event = "InsertEnter",
+    config = function() require("plugs.util.presence") end
+  },
+  {
+    "goolord/alpha-nvim",
+    event = "BufWinEnter",
+    config = function()
+      require("plugs.ui.alpha")
+    end
   }
 })
