@@ -27,27 +27,39 @@ On Battery                            : 0.030s - 0.045s
 
 </div>
 
-Has something like 35 plugins and but is still fast becuase of holy lazy loading.
+Has something like 34 plugins and but is still fast becuase of holy lazy loading.
 
 
 ## Plugins And Features
+
+| Plugin        | Description          | Lazy Loaded  |
+| ------------- |-------------| :-----:|
+| [folke/lazy](https://github.com/folke/lazy.nvim) | the package manager, better than packer.nvim for newbies | `false` |
+| [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) | syntax highlighting, most popular one for neovim | `true` |
+| [NvChad/nvim-colorizer.lua](https://github.com/NvChad/nvim-colorizer.lua) | highlights colors and is really frickin fast | `true` |
+| [kyazdani42/nvim-tree.lua](https://github.com/kyazdani42/nvim-tree.lua) | a very neat, simple and clean file tree | `true` |
+| [nvim-tree/nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons) | lua fork of vim devicons | `false`
+| [folke/which-key.nvim](https://github.com/folke/which-key.nvim) | shows all the posiible vim keybindings, perfect for dummies | `true` |
+| [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) | probably the most popular menu. can be used for a lot of stuff | `true` |
+| [akinsho/toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim) | terminal integration in neovim | `true` |
+| [lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) | Super fast git decorations implemented purely in Lua. | `true` |
+| [lukas-reineke/indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim) | super cool for keeping track of code | `true` |
+| [williamboman/mason.nvim](https://github.com/williamboman/mason.nvim) | installing LSPs made super easy | `true` |
+| [utilyre/barbecue.nvim](https://github.com/utilyre/barbecue.nvim) | vscode like winbar code context. looks super cool | `true` |
+| [kosayoda/nvim-lightbulb](https://github.com/kosayoda/nvim-lightbulb) | shows a lightbulb where ever code fixes are available | `true` |
+| [LnL7/vim-nix](https://github.com/LnL7/vim-nix) | nix lsp to make Nix a less of a headache | `true` |
+| [kevinhwang91/nvim-ufo](https://github.com/kevinhwang91/nvim-ufo) | folds in neovim arent that bad! actually, better than vscode | `true` |
+| [ggandor/leap.nvim](https://github.com/ggandor/leap.nvim) | move anywhere around the window in 2-3 clicks | `true` |
+| [cbochs/grapple.nvim](https://github.com/cbochs/grapple.nvim) | bookmark important files to move to them instantly | `true` |
+| [L3MON4D3/LuaSnip](https://github.com/L3MON4D3/LuaSnip) | very simple and easy to use snippet engine | `true`
+
+#### And Also...
 + Comes with 13 premade colourschemes (and xresources as a bonus)!
 + Lazy loading done most of the time to get blazingly moderate startup times.
 + A Minimal Custom [Bufferline](https://github.com/chadcat5207/nvide/tree/main/lua/ui/buf)
 + Cool Looking Custom [Statusline](https://github.com/chadcat5207/nvide/tree/main/lua/ui/stl)
-+ Parsing with [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
-+ A File Tree with [nvim-tree](https://github.com/kyazdani42/nvim-tree.lua)
-+ Fast file finding and more with [telescope](https://github.com/nvim-telescope/telescope.nvim/)
 + Dope [dashboard](https://github.com/chadcat5207/nvide/tree/main/lua/ui/dash) inspired by nvchad
-+ Snippets with [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
-+ Toggle-able Terminals with [toggleterm](https://github.com/akinsho/toggleterm.nvim)
-+ Color Hightlighting with [nvim-colorizer](https://github.com/norcalli/nvim-colorizer.lua)
-+ Popup mappings keysheet [whichkey.nvim](https://github.com/folke/which-key.nvim)
-+ Lsp Management with [Mason](https://github.com/williamboman/mason.nvim/)
-+ Easy Package Managing with [Lazy](https://github.com/folke/lazy.nvim)
 + Auto Formatting with inbuilt LSP (no plugin! , requires installing the lsp client)
-+ Quick Commenting with [comment-nvim](https://github.com/terrortylor/nvim-comment)
-+ [Indentlines](https://github.com/lukas-reineke/indent-blankline.nvim) to help you code better
 
 ## Requirements
 + Neovim >= v0.9

@@ -172,11 +172,6 @@ lazy.setup({
     lazy = true
   },
   {
-    "elkowar/yuck.vim",
-    lazy = true,
-    ft = 'yuck',
-  },
-  {
     'kevinhwang91/nvim-ufo',
     event = "BufRead",
     dependencies = 'kevinhwang91/promise-async'
@@ -208,5 +203,10 @@ lazy.setup({
       "GrappleToggle",
       "GrappleUntag"
     }
+  },
+  {
+    "ggandor/leap.nvim",
+    event = "BufRead",
+    config = function() require("plugs.util.leap") end
   }
 })
