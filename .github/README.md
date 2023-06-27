@@ -32,7 +32,7 @@ Has something like 34 plugins and but is still fast becuase of holy lazy loading
 
 ## Plugins And Features
 
-| Plugin        | Description          | Lazy Loaded  |
+| Plugin        | Description          | Lazy |
 | ------------- |-------------| :-----:|
 | [folke/lazy](https://github.com/folke/lazy.nvim) | the package manager, better than packer.nvim for newbies | `false` |
 | [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) | syntax highlighting, most popular one for neovim | `true` |
@@ -47,11 +47,12 @@ Has something like 34 plugins and but is still fast becuase of holy lazy loading
 | [williamboman/mason.nvim](https://github.com/williamboman/mason.nvim) | installing LSPs made super easy | `true` |
 | [utilyre/barbecue.nvim](https://github.com/utilyre/barbecue.nvim) | vscode like winbar code context. looks super cool | `true` |
 | [kosayoda/nvim-lightbulb](https://github.com/kosayoda/nvim-lightbulb) | shows a lightbulb where ever code fixes are available | `true` |
-| [LnL7/vim-nix](https://github.com/LnL7/vim-nix) | nix lsp to make Nix a less of a headache | `true` |
+| [LnL7/vim-nix](https://github.com/LnL7/vim-nix) | nix syntax to make Nix a less of a headache | `true` |
 | [kevinhwang91/nvim-ufo](https://github.com/kevinhwang91/nvim-ufo) | folds in neovim arent that bad! actually, better than vscode | `true` |
 | [ggandor/leap.nvim](https://github.com/ggandor/leap.nvim) | move anywhere around the window in 2-3 clicks | `true` |
 | [cbochs/grapple.nvim](https://github.com/cbochs/grapple.nvim) | bookmark important files to move to them instantly | `true` |
-| [L3MON4D3/LuaSnip](https://github.com/L3MON4D3/LuaSnip) | very simple and easy to use snippet engine | `true`
+| [L3MON4D3/LuaSnip](https://github.com/L3MON4D3/LuaSnip) | very simple and easy to use snippet engine | `true` |
+| [simrat39/symbols-outline.nvim](https://github.com/simrat39/symbols-outline.nvim) | a tree like view for symbols via lsp | `true` |
 
 #### And Also...
 + Comes with 13 premade colourschemes (and xresources as a bonus)!
