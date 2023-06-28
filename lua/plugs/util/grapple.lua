@@ -14,7 +14,7 @@ require("grapple").setup({
     height = 12,
     style = "minimal",
     focusable = false,
-    border = "single",
+    border = "rounded",
   },
   integrations = {
     ---Support for saving tag state using resession.nvim

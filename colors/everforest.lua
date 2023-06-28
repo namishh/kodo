@@ -1,4 +1,3 @@
-require("themes").setup({
-  theme = "everforest",
-  transparent_background = false
-})
+vim.g.currentTheme = "everforest"
+require("plenary.reload").reload_module "themes"
+require("themes").load()

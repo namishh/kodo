@@ -7,7 +7,10 @@ M.bufilter = function()
   end
 
   for i = #bufs, 1, -1 do
-    if not vim.api.nvim_buf_is_valid(bufs[i]) or not vim.bo[bufs[i]].buflisted or not vim.api.nvim_buf_is_loaded(bufs[i]) then
+    local filename = (#vim.api.nvim_buf_get_name(bufs[i]) ~= 0) and
+        vim.fn.fnamemodify(vim.api.nvim_buf_get_name(bufs[i]), ":t") or
+        ""
+    if not vim.api.nvim_buf_is_valid(bufs[i]) or not vim.bo[bufs[i]].buflisted or not vim.api.nvim_buf_is_loaded(bufs[i]) or filename == '' then
       table.remove(bufs, i)
     end
   end

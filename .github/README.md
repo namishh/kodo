@@ -22,7 +22,7 @@ A neovim configuration that looks good and is fast (startuptime < 0.05s).
 ```txt
 Tested on a pretty low end laptop
 On Power                              : 0.022s - 0.028s
-On Battery                            : 0.030s - 0.045s
+On Battery                            : 0.028s - 0.036s
 ```
 
 </div>
@@ -38,7 +38,7 @@ Has something like 34 plugins and but is still fast becuase of holy lazy loading
 | [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) | syntax highlighting, most popular one for neovim | `true` |
 | [NvChad/nvim-colorizer.lua](https://github.com/NvChad/nvim-colorizer.lua) | highlights colors and is really frickin fast | `true` |
 | [kyazdani42/nvim-tree.lua](https://github.com/kyazdani42/nvim-tree.lua) | a very neat, simple and clean file tree | `true` |
-| [nvim-tree/nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons) | lua fork of vim devicons | `false`
+| [nvim-tree/nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons) | lua fork of vim devicons | `true`
 | [folke/which-key.nvim](https://github.com/folke/which-key.nvim) | shows all the posiible vim keybindings, perfect for dummies | `true` |
 | [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) | probably the most popular menu. can be used for a lot of stuff | `true` |
 | [akinsho/toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim) | terminal integration in neovim | `true` |
@@ -56,7 +56,8 @@ Has something like 34 plugins and but is still fast becuase of holy lazy loading
 | [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim) | a very minimal and good looking dashboard | `true` |
 
 #### And Also...
-+ Comes with 13 premade colourschemes (and xresources as a bonus)!
++ Comes with 9 premade colourschemes!
++ Cached Colorschemes for better speeds!
 + Lazy loading done most of the time to get blazingly moderate startup times.
 + A Minimal Custom [Bufferline](https://github.com/chadcat5207/nvide/tree/main/lua/ui/buf)
 + Cool Looking Custom [Statusline](https://github.com/chadcat5207/nvide/tree/main/lua/ui/stl)
@@ -107,50 +108,9 @@ require("themes").setup({
 ```lua
 M.colorscheme = 'pop'
 ```
-
-### Using Xresources
-
-Sample Xresources file for my config
-```txt
-*.color0: #1b1b1b
-*.color1: #c14d53
-*.color10: #57a274
-*.color11: #e1956c
-*.color12: #6fadea
-*.color13: #d466e9
-*.color14: #63b4b5
-*.color15: #a4b5b5
-*.color2: #56966e
-*.color3: #dc8c61
-*.color4: #6e95bd
-*.color5: #a56db1
-*.color6: #6a9f98
-*.color7: #b7b7b7
-*.color8: #272727
-*.color9: #da4b52
-*.comment: #5a5858
-*.background: #0c0c0c
-*.contrast: #111111
-*.cursorline: #191919
-*.darker: #070707
-*.foreground: #dfdddd
-```
-
-Don't forget to merge the Xresources
-```bash
-~ $ xrdb -merge ./path/to/xresources
-```
-
-```lua
-M.colorscheme = 'xrdb'
-```
-Keep in mind that using xrdb increases startuptime by 5-15ms, I am looking to make this more faster
-
-+ Reload Neovim
-
 ## Statusline Styles 
 **Warning:** This section contains the worst ever code written
-There are three prebuilt styles
+There are two prebuilt styles
 + To change the style edit `/lua/core/cfg.lua`
 
 ```lua
@@ -180,12 +140,13 @@ M.statusstyle = 'minimal' -- minimal | fancy
 ## Todo
 - [x]  ~~better screenshots~~
 - [ ]  more, MORE fast (bring back to 15ms)
+- [x]  ~~colorscheme caching~~
 - [x]  ~~custom statusline (i am proud)~~
 - [x]  ~~learn markdown bcoz i suck at it~~
 - [x]  ~~fix autoformatting on save~~
 - [x] ~~make custom tabline~~
 - [x] ~~fix custom dashboard~~
-- [x] ~~add some more themes (currently 13)~~
+- [x] ~~add some more themes (currently 9)~~
 - [x] ~~fix custom tabline~~
 
 ## Special Thanks 

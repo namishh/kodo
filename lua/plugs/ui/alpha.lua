@@ -13,7 +13,7 @@ function makeButton(label, shortcut, hl_label, hl_icon)
       local key = vim.api.nvim_replace_termcodes(shortcut:gsub("%s", ""):gsub("LDR", "<leader>"), true, false, true)
       vim.api.nvim_feedkeys(key, "normal", false)
     end,
-    val = label,
+    val = " " .. label .. " ",
     opts = {
       position = "center",
       shortcut = " " .. shortcut .. " ",
@@ -22,8 +22,8 @@ function makeButton(label, shortcut, hl_label, hl_icon)
       align_shortcut = "right",
       hl_shortcut = "AlphaKeyPrefix",
       hl = {
-        { hl_icon,  0, 4 }, -- highlight the icon glyph
-        { hl_label, 5, 15 }, -- highlight the part after the icon glyph
+        { hl_icon,  0, 4 },  -- highlight the icon glyph
+        { hl_label, 5, 30 }, -- highlight the part after the icon glyph
       },
     },
   }

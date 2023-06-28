@@ -1,4 +1,3 @@
-require("themes").setup({
-  theme = "onedark",
-  transparent_background = false
-})
+vim.g.currentTheme = "onedark"
+require("plenary.reload").reload_module "themes"
+require("themes").load()

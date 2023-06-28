@@ -6,6 +6,8 @@ local g = vim.g
 opt.hidden = true
 g.code_action_menu_window_border = 'single'
 opt.ch = 0
+g.currentTheme = require("core.cfg").colorscheme
+g.theme_cache = vim.fn.stdpath "data" .. "/colors_data/"
 opt.pumheight = 2
 opt.fileencoding = 'utf-8'
 opt.splitbelow = true
@@ -29,7 +31,7 @@ opt.ignorecase = true
 opt.scrolloff = 0
 opt.sidescrolloff = 5
 opt.foldcolumn = '0' -- '0' is not bad
-opt.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+opt.foldlevel = 99   -- Using ufo provider need a large value, feel free to decrease the value
 opt.foldlevelstart = 99
 opt.foldenable = true
 opt.mouse = "a" -- Mouse support for noobs
@@ -42,7 +44,7 @@ opt.expandtab = true
 opt.fillchars:append('eob: ')
 opt.listchars:append "space: "
 cmd('set lazyredraw')
-opt.laststatus = 0 -- Global Status
+opt.laststatus = 0                  -- Global Status
 diagnostic.config { signs = false } -- Removing diagnostic column
 opt.updatetime = 250
 opt.shadafile = "NONE"
@@ -50,22 +52,8 @@ opt.shadafile = ""
 opt.swapfile = false
 opt.shortmess:append "sI"
 
-local color = require("core.cfg").colorscheme
-vim.cmd.colorscheme(color)
--- Formatting Code on Save
-vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-  callback = function()
-    for _, client in ipairs(vim.lsp.get_active_clients()) do
-      if client.attached_buffers[vim.api.nvim_get_current_buf()] then
-        vim.lsp.buf.format()
-        return
-      else
-        return
-      end
-    end
-  end
-})
-
+--local color = require("core.cfg").colorscheme
+--vim.cmd.colorscheme(color)
 
 -- Disabling some built in plugins
 local builtins = {

@@ -1,4 +1,3 @@
-require("themes").setup({
-  theme = "funk",
-  transparent_background = false
-})
+vim.g.currentTheme = "funk"
+require("plenary.reload").reload_module "themes"
+require("themes").load()

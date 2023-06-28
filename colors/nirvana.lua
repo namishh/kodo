@@ -1,4 +1,3 @@
-require("themes").setup({
-  theme = "nirvana",
-  transparent_background = false
-})
+vim.g.currentTheme = "nirvana"
+require("plenary.reload").reload_module "themes"
+require("themes").load()

@@ -5,6 +5,7 @@ lazy.setup({
   {
     'nvim-treesitter/nvim-treesitter',
     run = ":TSUpdate",
+    lazy = true,
     cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
     config = function() require('plugs.ts.treesitter') end
   },
@@ -28,12 +29,14 @@ lazy.setup({
 
   {
     'kyazdani42/nvim-tree.lua',
+    lazy = true,
     cmd = "NvimTreeToggle",
     config = function() require('plugs.util.nvim-tree') end
   },
   {
     "folke/which-key.nvim",
     keys = { "<leader>", ' ', "'", "`" },
+    lazy = true,
     config = function() require('plugs.util.which-key') end
   },
   {
@@ -43,18 +46,20 @@ lazy.setup({
   {
     'nvim-telescope/telescope.nvim',
     cmd = "Telescope",
+    lazy = true,
     dependencies = { 'plenary.nvim' },
     config = function() require('plugs.util.telescope') end
   },
   {
     "akinsho/toggleterm.nvim",
+    lazy = true,
     config = function() require('plugs.util.toggleterm') end,
     cmd = "ToggleTerm",
   },
   {
     "lewis6991/gitsigns.nvim",
     lazy = true,
-    event = { "CmdlineEnter", "InsertEnter", "CursorHold", "CursorMoved" },
+    event = { "BufRead" },
     config = function()
       require('gitsigns').setup {
         signs = {
@@ -70,14 +75,16 @@ lazy.setup({
   },
   {
     "lukas-reineke/indent-blankline.nvim",
+    lazy = true,
     config = function() require('plugs.ui.indentlines') end,
-    event = { "CursorMoved", "CursorHold", "InsertEnter" },
+    event = { "BufRead" },
   },
   { "williamboman/mason.nvim",
     cmd = {
       "MasonInstall",
       "MasonUninstall",
       "Mason",
+      lazy = true,
       "MasonUninstallAll",
       "MasonLog",
     },
@@ -91,8 +98,9 @@ lazy.setup({
   -- The funs begins
   {
     "neovim/nvim-lspconfig",
-    event = { "BufReadPost", "BufNewFile" },
-    cmd = { "LspInfo", "LspInstall", "LspUninstall" },
+        event = { "BufReadPost", "BufNewFile" },
+    lazy = true,
+    cmd = { "LspInfo", "LspInstall", "LspUninstall", "LspStart" },
     config = function()
       require "plugs.lsp.lspconfig"
     end,
@@ -100,6 +108,7 @@ lazy.setup({
 
   {
     "utilyre/barbecue.nvim",
+    lazy = true,
     event = { "BufRead", "BufNewFile" },
     dependencies = {
       "SmiteshP/nvim-navic",
@@ -117,6 +126,7 @@ lazy.setup({
   {
     "hrsh7th/nvim-cmp",
     event = "InsertEnter",
+    lazy = true,
     dependencies = {
       {
         -- snippet plugin
@@ -161,6 +171,7 @@ lazy.setup({
   },
   {
     "kosayoda/nvim-lightbulb",
+    lazy = true,
     event = 'BufRead',
     config = function() require("plugs.lsp.lightbulb") end,
   },
@@ -175,12 +186,14 @@ lazy.setup({
   },
   {
     'kevinhwang91/nvim-ufo',
+    lazy = true,
     event = "BufRead",
     dependencies = 'kevinhwang91/promise-async'
   },
   {
     'simrat39/symbols-outline.nvim',
-    event = "BufRead",
+    cmd = "SymbolsOutline",
+    lazy = true,
     config = function() require("plugs.util.symbols") end
   },
   {
@@ -188,12 +201,14 @@ lazy.setup({
     dependencies = {
       'nvim-treesitter/nvim-treesitter',
     },
+    lazy = true,
     config = function() require("plugs.lsp.biscuits") end,
     event = "BufRead",
   },
   {
     "cbochs/grapple.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
+    lazy = true,
     config = function() require("plugs.util.grapple") end,
     cmd = {
       "GrappleCycle",
@@ -209,6 +224,7 @@ lazy.setup({
   {
     'phaazon/hop.nvim',
     branch = 'v2',
+    lazy = true,
     cmd = {
       "HopAnywhere",
       "HopChar1",
@@ -221,13 +237,12 @@ lazy.setup({
     config = function() require("plugs.util.hop") end
   },
   {
-    'andweeb/presence.nvim',
-    event = "InsertEnter",
-    config = function() require("plugs.util.presence") end
-  },
-  {
     "goolord/alpha-nvim",
-    event = "BufWinEnter",
+    lazy = true,
+    cmd = {
+      "Alpha",
+      "AlphaRedraw"
+    },
     config = function()
       require("plugs.ui.alpha")
     end

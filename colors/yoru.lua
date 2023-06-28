@@ -1,4 +1,3 @@
-require("themes").setup({
-  theme = "yoru",
-  transparent_background = false
-})
+vim.g.currentTheme = "yoru"
+require("plenary.reload").reload_module "themes"
+require("themes").load()
