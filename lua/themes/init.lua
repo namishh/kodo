@@ -64,6 +64,8 @@ M.load            = function()
   end
 end
 
+M.themes          = {}
+
 M.toggleTheme     = function()
   local files = vim.fn.stdpath "config" .. "/colors/"
   for _, file in ipairs(vim.fn.readdir(files)) do

@@ -49,7 +49,7 @@ local heading = {
 
 dashboard.section.footer.val = footer
 dashboard.section.footer.opts.hl = "AlphaFooter"
-
+dashboard.config.opts.noautocmd = true
 local opts = {
   layout = {
     { type = "padding", val = 4 },
