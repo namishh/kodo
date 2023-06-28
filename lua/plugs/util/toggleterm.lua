@@ -10,4 +10,8 @@ require "toggleterm".setup {
   float_opts = {
     winblend = 3,
   },
+  winbar = {
+    enabled = false,
+  },
+
 }

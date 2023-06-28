@@ -15,8 +15,9 @@ local mappings = {
     f = { ":Telescope find_files<cr>", "Find Files" },
     g = { ":Telescope oldfiles<cr>", "Recently Opened" },
     r = { ":Telescope live_grep<cr>", "Find String" },
+    c = { ":lua require('themes.schemer').setup(require('telescope.themes').get_dropdown{})<cr>", "Change Colorschemes" }
   },
-  g = {
+  G = {
     name = "Grapple",
     a = { ":GrappleTag<cr>", "Add A Bookmark" },
     t = { ":GrappleToggle<cr>", "Toggle Bookmark" },

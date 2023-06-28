@@ -52,13 +52,13 @@ local logos = setmetatable({
     end,
   }
 )
-
+-- the keybinds for buttons better work
 M.dashboard = {
   header = logos.TEXT,
   buttons = {
-    { "   Find File",    "LDR f f", ":Telescope find_files<cr>" },
-    { "   Recent Files", "LDR f g", ":Telescope oldfiles<cr>" },
-    { "   Find Word",    "LDR f r", "Telescope live_grep" },
+    { "   Find File",    "LDR f f" },
+    { "   Recent Files", "LDR f g" },
+    { "   Find Word",    "LDR f r" },
   },
   message = {
     "[ ━━━━━━ ❖  ━━━━━━ ]",
@@ -68,5 +68,5 @@ M.dashboard = {
   }
 }
 
-M.colorscheme = 'serenity'
+M.colorscheme = 'cat'
 return M

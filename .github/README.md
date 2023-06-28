@@ -15,19 +15,19 @@
 ![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/1.png)
 
 
-A neovim configuration that looks good and is fast (startuptime < 0.05s).
+A neovim configuration that looks good and is fast (startuptime < 0.04s).
 
 <div align="center">
 
 ```txt
 Tested on a pretty low end laptop
-On Power                              : 0.022s - 0.028s
-On Battery                            : 0.028s - 0.036s
+On Power                              : 0.018s - 0.024s
+On Battery                            : 0.024s - 0.036s
 ```
 
 </div>
 
-Has something like 34 plugins and but is still fast becuase of holy lazy loading.
+Has something like 34 plugins and but is still fast becuase of holy lazy loading. Should be even faster on good cpus.
 
 
 ## Plugins And Features
@@ -49,11 +49,13 @@ Has something like 34 plugins and but is still fast becuase of holy lazy loading
 | [kosayoda/nvim-lightbulb](https://github.com/kosayoda/nvim-lightbulb) | shows a lightbulb where ever code fixes are available | `true` |
 | [LnL7/vim-nix](https://github.com/LnL7/vim-nix) | nix syntax to make Nix a less of a headache | `true` |
 | [kevinhwang91/nvim-ufo](https://github.com/kevinhwang91/nvim-ufo) | folds in neovim arent that bad! actually, better than vscode | `true` |
-| [ggandor/leap.nvim](https://github.com/ggandor/leap.nvim) | move anywhere around the window in 2-3 clicks | `true` |
+| [phaazon/hop.nvim](https://github.com/phaazon/hop.nvim) | move anywhere around the window in 2-3 clicks | `true` |
 | [cbochs/grapple.nvim](https://github.com/cbochs/grapple.nvim) | bookmark important files to move to them instantly | `true` |
 | [L3MON4D3/LuaSnip](https://github.com/L3MON4D3/LuaSnip) | very simple and easy to use snippet engine | `true` |
 | [simrat39/symbols-outline.nvim](https://github.com/simrat39/symbols-outline.nvim) | a tree like view for symbols via lsp | `true` |
 | [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim) | a very minimal and good looking dashboard | `true` |
+| [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim) | a very minimal and good looking dashboard | `true` |
+| [terrortylor/nvim-comment](https://github.com/terrortylor/nvim-comment) | quik and easy commenting | `true` |
 
 #### And Also...
 + Comes with 9 premade colourschemes!
@@ -139,7 +141,7 @@ M.statusstyle = 'minimal' -- minimal | fancy
 
 ## Todo
 - [x]  ~~better screenshots~~
-- [ ]  more, MORE fast (bring back to 15ms)
+- [x]  ~~more, MORE fast (bring back to 15ms) || brought back to 18ms~~
 - [x]  ~~colorscheme caching~~
 - [x]  ~~custom statusline (i am proud)~~
 - [x]  ~~learn markdown bcoz i suck at it~~

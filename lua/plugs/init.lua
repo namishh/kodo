@@ -79,7 +79,8 @@ lazy.setup({
     config = function() require('plugs.ui.indentlines') end,
     event = { "BufRead" },
   },
-  { "williamboman/mason.nvim",
+  {
+    "williamboman/mason.nvim",
     cmd = {
       "MasonInstall",
       "MasonUninstall",
@@ -92,13 +93,14 @@ lazy.setup({
   },
   {
     "terrortylor/nvim-comment",
+    event = 'BufRead',
     config = function() require('plugs.util.comments') end,
     lazy = true,
   },
   -- The funs begins
   {
     "neovim/nvim-lspconfig",
-        event = { "BufReadPost", "BufNewFile" },
+    event = { "BufReadPost", "BufNewFile" },
     lazy = true,
     cmd = { "LspInfo", "LspInstall", "LspUninstall", "LspStart" },
     config = function()
