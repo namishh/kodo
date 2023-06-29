@@ -1,13 +1,17 @@
 local colors = require("themes").getCurrentTheme()
+local themes = require("themes")
 
 return {
   StalineFolderIcon = { bg = colors.color1, fg = colors.black },
   StalineFolderSep = { bg = colors.black, fg = colors.color1 },
-  StalineFolderText = { bg = colors.cursorline, fg = colors.color1 },
+  --StalineFolderText = { bg = colors.cursorline, fg = colors.color1 },
+  StalineFolderText = { bg = themes.darken(colors.color1, colors.background, 0.05), fg = colors.color1 },
+
   StalineFilename = { bg = colors.background, fg = colors.color7 },
   StalineFilenameSep = { fg = colors.color8, bg = colors.black },
   StalineLogo = { bg = colors.black, fg = colors.color12 },
-  StalineProgress = { bg = colors.cursorline, fg = colors.color2 },
+  --StalineProgress = { bg = colors.cursorline, fg = colors.color2 },
+  StalineProgress = { bg = themes.darken(colors.color2, colors.background, 0.05), fg = colors.color2 },
   StalineProgressSep = { bg = colors.color8, fg = colors.color10 },
   StalineProgressIcon = { bg = colors.color10, fg = colors.color8 },
   StalineBranch = { bg = colors.background, fg = colors.comment },
@@ -35,8 +39,9 @@ return {
   StalineLspInfoIcon = { bg = colors.black, fg = colors.color12 },
   StalineLspHintsIcon = { bg = colors.black, fg = colors.color6 },
   StalineLspWarningIcon = { bg = colors.black, fg = colors.color11 },
-  StalineLspNameNormal = { bg = colors.cursorline, fg = colors.color5 },
-  StalineLspName = { bg = colors.cursorline, fg = colors.color5 },
+  --StalineLspNameNormal = { bg = colors.cursorline, fg = colors.color5 },
+  StalineLspNameNormal = { bg = themes.darken(colors.color5, colors.background, 0.07), fg = colors.color5 },
+  StalineLspName = { bg = themes.darken(colors.color5, colors.background, 0.07), fg = colors.color5 },
   StalineLspIcon = { bg = colors.color13, fg = colors.black },
   StalineDiffAdd = { bg = colors.background, fg = colors.color10 },
   StalineDiffChange = { bg = colors.background, fg = colors.color11 },
