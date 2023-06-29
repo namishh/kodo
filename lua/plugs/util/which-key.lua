@@ -8,6 +8,7 @@ local mappings = {
     q = { ":q<cr>", "Quit" },
     w = { ":wq<cr>", "Save & Quit" },
     s = { ":w<cr>", "Save" },
+    f = { ":lua vim.lsp.buf.format()<CR>", "Format file" },
     x = { ":bdelete<cr>", "Close" },
   },
   f = {

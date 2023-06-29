@@ -1,9 +1,10 @@
 local alpha = require("alpha")
 local dashboard = require("alpha.themes.dashboard")
-local logo = require("core.cfg").dashboard.header
-local buttons = require("core.cfg").dashboard.buttons
-local message = require("core.cfg").dashboard.message
-local footer = require("core.cfg").dashboard.footer
+local dashCfg = require("core.cfg").dashboard
+local logo = dashCfg.header
+local buttons = dashCfg.buttons
+local message = dashCfg.message
+local footer = dashCfg.footer
 
 -- thanks dharmx
 function makeButton(label, shortcut, hl_label, hl_icon)

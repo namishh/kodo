@@ -139,6 +139,31 @@ M.statusstyle = 'minimal' -- minimal | fancy
 
 ![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/7.png)
 
+## Keybinds for my config
+
+| Keys        | Function          |
+| ------------- |-------------|
+| CTRL h/j/k/l  | Moving Window Focus Towards Left/Up/Down/Right |
+| CTRL b | Open And Close NvimTree |
+| CTRL f | Format Files With Built In Lsp |
+| CTRL \ | Open And Close ToggleTerm |
+| LDT t t | Open And Close ToggleTerm |
+| zR | Open All Folds |
+| zM | Close All Folds |
+| zc | Close Fold Under Cursor |
+| zo | Open Fold Under Cursor |
+
+
+### Basic File Operations
+
+| Keys        | Function          |
+| ------------- |-------------|
+| LDR q q  | Exit Neovim |
+| LDR q w | Save And Exit Neovim |
+| LDR q s | Save File |
+| LDR q f | Format File |
+| LDR q x | Close Current Buffer |
+
 ## Todo
 - [x]  ~~better screenshots~~
 - [x]  ~~more, MORE fast (bring back to 15ms) || brought back to 18ms~~
