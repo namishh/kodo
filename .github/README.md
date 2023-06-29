@@ -147,7 +147,7 @@ M.statusstyle = 'minimal' -- minimal | fancy
 | CTRL b | Open And Close NvimTree |
 | CTRL f | Format Files With Built In Lsp |
 | CTRL \ | Open And Close ToggleTerm |
-| LDT t t | Open And Close ToggleTerm |
+| LDR t t | Open And Close ToggleTerm |
 | zR | Open All Folds |
 | zM | Close All Folds |
 | zc | Close Fold Under Cursor |
@@ -163,6 +163,44 @@ M.statusstyle = 'minimal' -- minimal | fancy
 | LDR q s | Save File |
 | LDR q f | Format File |
 | LDR q x | Close Current Buffer |
+
+### Telescope
+
+| Keys        | Function          |
+| ------------- |-------------|
+| LDR f f  | Basic File Picker |
+| LDR f g | Search All Recently Visited Files |
+| LDR f r | Search File By String |
+| LDR f c | Cooler Colorscheme Picker |
+
+### Hop
+
+| Keys        | Function          |
+| ------------- |-------------|
+| LDR h a  | Search For Anywhere in the File |
+| LDR h c | Search By A Single Character |
+| LDR h C | Search By Two Characters |
+| LDR h l | Search By Starting Of Line |
+| LDR h v | Search Vertically |
+| LDR h w | Search By Word |
+
+### Grapple
+
+| Keys        | Function          |
+| ------------- |-------------|
+| LDR G g  | Show All The Bookmarks |
+| LDR G t | Toggle A Boookmark |
+| LDR G a | Add A Bookmark |
+| LDR G r | Delete A Bookmark |
+
+### Other
+
+| Keys        | Function          |
+| ------------- |-------------|
+| LDR l l  | Open Lazy Dashboard |
+| LDR l m | Open Mason Dashboard |
+| LDR l c | Show Available Code Actions |
+| LDR l s | Open Symbols Outline |
 
 ## Todo
 - [x]  ~~better screenshots~~
