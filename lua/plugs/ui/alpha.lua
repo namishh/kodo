@@ -23,8 +23,8 @@ function makeButton(label, shortcut, hl_label, hl_icon)
       align_shortcut = "right",
       hl_shortcut = "AlphaKeyPrefix",
       hl = {
-        { hl_icon,  0, 4 },  -- highlight the icon glyph
-        { hl_label, 5, 30 }, -- highlight the part after the icon glyph
+        { hl_icon,  0, 6 },  -- highlight the icon glyph
+        { hl_label, 6, 30 }, -- highlight the part after the icon glyph
       },
     },
   }

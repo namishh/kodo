@@ -32,7 +32,7 @@ local mappings = {
   l = {
     name = "Misc",
     l = { ":Lazy<cr>", "Open Lazy" },
-    c = { ":lua vim.lsp.buf.code_action()<cr>", "Show Code Actions" },
+    c = { ":lua require('telescope') vim.lsp.buf.code_action()<cr>", "Show Code Actions" },
     m = { ":Mason<cr>", "Open Mason" },
     s = { ":SymbolsOutline<cr>", "Overview of file" },
   },

@@ -27,7 +27,7 @@ On Battery                            : 0.024s - 0.032s
 
 </div>
 
-Has something like 34 plugins and but is still fast becuase of holy lazy loading. Should be even faster on good cpus.
+Has something like 33 plugins and but is still fast becuase of holy lazy loading. Should be even faster on good cpus.
 
 
 ## Plugins And Features
@@ -45,8 +45,7 @@ Has something like 34 plugins and but is still fast becuase of holy lazy loading
 | [lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) | Super fast git decorations implemented purely in Lua. | `true` |
 | [lukas-reineke/indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim) | super cool for keeping track of code | `true` |
 | [williamboman/mason.nvim](https://github.com/williamboman/mason.nvim) | installing LSPs made super easy | `true` |
-| [utilyre/barbecue.nvim](https://github.com/utilyre/barbecue.nvim) | vscode like winbar code context. looks super cool | `true` |
-| [kosayoda/nvim-lightbulb](https://github.com/kosayoda/nvim-lightbulb) | shows a lightbulb where ever code fixes are available | `true` |
+| [nvimdev/lspsaga.nvim](https://github.com/nvimdev/lspsaga.nvim) | responsible for the winbar and lightbulb | `true` |
 | [LnL7/vim-nix](https://github.com/LnL7/vim-nix) | nix syntax to make Nix a less of a headache | `true` |
 | [kevinhwang91/nvim-ufo](https://github.com/kevinhwang91/nvim-ufo) | folds in neovim arent that bad! actually, better than vscode | `true` |
 | [phaazon/hop.nvim](https://github.com/phaazon/hop.nvim) | move anywhere around the window in 2-3 clicks | `true` |

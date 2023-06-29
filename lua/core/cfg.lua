@@ -56,9 +56,9 @@ local logos = setmetatable({
 M.dashboard = {
   header = logos.TEXT,
   buttons = {
-    { "   Find File",    "LDR f f" },
-    { "   Recent Files", "LDR f g" },
-    { "   Find Word",    "LDR f r" },
+    { "   Find File",     "LDR f f" },
+    { "󰈚   Recent Files", "LDR f g" },
+    { "󰈭   Find Word",    "LDR f r" },
   },
   message = {
     "[ ━━━━━━ ❖  ━━━━━━ ]",
@@ -68,5 +68,5 @@ M.dashboard = {
   }
 }
 
-M.colorscheme = 'nirvana'
+M.colorscheme = 'cat'
 return M

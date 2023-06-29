@@ -108,22 +108,6 @@ lazy.setup({
     end,
   },
 
-  {
-    "utilyre/barbecue.nvim",
-    lazy = true,
-    event = { "BufRead", "BufNewFile" },
-    dependencies = {
-      "SmiteshP/nvim-navic",
-      "nvim-tree/nvim-web-devicons",
-    },
-    opts = {
-      attach_navic = true,
-      theme = "auto",
-      include_buftypes = { "" },
-      exclude_filetypes = { "markdown", "gitcommit", "Trouble", "toggleterm" },
-      show_modified = false,
-    },
-  },
   -- load luasnips + cmp related in insert mode only
   {
     "hrsh7th/nvim-cmp",
@@ -169,12 +153,6 @@ lazy.setup({
     config = function()
       require("plugs.lsp.cmp")
     end,
-  },
-  {
-    "kosayoda/nvim-lightbulb",
-    lazy = true,
-    event = 'BufRead',
-    config = function() require("plugs.lsp.lightbulb") end,
   },
   {
     "LnL7/vim-nix",
@@ -247,5 +225,15 @@ lazy.setup({
     config = function()
       require("plugs.ui.alpha")
     end
+  },
+  {
+    "glepnir/lspsaga.nvim",
+    event = "LspAttach",
+    config = function() require("plugs.lsp.saga") end,
+    dependencies = {
+      { "nvim-tree/nvim-web-devicons" },
+      --Please make sure you install markdown and markdown_inline parser
+      { "nvim-treesitter/nvim-treesitter" }
+    }
   }
 })
