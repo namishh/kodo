@@ -15,6 +15,7 @@ local mappings = {
     name = 'Telescope',
     f = { ":Telescope find_files<cr>", "Find Files" },
     g = { ":Telescope oldfiles<cr>", "Recently Opened" },
+    p = { ":Telescope persisted<cr>", "Sessions" },
     r = { ":Telescope live_grep<cr>", "Find String" },
     c = { ":lua require('themes.schemer').setup(require('telescope.themes').get_dropdown{})<cr>", "Change Colorschemes" }
   },
@@ -35,6 +36,7 @@ local mappings = {
     c = { ":lua require('telescope') vim.lsp.buf.code_action()<cr>", "Show Code Actions" },
     m = { ":Mason<cr>", "Open Mason" },
     s = { ":SymbolsOutline<cr>", "Overview of file" },
+    w = { ":SessionSave<cr>", "Save this session" }
   },
   h = {
     name = "Hop",

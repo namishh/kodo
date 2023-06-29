@@ -235,5 +235,10 @@ lazy.setup({
       --Please make sure you install markdown and markdown_inline parser
       { "nvim-treesitter/nvim-treesitter" }
     }
-  }
+  },
+  {
+    "olimorris/persisted.nvim",
+    event = { "BufReadPost", "BufNewFile" },
+    config = function() require("plugs.util.persist") end
+  },
 })
