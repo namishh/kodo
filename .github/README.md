@@ -12,7 +12,7 @@
 </div>
 
 
-![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/1.png)
+![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/header.png)
 
 
 A neovim configuration that looks good and is fast (startuptime < 0.035s).
@@ -125,25 +125,35 @@ M.statusstyle = 'minimal' -- minimal | fancy
 + THIS IS NOT A "DISTRO", just my personal dotfiles that i wanted to share with you guys!
 + This is not for beginners, you need to have some experience wihth lua and neovim.
 
-## Screenshots
+## Showcase
 
-![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/2.png)
+![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/01.png)
 
-![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/3.png)
+![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/02.png)
 
-![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/4.png)
+![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/03.png)
 
-![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/5.png)
+![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/04.png)
 
-![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/6.png)
+![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/05.png)
 
-![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/7.png)
+![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/06.png)
+
+![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/07.png)
+
+![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/08.png)
+
+![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/09.png)
+
+![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/10.png)
+
+![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/11.png)
 
 ## Keybinds for my config
 
 | Keys        | Function          |
 | ------------- |-------------|
-| <kbd>CTRL</kbd> <kbd>h</kbd>/<kbd>j</kbd>/<kbd>k</kbd>/<kbd>l</kbd>  | Moving Window Focus Towards Left/Up/Down/Right |
+| <kbd>CTRL</kbd> <kbd>h</kbd> / <kbd>j</kbd> / <kbd>k</kbd> / <kbd>l</kbd>  | Moving Window Focus Towards Left/Up/Down/Right |
 | <kbd>CTRL</kbd> <kbd>b</kbd> | Open And Close NvimTree |
 | <kbd>CTRL</kbd> <kbd>f</kbd> | Format Files With Built In Lsp |
 | <kbd>CTRL</kbd> <kbd>\\</kbd> | Open And Close ToggleTerm |

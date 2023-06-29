@@ -68,5 +68,5 @@ M.dashboard = {
   }
 }
 
-M.colorscheme = 'cat'
+M.colorscheme = 'nirvana'
 return M
