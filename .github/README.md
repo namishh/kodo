@@ -58,7 +58,7 @@ Has something like 34 plugins and but is still fast becuase of holy lazy loading
 | [terrortylor/nvim-comment](https://github.com/terrortylor/nvim-comment) | quik and easy commenting | `true` |
 
 #### And Also...
-+ Comes with 9 premade colourschemes!
++ Comes with 11 premade colourschemes!
 + Cached Colorschemes for better speeds!
 + Lazy loading done most of the time to get blazingly moderate startup times.
 + A Minimal Custom [Bufferline](https://github.com/chadcat5207/nvide/tree/main/lua/ui/buf)

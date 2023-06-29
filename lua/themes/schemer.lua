@@ -16,7 +16,7 @@ end
 M.setup = function(opts)
   opts = opts or {}
   pickers.new(opts, {
-    prompt_title = "colors",
+    prompt_title = "Kolorschemes",
     finder = finders.new_table {
       results = schemes
     },

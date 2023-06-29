@@ -6,7 +6,7 @@ return {
   BuffLineBufOnModified = { bg = colors.color4, fg = colors.background },
   BuffLineBufOffModified = { fg = colors.color4, bg = colors.cursorline },
   BuffLineBufOnClose = { bg = colors.color4, fg = colors.background },
-  BuffLineBufOffClose = { fg = colors.color9, bg = colors.contrast },
+  BuffLineBufOffClose = { fg = colors.color9, bg = colors.cursorline },
   BuffLineTree = { bg = colors.darker, fg = colors.white },
   BuffLineEmpty = { bg = colors.background, fg = colors.white },
   BuffLineEmptyColor = { bg = colors.cursorline, fg = colors.white },
