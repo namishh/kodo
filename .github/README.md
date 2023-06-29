@@ -197,8 +197,8 @@ M.statusstyle = 'minimal' -- minimal | fancy
 
 | Keys        | Function          |
 | ------------- |-------------|
-| LDR l l  | Open Lazy Dashboard |
-| LDR l m | Open Mason Dashboard |
+| <kbd>LDR</kbd> <kbd>l</kbd> <kbd>l</kbd>  | Open Lazy Dashboard |
+| <kbd>LDR</kbd> <kbd>l</kbd> <kbd>m</kbd> | Open Mason Dashboard |
 | LDR l c | Show Available Code Actions |
 | LDR l s | Open Symbols Outline |
 
