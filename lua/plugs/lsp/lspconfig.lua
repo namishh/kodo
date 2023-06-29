@@ -34,7 +34,7 @@ M.capabilities.textDocument.completion.completionItem = {
 }
 
 
-local servers = { "html", "pyright", "tsserver", "emmet_ls", "clangd", "cssls", "rnix", "hls" }
+local servers = { "html", "pyright", "tsserver", "emmet_ls", "clangd", "cssls", "rnix", "hls", "rust_analyzer" }
 for _, k in ipairs(servers) do
   lspconfig[k].setup {
     on_attach = M.on_attach,

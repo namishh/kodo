@@ -15,14 +15,14 @@
 ![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/1.png)
 
 
-A neovim configuration that looks good and is fast (startuptime < 0.04s).
+A neovim configuration that looks good and is fast (startuptime < 0.035s).
 
 <div align="center">
 
 ```txt
 Tested on a pretty low end laptop
 On Power                              : 0.018s - 0.024s
-On Battery                            : 0.024s - 0.036s
+On Battery                            : 0.024s - 0.032s
 ```
 
 </div>
