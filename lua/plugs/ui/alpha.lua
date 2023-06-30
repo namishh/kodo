@@ -53,7 +53,7 @@ dashboard.section.footer.opts.hl = "AlphaFooter"
 dashboard.config.opts.noautocmd = true
 local opts = {
   layout = {
-    { type = "padding", val = 4 },
+    { type = "padding", val = 2 },
     dashboard.section.header,
     { type = "padding", val = 2 },
     heading,

@@ -1,80 +1,56 @@
 local cmp = require("cmp")
-vim.g.completeopt = "menu,menuone,noselect,noinsert"
-local cmp_window = require "cmp.utils.window"
 
-cmp_window.info_ = cmp_window.info
-cmp_window.info = function(self)
-  local info = self:info_()
-  info.scrollable = false
-  return info
-end
-
-local kind_icons = {
-  Namespace = " ",
-  Text = " ",
-  Method = " ",
-  Function = "󰊕",
-  Constructor = " ",
-  Field = " ",
-  Variable = " ",
-  Class = " ",
-  Interface = " ",
-  Module = " ",
-  Property = " ",
-  Unit = " ",
-  Number = " ",
-  Constant = " ",
-  Enum = " ",
-  EnumMember = " ",
-  Keyword = " ",
-  Snippet = " ",
-  Color = " ",
-  File = " ",
-  Reference = " ",
-  Folder = " ",
-  Struct = " ",
-  Event = " ",
-  Operator = " ",
-  TypeParameter = " ",
-  Table = " ",
-  Object = " ",
-  Tag = " ",
-  Array = " ",
-  Boolean = " ",
-  Value = " ",
-  Null = " ",
-  String = " ",
-  Calendar = " ",
-  Watch = " ",
-  Package = " ",
-  Copilot = " ",
+local symbol_map = {
+  Text = "󰉿 ",
+  Method = "󰆧 ",
+  Function = "󰡱 ",
+  Constructor = " ",
+  Field = "󰜢 ",
+  Variable = "󰘥 ",
+  Class = "󰠱",
+  Interface = " ",
+  Module = " ",
+  Property = "󰜢 ",
+  Unit = "󰑭",
+  Value = "󰎠 ",
+  Enum = " ",
+  Keyword = "󰌋 ",
+  Snippet = " ",
+  Color = "󰏘",
+  File = "󰈙",
+  Reference = "󰈇 ",
+  Folder = "󰉋 ",
+  EnumMember = " ",
+  Constant = "󰭍 ",
+  Struct = "󰙅 ",
+  Event = " ",
+  Operator = "󰆕 ",
 }
 local options = {
+  completion = {
+    completeopt = "menu,menuone",
+  },
   snippet = {
     expand = function(args)
       require("luasnip").lsp_expand(args.body)
     end,
   },
-  preselect = cmp.PreselectMode.Item,
   window = {
     documentation = {
-      border = "solid",
+      winhighlight = "Normal:CmpDoc",
     },
     completion = {
-      border = "solid",
-      completeopt = "menu,menuone,noinsert",
-      keyword_length = 1,
-    },
-  },
-  view = {
-    entries = {
-      name = "custom",
+      winhighlight = "Normal:Pmenu",
+      scrollbar = false,
     },
   },
   formatting = {
-    fields = { "abbr", "kind", "menu" },
+    fields = { "kind", "abbr", "menu" },
     format = function(_, item)
-      item.kind = kind_icons[item.kind] .. " " .. item.kind
+      local a = string.rep(" ", 10)
+      item.abbr = item.abbr .. a
+      item.menu = " " .. item.kind .. " "
+      item.kind = " " .. symbol_map[item.kind] .. " "
       return item
     end,
   },

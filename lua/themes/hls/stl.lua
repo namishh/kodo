@@ -1,5 +1,5 @@
-local colors = require("themes").getCurrentTheme()
 local themes = require("themes")
+local colors = themes.getCurrentTheme()
 
 return {
   StalineFolderIcon = { bg = colors.color1, fg = colors.black },

@@ -1,6 +1,5 @@
 require("plugs.strap")
 local lazy = require("lazy")
-
 lazy.setup({
   {
     'nvim-treesitter/nvim-treesitter',
@@ -237,8 +236,7 @@ lazy.setup({
     }
   },
   {
-    "olimorris/persisted.nvim",
-    event = { "BufReadPost", "BufNewFile" },
-    config = function() require("plugs.util.persist") end
-  },
+    "onsails/lspkind.nvim",
+    event = "InsertEnter",
+  }
 })

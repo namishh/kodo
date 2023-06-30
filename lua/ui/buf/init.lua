@@ -16,7 +16,7 @@ vim.api.nvim_create_user_command("BufflineNext", function()
   require("ui.buf.fn").tabuflineNext()
 end, {})
 local createTab = function(buf)
-  local close_btn = "%" .. buf .. "@BufflineKillBuf@  %X"
+  local close_btn = "%" .. buf .. "@BufflineKillBuf@ %X"
   local filename = (#vim.api.nvim_buf_get_name(buf) ~= 0) and vim.fn.fnamemodify(vim.api.nvim_buf_get_name(buf), ":t") or
       ""
 

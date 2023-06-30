@@ -15,7 +15,6 @@ local mappings = {
     name = 'Telescope',
     f = { ":Telescope find_files<cr>", "Find Files" },
     g = { ":Telescope oldfiles<cr>", "Recently Opened" },
-    p = { ":Telescope persisted<cr>", "Sessions" },
     r = { ":Telescope live_grep<cr>", "Find String" },
     c = { ":lua require('themes.schemer').setup(require('telescope.themes').get_dropdown{})<cr>", "Change Colorschemes" }
   },

@@ -3,14 +3,13 @@ local opt = vim.opt
 local diagnostic = vim.diagnostic
 local g = vim.g
 local config = require("core.cfg")
-
 opt.hidden = true
 g.code_action_menu_window_border = 'single'
 opt.ch = 0
 g.currentTheme = config.colorscheme
 g.theme_cache = vim.fn.stdpath "data" .. "/colors_data/"
 g.statusStyle = config.statusstyle
-opt.pumheight = 2
+opt.pumheight = 10
 opt.fileencoding = 'utf-8'
 opt.splitbelow = true
 opt.list = true
