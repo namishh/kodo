@@ -7,7 +7,7 @@ local M = function(m)
         " " .. current .. "/" .. total .. " " .. "%#StalineProgressIcon#" .. " " .. "%#StalineEmptySpace#"
   elseif (m == 'fancy') then
     return "%#StalineProgressIcon#" ..
-        "  " .. "%#StalineProgress#" .. " " .. current .. "/" .. total .. " " .. "%#StalineEmptySpace#"
+        "   " .. "%#StalineProgress#" .. " " .. current .. "/" .. total .. " " .. "%#StalineEmptySpace#"
   else
     return "F"
   end

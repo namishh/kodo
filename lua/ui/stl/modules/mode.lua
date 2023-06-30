@@ -36,7 +36,7 @@ local M = function(m)
   if (m == 'minimal') then
     return "%#" .. modes[mode][2] .. "#" .. " " .. modes[mode][1] .. " ";
   elseif (m == 'fancy') then
-    return "%#" .. modes[mode][2] .. "#" .. "  " .. modes[mode][1] .. " " .. sep .. septwo .. " ";
+    return "%#" .. modes[mode][2] .. "#" .. "   " .. modes[mode][1] .. " " .. sep .. septwo .. "";
   else
     return "F"
   end

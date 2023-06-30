@@ -5,7 +5,6 @@ local function hexToRgb(c)
   c = string.lower(c)
   return { tonumber(c:sub(2, 3), 16), tonumber(c:sub(4, 5), 16), tonumber(c:sub(6, 7), 16) }
 end
-
 M.getCurrentTheme = function()
   local path = "themes.schemes." .. vim.g.currentTheme
   local theme = require(path).get_colors()

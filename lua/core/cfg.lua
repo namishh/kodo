@@ -1,6 +1,6 @@
 local M = {}
 local stats = require("lazy").stats()
-M.statusstyle = 'minimal'
+M.statusstyle = 'fancy'
 local logos = setmetatable({
     TEXT = {
       " ",
@@ -43,7 +43,7 @@ local logos = setmetatable({
 )
 -- the keybinds for buttons better work
 M.dashboard = {
-  header = logos.UWU2,
+  header = logos.TEXT,
   buttons = {
     { "   Find File",     "LDR f f" },
     { "󰈚   Recent Files", "LDR f g" },
