@@ -1,5 +1,5 @@
 local fn = vim.fn
-local M = function()
+local M = function(m)
   local icon = "  "
   local filename = (fn.expand "%" == "" and "Empty ") or fn.expand "%:t"
   if filename ~= "Empty " then
@@ -18,9 +18,18 @@ local M = function()
     if string.find(filename, "toggleterm") then
       filename = "Terminal"
     end
-    return "%#StalineFilenameIcon#" .. "%#" .. icon_hl .. "# " .. icon .. "  %#StalineFilename#" .. filename .. "  "
+    if (m == 'minimal') then
+      return "%#StalineFilenameIcon#" .. "%#" .. icon_hl .. "# " .. icon .. "  %#StalineFilename#" .. filename .. "  "
+    elseif m == "fancy" then
+      return "%#StalineFilenameFancy# " ..
+          icon .. "  " .. filename .. "   " .. "%#StalineFilenameSep#" .. " %#StalineEmptySpace#"
+    end
   else
-    return "%#StalineFilename#  Kodo "
+    if (m == 'minimal') then
+      return "%#StalineFilename#  Kodo "
+    elseif m == "fancy" then
+      return "%#StalineFilenameFancy#" .. "  Kodo  " .. "%#StalineFilenameSep#" .. " %#StalineEmptySpace#"
+    end
   end
 end
 return M

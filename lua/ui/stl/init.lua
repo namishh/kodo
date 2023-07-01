@@ -9,7 +9,7 @@ local run = function(STYLE)
   local lsp = require("ui.stl.modules.lsp")
   return table.concat {
     mode(STYLE),
-    filename(),
+    filename(STYLE),
     branch(),
     diff(STYLE),
     "%=",

@@ -6,8 +6,11 @@ require 'nvim-tree'.setup {
     },
     icons = {
       glyphs = {
-        default = '',
-        symlink = '',
+        default = ' ',
+        symlink = ' ',
+        git = {
+          untracked = " ",
+        }
       },
       show = {
         git = true,
