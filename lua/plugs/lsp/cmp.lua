@@ -30,6 +30,7 @@ local options = {
   completion = {
     completeopt = "menu,menuone",
   },
+  preselect = cmp.PreselectMode.Item,
   snippet = {
     expand = function(args)
       require("luasnip").lsp_expand(args.body)

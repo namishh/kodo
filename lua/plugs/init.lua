@@ -92,7 +92,7 @@ lazy.setup({
   },
   {
     "terrortylor/nvim-comment",
-    event = 'CursorHold',
+    keys = { "<leader>", 'g' },
     config = function() require('plugs.util.comments') end,
     lazy = true,
   },

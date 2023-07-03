@@ -45,7 +45,10 @@ return {
   StalineLspName = { bg = themes.darken(colors.color5, colors.background, 0.07), fg = colors.color5 },
   StalineLspIcon = { bg = colors.color13, fg = colors.black },
   StalineDiffAdd = { bg = colors.background, fg = colors.color10 },
+  StalineDiffAddFancy = { bg = themes.darken(colors.color2, colors.background, 0.07), fg = colors.color10 },
   StalineDiffChange = { bg = colors.background, fg = colors.color11 },
+  StalineDiffChangeFancy = { bg = themes.darken(colors.color11, colors.background, 0.07), fg = colors.color11 },
+  StalineDiffRemoveFancy = { bg = themes.darken(colors.color9, colors.background, 0.07), fg = colors.color9 },
   StalineDiffRemove = { bg = colors.background, fg = colors.color9 },
   StalineDefaultFile = { bg = colors.background, fg = colors.foreground },
 }

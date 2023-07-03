@@ -57,5 +57,5 @@ M.dashboard = {
   }
 }
 
-M.colorscheme = 'verdant'
+M.colorscheme = 'serenity'
 return M

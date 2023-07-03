@@ -21,7 +21,7 @@ local M = function(m)
     if (m == 'minimal') then
       return "%#StalineFilenameIcon#" .. "%#" .. icon_hl .. "# " .. icon .. "  %#StalineFilename#" .. filename .. "  "
     elseif m == "fancy" then
-      return "%#StalineFilenameFancy# " ..
+      return "%#StalineFilenameFancy#" ..
           icon .. "  " .. filename .. "   " .. "%#StalineFilenameSep#" .. " %#StalineEmptySpace#"
     end
   else
