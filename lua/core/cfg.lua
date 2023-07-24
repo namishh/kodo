@@ -55,5 +55,5 @@ M.dashboard = {
   }
 }
 
-M.colorscheme = 'onedarker'
+M.colorscheme = 'verdant'
 return M
