@@ -45,6 +45,7 @@ opt.expandtab = true
 opt.fillchars:append('eob: ')
 opt.listchars:append "space: "
 cmd('set lazyredraw')
+cmd('set nolist')
 opt.laststatus = 0                  -- Global Status
 diagnostic.config { signs = false } -- Removing diagnostic column
 opt.updatetime = 250
