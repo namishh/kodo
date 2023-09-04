@@ -43,9 +43,9 @@ local logos = setmetatable({
 M.dashboard = {
   header = vim.split(logos.TEXT, "\n"),
   buttons = {
-    { "   Find File",     "LDR f f" },
+    { "   Find File", "LDR f f" },
     { "󰈚   Recent Files", "LDR f g" },
-    { "󰈭   Find Word",    "LDR f r" },
+    { "󰈭   Find Word", "LDR f r" },
   },
   message = {
     "[ ━━━━━━ ❖  ━━━━━━ ]",
@@ -55,5 +55,5 @@ M.dashboard = {
   }
 }
 
-M.colorscheme = 'verdant'
+M.colorscheme = 'everforest'
 return M

@@ -175,15 +175,6 @@ lazy.setup({
     config = function() require("plugs.util.symbols") end
   },
   {
-    'code-biscuits/nvim-biscuits',
-    dependencies = {
-      'nvim-treesitter/nvim-treesitter',
-    },
-    lazy = true,
-    config = function() require("plugs.lsp.biscuits") end,
-    event = 'CursorHold',
-  },
-  {
     "cbochs/grapple.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
     lazy = true,
@@ -238,5 +229,9 @@ lazy.setup({
   {
     "onsails/lspkind.nvim",
     event = "InsertEnter",
+  },
+  {
+    "elkowar/yuck.vim",
+    ft = "yuck"
   }
 })
