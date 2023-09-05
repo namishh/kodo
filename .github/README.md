@@ -12,7 +12,7 @@
 </div>
 
 
-![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/header.png)
+![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/collage.png)
 
 
 A neovim configuration that looks good and is fast (startuptime < 0.035s).

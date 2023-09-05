@@ -55,5 +55,5 @@ M.dashboard = {
   }
 }
 
-M.colorscheme = 'everforest'
+M.colorscheme = 'groove'
 return M
