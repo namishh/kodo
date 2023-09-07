@@ -11,15 +11,8 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
     end
   end
 })
-vim.api.nvim_create_autocmd({ "ColorScheme" }, {
-  callback = function()
-    require("themes").load()
-  end
-})
-
 vim.api.nvim_create_autocmd({ "UIEnter" }, {
   callback = function()
-    require("themes").load()
     local should_skip = false
     if vim.fn.argc() > 0 or vim.fn.line2byte "$" ~= -1 or not vim.o.modifiable then
       should_skip = true

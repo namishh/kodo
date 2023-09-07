@@ -233,5 +233,16 @@ lazy.setup({
   {
     "elkowar/yuck.vim",
     ft = "yuck"
+  },
+  -- {
+  --  "prism",
+  --  event = { "UIEnter", "ColorScheme" },
+  -- config = function() require("plugs.ui.prism") end,
+  --  dir = "~/Documents/prism/"
+  -- },
+  {
+    "chadcat7/prism",
+    event = { "UIEnter", "ColorScheme" },
+    config = function() require("plugs.ui.prism") end,
   }
 })

@@ -54,9 +54,6 @@ opt.shadafile = ""
 opt.swapfile = false
 opt.shortmess:append "sI"
 
---local color = require("core.cfg").colorscheme
---vim.cmd.colorscheme(color)
-
 -- Disabling some built in plugins
 local builtins = {
   "2html_plugin",
