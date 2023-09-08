@@ -35,7 +35,7 @@ Has something like 33 plugins and but is still fast becuase of holy lazy loading
 | Plugin        | Description          | Lazy |
 | ------------- |-------------| :-----:|
 | [folke/lazy](https://github.com/folke/lazy.nvim) | the package manager, better than packer.nvim for newbies | `false` |
-| [chadcat7/prism](https://github.com/chadcat7/prism) | my own plugin written for making fast colorschemes | `false` |
+| [chadcat7/prism](https://github.com/chadcat7/prism) | my own plugin written for making fast colorschemes | `true` |
 | [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) | syntax highlighting, most popular one for neovim | `true` |
 | [NvChad/nvim-colorizer.lua](https://github.com/NvChad/nvim-colorizer.lua) | highlights colors and is really frickin fast | `true` |
 | [kyazdani42/nvim-tree.lua](https://github.com/kyazdani42/nvim-tree.lua) | a very neat, simple and clean file tree | `true` |
