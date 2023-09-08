@@ -15,13 +15,13 @@ lazy.setup({
   },
   {
     'NvChad/nvim-colorizer.lua',
-    event = 'CursorHold',
+    event = 'BufRead',
     config = function() require('plugs.ui.colorizer') end,
     lazy = true
   },
   {
     "nvim-tree/nvim-web-devicons",
-    event = 'CursorHold',
+    event = 'BufRead',
     config = function() require('plugs.ui.devicons') end,
     lazy = true,
   },
@@ -58,7 +58,7 @@ lazy.setup({
   {
     "lewis6991/gitsigns.nvim",
     lazy = true,
-    event = 'CursorHold',
+    event = { "BufRead" },
     config = function()
       require('gitsigns').setup {
         signs = {
@@ -76,7 +76,7 @@ lazy.setup({
     "lukas-reineke/indent-blankline.nvim",
     lazy = true,
     config = function() require('plugs.ui.indentlines') end,
-    event = 'CursorHold',
+    event = { "BufRead" },
   },
   {
     "williamboman/mason.nvim",
@@ -84,22 +84,21 @@ lazy.setup({
       "MasonInstall",
       "MasonUninstall",
       "Mason",
-      lazy = true,
       "MasonUninstallAll",
       "MasonLog",
     },
+    lazy = true,
     config = function() require('plugs.lsp.mason') end,
   },
   {
     "terrortylor/nvim-comment",
-    keys = { "<leader>", 'g' },
     config = function() require('plugs.util.comments') end,
     lazy = true,
   },
   -- The funs begins
   {
     "neovim/nvim-lspconfig",
-    event = { "BufReadPost", "BufNewFile", "CursorHold" },
+    event = { "BufReadPost", "BufNewFile" },
     lazy = true,
     cmd = { "LspInfo", "LspInstall", "LspUninstall", "LspStart" },
     config = function()
@@ -107,6 +106,22 @@ lazy.setup({
     end,
   },
 
+  {
+    "utilyre/barbecue.nvim",
+    lazy = true,
+    event = { "BufRead", "BufNewFile" },
+    dependencies = {
+      "SmiteshP/nvim-navic",
+      "nvim-tree/nvim-web-devicons",
+    },
+    opts = {
+      attach_navic = true,
+      theme = "auto",
+      include_buftypes = { "" },
+      exclude_filetypes = { "markdown", "gitcommit", "Trouble", "toggleterm" },
+      show_modified = false,
+    },
+  },
   -- load luasnips + cmp related in insert mode only
   {
     "hrsh7th/nvim-cmp",
@@ -117,6 +132,7 @@ lazy.setup({
         -- snippet plugin
         "L3MON4D3/LuaSnip",
         lazy = true,
+        dependencies = "rafamadriz/friendly-snippets",
         config = function()
           require("plugs.lsp.luasnip")
         end,
@@ -165,7 +181,7 @@ lazy.setup({
   {
     'kevinhwang91/nvim-ufo',
     lazy = true,
-    event = 'CursorHold',
+    event = "BufReadPost",
     dependencies = 'kevinhwang91/promise-async'
   },
   {
@@ -206,17 +222,6 @@ lazy.setup({
     config = function() require("plugs.util.hop") end
   },
   {
-    "goolord/alpha-nvim",
-    lazy = true,
-    cmd = {
-      "Alpha",
-      "AlphaRedraw"
-    },
-    config = function()
-      require("plugs.ui.alpha")
-    end
-  },
-  {
     "glepnir/lspsaga.nvim",
     event = "LspAttach",
     config = function() require("plugs.lsp.saga") end,
@@ -229,20 +234,31 @@ lazy.setup({
   {
     "onsails/lspkind.nvim",
     event = "InsertEnter",
+    lazy = true,
   },
   {
     "elkowar/yuck.vim",
     ft = "yuck"
   },
+  {
+    "goolord/alpha-nvim",
+    cmd = {
+      "Alpha",
+      "AlphaRedraw"
+    },
+    config = function()
+      require("plugs.ui.alpha")
+    end
+  },
+
   -- {
-  --  "prism",
-  --  event = { "UIEnter", "ColorScheme" },
-  -- config = function() require("plugs.ui.prism") end,
-  --  dir = "~/Documents/prism/"
+  --   "prism",
+  --   event = { "UIEnter", "ColorScheme" },
+  --   config = function() require("plugs.ui.prism") end,
+  --   dir = "~/Documents/prism/"
   -- },
   {
     "chadcat7/prism",
-    event = { "UIEnter", "ColorScheme" },
-    config = function() require("plugs.ui.prism") end,
+    lazy = true,
   }
 })

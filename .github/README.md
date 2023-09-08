@@ -35,6 +35,7 @@ Has something like 33 plugins and but is still fast becuase of holy lazy loading
 | Plugin        | Description          | Lazy |
 | ------------- |-------------| :-----:|
 | [folke/lazy](https://github.com/folke/lazy.nvim) | the package manager, better than packer.nvim for newbies | `false` |
+| [chadcat7/prism](https://github.com/chadcat7/prism) | my own plugin written for making fast colorschemes | `false` |
 | [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) | syntax highlighting, most popular one for neovim | `true` |
 | [NvChad/nvim-colorizer.lua](https://github.com/NvChad/nvim-colorizer.lua) | highlights colors and is really frickin fast | `true` |
 | [kyazdani42/nvim-tree.lua](https://github.com/kyazdani42/nvim-tree.lua) | a very neat, simple and clean file tree | `true` |
@@ -91,23 +92,9 @@ export PATH=$PATH:~/.local/share/nvim/mason/bin
 ```
 
 ## Custom Colorschemes
-I know it sucks but you will have to do it manually
-+ Make a new color scheme  `/lua/themes/schemes/scheme.lua` (copy the default colorscheme and change the colors) 
-+ Make a colors file for it `/colors/scheme.lua`
 
-```lua
--- /colors/scheme.lua
-require("themes").setup({
-  theme = "scheme",
-  transparent_background = false
-})
-```
+Refer to [prism](https://github.com/chadcat7/prism)
 
-+ Set the color scheme in `lua/core/cfg.lua`
-
-```lua
-M.colorscheme = 'pop'
-```
 ## Statusline Styles 
 **Warning:** This section contains the worst ever code written
 There are two prebuilt styles
