@@ -106,22 +106,6 @@ lazy.setup({
     end,
   },
 
-  {
-    "utilyre/barbecue.nvim",
-    lazy = true,
-    event = { "BufRead", "BufNewFile" },
-    dependencies = {
-      "SmiteshP/nvim-navic",
-      "nvim-tree/nvim-web-devicons",
-    },
-    opts = {
-      attach_navic = true,
-      theme = "auto",
-      include_buftypes = { "" },
-      exclude_filetypes = { "markdown", "gitcommit", "Trouble", "toggleterm" },
-      show_modified = false,
-    },
-  },
   -- load luasnips + cmp related in insert mode only
   {
     "hrsh7th/nvim-cmp",
@@ -250,13 +234,6 @@ lazy.setup({
       require("plugs.ui.alpha")
     end
   },
-
-  -- {
-  --   "prism",
-  --   event = { "UIEnter", "ColorScheme" },
-  --   config = function() require("plugs.ui.prism") end,
-  --   dir = "~/Documents/prism/"
-  -- },
   {
     "chadcat7/prism",
     lazy = true,

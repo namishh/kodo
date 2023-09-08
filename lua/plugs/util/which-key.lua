@@ -16,6 +16,7 @@ local mappings = {
     f = { ":Telescope find_files<cr>", "Find Files" },
     g = { ":Telescope oldfiles<cr>", "Recently Opened" },
     r = { ":Telescope live_grep<cr>", "Find String" },
+    c = { ":lua require('prism.picker').open()<cr>", "Kolorschemes" },
   },
   G = {
     name = "Grapple",

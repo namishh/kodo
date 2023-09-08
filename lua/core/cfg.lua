@@ -55,5 +55,4 @@ M.dashboard = {
   }
 }
 
-M.colorscheme = 'groove'
 return M
