@@ -1,6 +1,10 @@
 local utils = require("prism.utils")
 local colors = require("prism.themer"):getColors()
 
+-- IN THIS DIRECTORY YOU CAN ADD ANY NUMBER OF FILES
+-- ALL OF THEM RETURN A TABLE WHICH CONTAINS HIGHLIGHTS TO BE ADDED
+-- YOUR HIGHLIGHTS WILL BE PREFFERED OVER THE DEFAULTS
+
 return {
   AlphaHeader = { fg = colors.color4, bg = colors.background },
   AlphaLabel = { fg = colors.color7, bg = colors.background },

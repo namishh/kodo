@@ -237,5 +237,12 @@ lazy.setup({
   {
     "chadcat7/prism",
     lazy = true,
+  },
+  {
+    "andweeb/presence.nvim",
+    event = { "BufReadPost" },
+    config = function()
+      require("plugs.util.presence")
+    end
   }
 })
