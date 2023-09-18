@@ -41,7 +41,7 @@ local logos = setmetatable({
 )
 -- the keybinds for buttons better work
 M.dashboard = {
-  header = vim.split(logos.TEXT, "\n"),
+  header = vim.split(logos.UWU2, "\n"),
   buttons = {
     { "   Find File", "LDR f f" },
     { "󰈚   Recent Files", "LDR f g" },

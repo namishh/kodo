@@ -237,6 +237,7 @@ lazy.setup({
   {
     "chadcat7/prism",
     lazy = true,
+    dir = "~/Documents/prism/"
   },
   {
     "andweeb/presence.nvim",
@@ -244,5 +245,5 @@ lazy.setup({
     config = function()
       require("plugs.util.presence")
     end
-  }
+  },
 })

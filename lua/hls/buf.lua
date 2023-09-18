@@ -11,5 +11,5 @@ return {
   BuffLineEmpty = { bg = colors.background, fg = colors.white },
   BuffLineEmptyColor = { bg = colors.cursorline, fg = colors.white },
   BuffLineButton = { bg = utils.darken(colors.color4, colors.cursorline, 0.12), fg = colors.color4 },
-  BuffLineCloseButton = { bg = colors.color9, fg = colors.black }
+  BuffLineCloseButton = { bg = colors.color9, fg = colors.black },
 }
