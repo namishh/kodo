@@ -27,7 +27,7 @@ On Battery                            : 0.024s - 0.032s
 
 </div>
 
-Has something like 33 plugins and but is still fast becuase of holy lazy loading. Should be even faster on good cpus.
+Has something like 40+ plugins and but is still fast becuase of holy lazy loading. Should be even faster on good cpus.
 
 
 ## Plugins And Features
@@ -55,6 +55,10 @@ Has something like 33 plugins and but is still fast becuase of holy lazy loading
 | [simrat39/symbols-outline.nvim](https://github.com/simrat39/symbols-outline.nvim) | a tree like view for symbols via lsp | `true` |
 | [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim) | a very minimal and good looking dashboard | `true` |
 | [terrortylor/nvim-comment](https://github.com/terrortylor/nvim-comment) | quik and easy commenting | `true` |
+| [folke/todo-comments.nvim](https://github.com/folke/todo-comments.nvim) | beautiful highlights for TODO comments | `true` |
+| [folke/trouble.nvim](https://github.com/folke/trouble.nvim) | pretty list for showing diagnostics, references, etc | `true` |
+| [NeogitOrg/neogit](https://github.com/NeogitOrg/neogit) | magit clone for neovim | `true` |
+| [j-hui/fidget.nvim](https://github.com/j-hui/fidget.nvim) | UI for nvim-lsp progress. Eye candy for the impatient | `true` |
 
 #### And Also...
 + Comes with 11 premade colourschemes!
@@ -193,6 +197,8 @@ M.statusstyle = 'minimal' -- minimal | fancy
 | Keys        | Function          |
 | ------------- |-------------|
 | <kbd>LDR</kbd> <kbd>l</kbd> <kbd>l</kbd>  | Open Lazy Dashboard |
+| <kbd>LDR</kbd> <kbd>l</kbd> <kbd>n</kbd>  | Open Neogit Buffer |
+| <kbd>LDR</kbd> <kbd>l</kbd> <kbd>t</kbd>  | Open Trouble List |
 | <kbd>LDR</kbd> <kbd>l</kbd> <kbd>m</kbd> | Open Mason Dashboard |
 | <kbd>LDR</kbd> <kbd>l</kbd> <kbd>c</kbd> | Show Available Code Actions |
 | <kbd>LDR</kbd> <kbd>l</kbd> <kbd>s</kbd> | Open Symbols Outline |

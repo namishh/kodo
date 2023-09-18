@@ -163,16 +163,48 @@ lazy.setup({
     lazy = true
   },
   {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    event = { "BufReadPost", "InsertEnter" },
+    opts = {
+      signs = false,
+
+    }
+  },
+  {
     'kevinhwang91/nvim-ufo',
     lazy = true,
     event = "BufReadPost",
     dependencies = 'kevinhwang91/promise-async'
   },
   {
+    "folke/trouble.nvim",
+    event = "BufReadPost",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
+  {
+    "NeogitOrg/neogit",
+    dependencies = {
+      "nvim-lua/plenary.nvim",         -- required
+      "nvim-telescope/telescope.nvim", -- optional
+      "sindrets/diffview.nvim",        -- optional
+      "ibhagwan/fzf-lua",              -- optional
+    },
+    event = "BufRead",
+    config = true,
+  },
+  {
     'simrat39/symbols-outline.nvim',
     cmd = "SymbolsOutline",
     lazy = true,
     config = function() require("plugs.util.symbols") end
+  },
+  {
+    "j-hui/fidget.nvim",
+    tag = "legacy",
+    opts = {
+    },
+    event = "LspAttach",
   },
   {
     "cbochs/grapple.nvim",
@@ -237,7 +269,7 @@ lazy.setup({
   {
     "chadcat7/prism",
     lazy = true,
-    dir = "~/Documents/prism/"
+    --dir = "~/Documents/prism/"
   },
   {
     "andweeb/presence.nvim",
