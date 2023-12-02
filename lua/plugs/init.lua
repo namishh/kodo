@@ -25,7 +25,17 @@ lazy.setup({
     config = function() require('plugs.ui.devicons') end,
     lazy = true,
   },
-
+  {
+    {
+      "lukas-reineke/indent-blankline.nvim",
+      main = "ibl",
+      opts = {},
+      event = "BufReadPost",
+      config = function()
+        require("ibl").setup()
+      end
+    }
+  },
   {
     'kyazdani42/nvim-tree.lua',
     lazy = true,
