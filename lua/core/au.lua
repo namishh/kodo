@@ -13,7 +13,7 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 })
 vim.api.nvim_create_autocmd({ "UIEnter" }, {
   callback = function()
-    require("plugs.ui.prism")
+    -- require("plugs.ui.prism")
     local should_skip = false
     if vim.fn.argc() > 0 or vim.fn.line2byte "$" ~= -1 or not vim.o.modifiable then
       should_skip = true

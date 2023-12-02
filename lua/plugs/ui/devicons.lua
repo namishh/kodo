@@ -10,6 +10,7 @@ local config = {
       name = "Dockerfile",
     },
     md = { icon = "" },
+    astro = { icon = "󰑣", name = "SVELTE" },
     html = { icon = "", name = "HTML" },
     jpeg = { icon = " ", name = "JPEG" },
     jpg = { icon = " ", name = "JPG" },

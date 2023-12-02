@@ -34,7 +34,8 @@ M.capabilities.textDocument.completion.completionItem = {
 }
 
 
-local servers = { "html", "pyright", "tsserver", "emmet_ls", "clangd", "cssls", "rnix", "hls", "rust_analyzer", "gopls" }
+local servers = { "html", "pyright", "tsserver", "emmet_ls", "clangd", "cssls", "rnix", "hls", "rust_analyzer", "gopls",
+  "astro" }
 for _, k in ipairs(servers) do
   lspconfig[k].setup {
     on_attach = M.on_attach,
@@ -51,7 +52,7 @@ lspconfig.lua_ls.setup {
         callSnippet = "Replace"
       },
       diagnostics = {
-        globals = { "vim", "awesome", "client", "screen", "mouse" },
+        globals = { "vim", "awesome", "client", "screen", "mouse", "tag" },
       },
     },
   }

@@ -15,7 +15,7 @@
 ![Screenshot1](https://raw.githubusercontent.com/dark-Jedi2108/nvide/main/.github/screenshots/collage.png)
 
 
-A neovim configuration that looks good and is fast (startuptime < 0.035s).
+A bloated neovim configuration that looks good and is fast (startuptime < 0.035s).
 
 <div align="center">
 
@@ -61,7 +61,6 @@ Has something like 40+ plugins and but is still fast becuase of holy lazy loadin
 | [j-hui/fidget.nvim](https://github.com/j-hui/fidget.nvim) | UI for nvim-lsp progress. Eye candy for the impatient | `true` |
 
 #### And Also...
-+ Comes with 11 premade colourschemes!
 + Cached Colorschemes for better speeds!
 + Lazy loading done most of the time to get blazingly moderate startup times.
 + A Minimal Custom [Bufferline](https://github.com/chadcat5207/nvide/tree/main/lua/ui/buf)

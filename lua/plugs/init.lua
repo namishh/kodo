@@ -73,12 +73,6 @@ lazy.setup({
     end
   },
   {
-    "lukas-reineke/indent-blankline.nvim",
-    lazy = true,
-    config = function() require('plugs.ui.indentlines') end,
-    event = { "BufRead" },
-  },
-  {
     "williamboman/mason.nvim",
     cmd = {
       "MasonInstall",
@@ -178,33 +172,10 @@ lazy.setup({
     dependencies = 'kevinhwang91/promise-async'
   },
   {
-    "folke/trouble.nvim",
-    event = "BufReadPost",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-  },
-  {
-    "NeogitOrg/neogit",
-    dependencies = {
-      "nvim-lua/plenary.nvim",         -- required
-      "nvim-telescope/telescope.nvim", -- optional
-      "sindrets/diffview.nvim",        -- optional
-      "ibhagwan/fzf-lua",              -- optional
-    },
-    event = "BufRead",
-    config = true,
-  },
-  {
     'simrat39/symbols-outline.nvim',
     cmd = "SymbolsOutline",
     lazy = true,
     config = function() require("plugs.util.symbols") end
-  },
-  {
-    "j-hui/fidget.nvim",
-    tag = "legacy",
-    opts = {
-    },
-    event = "LspAttach",
   },
   {
     "cbochs/grapple.nvim",
@@ -238,21 +209,6 @@ lazy.setup({
     config = function() require("plugs.util.hop") end
   },
   {
-    "glepnir/lspsaga.nvim",
-    event = "LspAttach",
-    config = function() require("plugs.lsp.saga") end,
-    dependencies = {
-      { "nvim-tree/nvim-web-devicons" },
-      --Please make sure you install markdown and markdown_inline parser
-      { "nvim-treesitter/nvim-treesitter" }
-    }
-  },
-  {
-    "onsails/lspkind.nvim",
-    event = "InsertEnter",
-    lazy = true,
-  },
-  {
     "elkowar/yuck.vim",
     ft = "yuck"
   },
@@ -269,7 +225,10 @@ lazy.setup({
   {
     "chadcat7/prism",
     lazy = true,
-    --dir = "~/Documents/prism/"
+    event = "VeryLazy",
+    config = function()
+      require("plugs.ui.prism")
+    end
   },
   {
     "andweeb/presence.nvim",
@@ -277,5 +236,9 @@ lazy.setup({
     config = function()
       require("plugs.util.presence")
     end
+  },
+  {
+    "wuelnerdotexe/vim-astro",
+    ft = "astro"
   },
 })

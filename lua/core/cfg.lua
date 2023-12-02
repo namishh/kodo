@@ -55,4 +55,8 @@ M.dashboard = {
   }
 }
 
+M.neorg = {
+  dir = "~/Documents/notes"
+}
+
 return M
