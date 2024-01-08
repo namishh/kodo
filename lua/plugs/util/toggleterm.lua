@@ -13,5 +13,5 @@ require "toggleterm".setup {
   winbar = {
     enabled = false,
   },
-
+close_on_exit = true,
 }

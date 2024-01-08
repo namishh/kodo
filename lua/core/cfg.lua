@@ -55,8 +55,6 @@ M.dashboard = {
   }
 }
 
-M.neorg = {
-  dir = "~/Documents/notes"
-}
+M.customSchemes = require("core.colorschemes")
 
 return M

@@ -53,7 +53,7 @@ opt.shadafile = "NONE"
 opt.shadafile = ""
 opt.swapfile = false
 opt.shortmess:append "sI"
-
+g.loaded_python3_provider = 0
 -- Disabling some built in plugins
 local builtins = {
   "2html_plugin",
