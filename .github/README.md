@@ -96,7 +96,7 @@ export PATH=$PATH:~/.local/share/nvim/mason/bin
 
 ## Custom Colorschemes
 
-Refer to [prism](https://github.com/chadcat7/prism)
+Add or remove them in this [file](https://github.com/chadcat7/kodo/blob/main/lua/core/colorschemes.lua)
 
 ## Statusline Styles 
 **Warning:** This section contains the worst ever code written
