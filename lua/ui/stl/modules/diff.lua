@@ -5,10 +5,10 @@ local M = function(m)
 
   local git_status = vim.b.gitsigns_status_dict
 
-  local added = (git_status.added and git_status.added ~= 0) and (" + " .. git_status.added) or ""
-  local changed = (git_status.changed and git_status.changed ~= 0) and (" ~ " .. git_status.changed) or ""
-  local removed = (git_status.removed and git_status.removed ~= 0) and (" - " .. git_status.removed) or ""
-  if (tonumber(git_status.added) and tonumber(git_status.added) > 0) or (tonumber(git_status.changed) and tonumber(git_status.changed)) > 0 or (tonumber(git_status.removed) and tonumber(git_status.removed) > 0) then
+  if git_status then
+    local added = (git_status.added and git_status.added ~= 0) and (" + " .. git_status.added) or ""
+    local changed = (git_status.changed and git_status.changed ~= 0) and (" ~ " .. git_status.changed) or ""
+    local removed = (git_status.removed and git_status.removed ~= 0) and (" - " .. git_status.removed) or ""
     if (m == 'minimal') then
       return " " ..
           "%#StalineDiffAdd#" .. added .. "%#StalineDiffChange#" .. changed .. "%#StalineDiffRemove#" .. removed
