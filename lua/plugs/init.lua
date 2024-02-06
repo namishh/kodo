@@ -235,7 +235,7 @@ lazy.setup({
   {
     "chadcat7/prism",
     lazy = true,
-    event = "VeryLazy",
+    event = "UIEnter",
     config = function()
       require("plugs.ui.prism")
     end
@@ -251,4 +251,9 @@ lazy.setup({
     "wuelnerdotexe/vim-astro",
     ft = "astro"
   },
+  {
+    "iamcco/markdown-preview.nvim",
+    ft = { "markdown", },
+    build = function() vim.fn["mkdp#util#install"]() end,
+  }
 })

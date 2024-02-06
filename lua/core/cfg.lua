@@ -55,6 +55,6 @@ M.dashboard = {
   }
 }
 
-M.customSchemes = require("core.colorschemes")
+M.customSchemes = require("core.colors")
 
 return M
