@@ -248,8 +248,23 @@ lazy.setup({
     end
   },
   {
+    'numToStr/Comment.nvim',
+    event = { "BufReadPost" },
+    opts = {
+      toggler = {
+        line = 'gcc',
+        block = 'gbc',
+      },
+    },
+    lazy = true,
+  },
+  {
     "wuelnerdotexe/vim-astro",
     ft = "astro"
+  },
+  {
+    'prisma/vim-prisma',
+    ft = "prisma"
   },
   {
     "iamcco/markdown-preview.nvim",

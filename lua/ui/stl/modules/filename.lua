@@ -18,14 +18,17 @@ local M = function(m)
     if string.find(filename, "toggleterm") then
       filename = "Terminal"
     end
-    if (m == 'minimal') then
+    if (m == 'blocks') then
       return "%#StalineFilenameIcon#" .. "%#" .. icon_hl .. "# " .. icon .. "  %#StalineFilename#" .. filename .. "  "
+    elseif (m == 'minimal') then
+      return "%#StalineFilenameIconMinimal#" ..
+      "%#" .. icon_hl .. "# " .. icon .. "  %#StalineFilenameMinimal#" .. filename .. "  "
     elseif m == "fancy" then
       return "%#StalineFilenameFancy#" ..
           icon .. "  " .. filename .. "   " .. "%#StalineFilenameSep#" .. " %#StalineEmptySpace#"
     end
   else
-    if (m == 'minimal') then
+    if (m == 'minimal' or m == 'blocks') then
       return "%#StalineFilename#  Kodo "
     elseif m == "fancy" then
       return "%#StalineFilenameFancy#" .. "  Kodo  " .. "%#StalineFilenameSep#" .. " %#StalineEmptySpace#"

@@ -7,7 +7,7 @@ local has_value = function(tab, val)
   return false
 end
 
-local available_themes = { 'minimal', 'fancy' }
+local available_themes = { 'blocks', 'fancy', 'minimal' }
 vim.api.nvim_create_user_command(
   'StatuslineGlowup',
   function(opts)

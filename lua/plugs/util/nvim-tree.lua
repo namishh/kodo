@@ -43,14 +43,14 @@ require 'nvim-tree'.setup {
     enable = true,
     update_root = true,
   },
-git = {
-  enable = true,
-  ignore = false,
-  timeout = 500,
-},
+  git = {
+    enable = true,
+    ignore = false,
+    timeout = 500,
+  },
   hijack_directories = { enable = true },
   view = {
-    width = "18%",
+    width = "20%",
     side = "left",
   },
 }

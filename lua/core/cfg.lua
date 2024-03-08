@@ -48,7 +48,7 @@ M.dashboard = {
     { "󰈭   Find Word", "LDR f r" },
   },
   message = {
-    "[ ━━━━━━ ❖  ━━━━━━ ]",
+    --"[ ━━━━━━ ❖  ━━━━━━ ]",
   },
   footer = {
     "Loaded " .. stats.count .. " plugins",
