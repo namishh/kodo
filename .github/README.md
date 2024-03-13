@@ -29,7 +29,6 @@ On Battery                            : 0.024s - 0.032s
 
 Has something like 40+ plugins and but is still fast becuase of holy lazy loading. Should be even faster on good cpus.
 
-
 ## Plugins And Features
 
 | Plugin        | Description          | Lazy |
@@ -46,7 +45,6 @@ Has something like 40+ plugins and but is still fast becuase of holy lazy loadin
 | [lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) | Super fast git decorations implemented purely in Lua. | `true` |
 | [lukas-reineke/indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim) | super cool for keeping track of code | `true` |
 | [williamboman/mason.nvim](https://github.com/williamboman/mason.nvim) | installing LSPs made super easy | `true` |
-| [nvimdev/lspsaga.nvim](https://github.com/nvimdev/lspsaga.nvim) | responsible for the winbar and lightbulb | `true` |
 | [LnL7/vim-nix](https://github.com/LnL7/vim-nix) | nix syntax to make Nix a less of a headache | `true` |
 | [kevinhwang91/nvim-ufo](https://github.com/kevinhwang91/nvim-ufo) | folds in neovim arent that bad! actually, better than vscode | `true` |
 | [phaazon/hop.nvim](https://github.com/phaazon/hop.nvim) | move anywhere around the window in 2-3 clicks | `true` |
@@ -56,9 +54,6 @@ Has something like 40+ plugins and but is still fast becuase of holy lazy loadin
 | [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim) | a very minimal and good looking dashboard | `true` |
 | [terrortylor/nvim-comment](https://github.com/terrortylor/nvim-comment) | quik and easy commenting | `true` |
 | [folke/todo-comments.nvim](https://github.com/folke/todo-comments.nvim) | beautiful highlights for TODO comments | `true` |
-| [folke/trouble.nvim](https://github.com/folke/trouble.nvim) | pretty list for showing diagnostics, references, etc | `true` |
-| [NeogitOrg/neogit](https://github.com/NeogitOrg/neogit) | magit clone for neovim | `true` |
-| [j-hui/fidget.nvim](https://github.com/j-hui/fidget.nvim) | UI for nvim-lsp progress. Eye candy for the impatient | `true` |
 
 #### And Also...
 + Cached Colorschemes for better speeds!
