@@ -20,32 +20,21 @@ local mappings = {
   },
   G = {
     name = "Grapple",
-    a = { ":GrappleTag<cr>", "Add A Bookmark" },
-    t = { ":GrappleToggle<cr>", "Toggle Bookmark" },
-    r = { ":GrappleUntag<cr>", "Remove Bookmark" },
-    g = { ":GrapplePopup tags<cr>", "Show All Bookmarks" }
+    a = { ":Grapple tag<cr>", "Add A Bookmark" },
+    t = { ":Grapple toggle<cr>", "Toggle Bookmark" },
+    r = { ":Grapple untag<cr>", "Remove Bookmark" },
+    g = { ":Grapple open_tags<cr>", "Show All Bookmarks" }
   },
   t = {
     name = "Terminal",
     t = { ":ToggleTerm<cr>", "Split Below" },
   },
-  z = {
-    name = "Focus",
-    t = { ":Twilight<cr>", "Twilight" },
-    n = { ":TZNarrow<cr>", "Truezen narrow" },
-    f = { ":TZFocus<cr>", "Truezen focus" },
-    m = { ":TZMinimalist<cr>", "Truezen minimal mode" },
-    a = { ":TZAtaraxis<cr>", "Truezen atraxis" },
-  },
   l = {
     name = "Misc",
     l = { ":Lazy<cr>", "Open Lazy" },
-    t = { ":TroubleToggle<cr>", "Open Trouble" },
     c = { ":lua require('telescope') vim.lsp.buf.code_action()<cr>", "Show Code Actions" },
     m = { ":Mason<cr>", "Open Mason" },
-    n = { ":Neogit<cr>", "Open Neogit" },
     s = { ":SymbolsOutline<cr>", "Overview of file" },
-    w = { ":SessionSave<cr>", "Save this session" }
   },
   h = {
     name = "Hop",

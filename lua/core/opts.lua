@@ -25,6 +25,7 @@ opt.tabline = ' '
 opt.showmode = false
 opt.backup = false
 opt.number = true
+opt.relativenumber = true
 opt.numberwidth = 3
 opt.ruler = false
 opt.writebackup = false
