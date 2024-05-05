@@ -17,8 +17,8 @@ Specific language based plugins are not included
 | [lukas-reineke/indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim) | super cool for keeping track of code | `true` |
 | [williamboman/mason.nvim](https://github.com/williamboman/mason.nvim) | installing LSPs made super easy | `true` |
 | [L3MON4D3/LuaSnip](https://github.com/L3MON4D3/LuaSnip) | very simple and easy to use snippet engine | `true` |
-| [simrat39/symbols-outline.nvim](https://github.com/simrat39/symbols-outline.nvim) | a tree like view for symbols via lsp | `true` |
 | [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim) | a very minimal and good looking dashboard | `true` |
 | [terrortylor/nvim-comment](https://github.com/terrortylor/nvim-comment) | quik and easy commenting | `true` |
 | [folke/todo-comments.nvim](https://github.com/folke/todo-comments.nvim) | beautiful highlights for TODO comments | `true` |
+| [dharmx/track.nvim](https://github.com/dharmx/track.nvim/tree/feature/pad) | Most over-engineered marking system. Harpoon like file tracking | `true` |
 

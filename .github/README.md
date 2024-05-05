@@ -1,13 +1,13 @@
 <img src="screenshots/header.png" alt="screenshot">
 
 ```txt
-Startuptime: 20.13ms
+  Startuptime: 17.58ms
 
-Based on the actual CPU time of the Neovim process till UIEnter.
-This is more accurate than `nvim --startuptime`.
-  LazyStart 6.68ms
-  LazyDone  13.97ms (+7.29ms)
-  UIEnter   20.13ms (+6.16ms)
+  Based on the actual CPU time of the Neovim process till UIEnter.
+  This is more accurate than `nvim --startuptime`.
+    LazyStart 7.11ms
+    LazyDone  12.27ms (+5.16ms)
+    UIEnter   17.58ms (+5.31ms)
 ```
 
 ## Special Thanks 
