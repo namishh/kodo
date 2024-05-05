@@ -35,12 +35,14 @@ M.capabilities.textDocument.completion.completionItem = {
 
 local servers = { "html", "pyright", "tsserver", "emmet_ls", "clangd", "cssls", "rnix", "hls", "rust_analyzer", "gopls",
   "astro", "vuels" }
+
 for _, k in ipairs(servers) do
   lspconfig[k].setup {
     on_attach = M.on_attach,
     capabilities = M.capabilities,
   }
 end
+
 lspconfig.lua_ls.setup {
   on_attach = M.on_attach,
   capabilities = M.capabilities,
@@ -56,5 +58,5 @@ lspconfig.lua_ls.setup {
     },
   }
 }
-require('ufo').setup()
+
 return M

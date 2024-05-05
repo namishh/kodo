@@ -26,27 +26,19 @@ lazy.setup({
     lazy = true,
   },
   {
-    {
-      "lukas-reineke/indent-blankline.nvim",
-      main = "ibl",
-      opts = {},
-      event = "BufReadPost",
-      config = function()
-        require("ibl").setup()
-      end
-    }
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    opts = {},
+    event = "BufReadPost",
+    config = function()
+      require("ibl").setup()
+    end
   },
   {
     'kyazdani42/nvim-tree.lua',
     lazy = true,
     cmd = "NvimTreeToggle",
     config = function() require('plugs.util.nvim-tree') end
-  },
-  {
-    "folke/which-key.nvim",
-    keys = { "<leader>", ' ', "'", "`" },
-    lazy = true,
-    config = function() require('plugs.util.which-key') end
   },
   {
     'nvim-lua/plenary.nvim',
@@ -58,6 +50,12 @@ lazy.setup({
     lazy = true,
     dependencies = { 'plenary.nvim' },
     config = function() require('plugs.util.telescope') end
+  },
+  {
+    "terrortylor/nvim-comment",
+    config = function()
+      require('nvim_comment').setup({ create_mappings = false })
+    end
   },
   {
     "akinsho/toggleterm.nvim",
@@ -94,12 +92,6 @@ lazy.setup({
     lazy = true,
     config = function() require('plugs.lsp.mason') end,
   },
-  {
-    "terrortylor/nvim-comment",
-    config = function() require('plugs.util.comments') end,
-    lazy = true,
-  },
-  -- The funs begins
   {
     "neovim/nvim-lspconfig",
     event = { "BufReadPost", "BufNewFile" },
@@ -158,11 +150,6 @@ lazy.setup({
     end,
   },
   {
-    "LnL7/vim-nix",
-    lazy = true,
-    ft = 'nix',
-  },
-  {
     "nvim-telescope/telescope-ui-select.nvim",
     lazy = true
   },
@@ -172,55 +159,7 @@ lazy.setup({
     event = { "BufReadPost", "InsertEnter" },
     opts = {
       signs = false,
-
     }
-  },
-  {
-    'kevinhwang91/nvim-ufo',
-    lazy = true,
-    event = "BufReadPost",
-    dependencies = 'kevinhwang91/promise-async'
-  },
-  {
-    'simrat39/symbols-outline.nvim',
-    cmd = "SymbolsOutline",
-    lazy = true,
-    config = function() require("plugs.util.symbols") end
-  },
-  {
-    "cbochs/grapple.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    lazy = true,
-    config = function() require("plugs.util.grapple") end,
-    cmd = {
-      "GrappleCycle",
-      "GrapplePopup",
-      "GrappleReset",
-      "GrappleSelect",
-      "GrappleTag",
-      "GrappleTags",
-      "GrappleToggle",
-      "GrappleUntag"
-    }
-  },
-  {
-    'phaazon/hop.nvim',
-    branch = 'v2',
-    lazy = true,
-    cmd = {
-      "HopAnywhere",
-      "HopChar1",
-      "HopChar2",
-      "HopLine",
-      "HopLineStart",
-      "HopVertical",
-      "HopWord"
-    },
-    config = function() require("plugs.util.hop") end
-  },
-  {
-    "elkowar/yuck.vim",
-    ft = "yuck"
   },
   {
     "goolord/alpha-nvim",
@@ -240,24 +179,7 @@ lazy.setup({
       require("plugs.ui.prism")
     end
   },
-  {
-    "andweeb/presence.nvim",
-    event = { "BufReadPost" },
-    config = function()
-      require("plugs.util.presence")
-    end
-  },
-  {
-    'numToStr/Comment.nvim',
-    event = { "BufReadPost" },
-    opts = {
-      toggler = {
-        line = 'gcc',
-        block = 'gbc',
-      },
-    },
-    lazy = true,
-  },
+  -- Plugins for specific file types
   {
     "wuelnerdotexe/vim-astro",
     ft = "astro"
@@ -267,8 +189,12 @@ lazy.setup({
     ft = "prisma"
   },
   {
-    "iamcco/markdown-preview.nvim",
-    ft = { "markdown", },
-    build = function() vim.fn["mkdp#util#install"]() end,
-  }
+    "elkowar/yuck.vim",
+    ft = "yuck"
+  },
+  {
+    "LnL7/vim-nix",
+    lazy = true,
+    ft = 'nix',
+  },
 })
