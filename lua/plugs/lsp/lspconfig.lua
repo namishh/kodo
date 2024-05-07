@@ -33,7 +33,7 @@ M.capabilities.textDocument.completion.completionItem = {
 }
 
 
-local servers = { "html", "pyright", "tsserver", "emmet_ls", "clangd", "cssls", "rnix", "hls", "rust_analyzer", "gopls",
+local servers = { "html", "pyright", "tsserver", "emmet_ls", "clangd", "cssls", "rnix", "hls", "gopls",
   "astro", "vuels" }
 
 for _, k in ipairs(servers) do
@@ -42,6 +42,11 @@ for _, k in ipairs(servers) do
     capabilities = M.capabilities,
   }
 end
+
+lspconfig.rust_analyzer.setup {
+  filetypes = { "rust" },
+  cmd = { "rustup", "run", "stable", "rust-analyzer" },
+}
 
 lspconfig.lua_ls.setup {
   on_attach = M.on_attach,

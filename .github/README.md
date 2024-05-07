@@ -2,6 +2,7 @@
 
 ```txt
   Startuptime: 17.58ms
+  List of plugins can be found in a readme in lua/plugs folder.
 
   Based on the actual CPU time of the Neovim process till UIEnter.
   This is more accurate than `nvim --startuptime`.
