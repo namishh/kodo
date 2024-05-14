@@ -2,13 +2,13 @@
 
 <samp>
   Startuptime: 17.58ms
-  List of plugins can be found in a readme in [lua/plugs](https://github.com/chadcat7/kodo/tree/main/lua/plugs) folder.
+  List of plugins can be found in a readme in <a href="https://github.com/chadcat7/kodo/tree/main/lua/plugs">lua/plugs</a> folder. <br>
 
-  Based on the actual CPU time of the Neovim process till UIEnter.
-  This is more accurate than `nvim --startuptime`.
-    LazyStart 7.11ms
-    LazyDone  12.27ms (+5.16ms)
-    UIEnter   17.58ms (+5.31ms)
+  Based on the actual CPU time of the Neovim process till UIEnter. <br>
+  This is more accurate than `nvim --startuptime`. <br>
+    LazyStart 7.11ms <br>
+    LazyDone  12.27ms (+5.16ms) <br>
+    UIEnter   17.58ms (+5.31ms) <br>
 
 ## Special Thanks 
 This config wouldn't have been possible without these chads!
