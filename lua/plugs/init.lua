@@ -184,7 +184,6 @@ lazy.setup({
     config = function()
       require("track").setup({})
     end,
-    branch = "feature/pad",
     cmd = {
       "Mark",
       "Track",
