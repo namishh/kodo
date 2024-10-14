@@ -7,7 +7,7 @@ local message = dashCfg.message
 local footer = dashCfg.footer
 
 -- thanks dharmx
-function makeButton(label, shortcut, hl_label, hl_icon)
+local function makeButton(label, shortcut, hl_label, hl_icon)
   return {
     type = "button",
     on_press = function()
@@ -53,7 +53,7 @@ dashboard.section.footer.opts.hl = "AlphaFooter"
 dashboard.config.opts.noautocmd = true
 local opts = {
   layout = {
-    { type = "padding", val = 2 },
+    { type = "padding", val = 4 },
     dashboard.section.header,
     { type = "padding", val = 1 },
     heading,

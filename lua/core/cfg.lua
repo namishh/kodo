@@ -32,6 +32,9 @@ local logos = setmetatable({
           ▌█▌█▄         ▄▄████▀ ▀
             █▀██▄▄▄ ▄▄▀▀▒█▀█
       ]],
+    MIN = [[
+/< () |) ()
+      ]]
   },
   {
     __index = function(logos, key)
@@ -41,7 +44,7 @@ local logos = setmetatable({
 )
 -- the keybinds for buttons better work
 M.dashboard = {
-  header = vim.split(logos.TEXT, "\n"),
+  header = vim.split(logos.MIN, "\n"),
   buttons = {
     { "   Find File", "<C-p>" },
     { "󰈚   Recent Files", "<C-o>" },
