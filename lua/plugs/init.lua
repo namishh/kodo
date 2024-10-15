@@ -180,22 +180,6 @@ lazy.setup({
     end
   },
   {
-    "dharmx/track.nvim",
-    config = function()
-      require("track").setup({})
-    end,
-    cmd = {
-      "Mark",
-      "Track",
-      "MarkOpened",
-      "StashBundle",
-      "RestoreBundle",
-      "AlternateBundle",
-      "Unmark"
-    },
-  },
-  -- Plugins for specific file types
-  {
     "wuelnerdotexe/vim-astro",
     ft = "astro"
   },
