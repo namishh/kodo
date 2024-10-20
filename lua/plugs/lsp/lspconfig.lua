@@ -33,15 +33,22 @@ M.capabilities.textDocument.completion.completionItem = {
 }
 
 
-local servers = { "html", "pyright", "tsserver", "emmet_ls", "clangd", "cssls", "rnix", "hls", "gopls",
+local servers = { "html", "pyright", "emmet_ls", "clangd", "cssls", "rnix", "hls", "gopls",
   "astro", "vuels" }
 
 for _, k in ipairs(servers) do
   lspconfig[k].setup {
-    on_attach = M.on_attach,
-    capabilities = M.capabilities,
   }
 end
+
+lspconfig.ts_ls.setup {
+  on_attach = M.on_attach,
+  capabilities = M.capabilities,
+  init_options = {
+    preferences = { includeCompletionsForModuleExports = false }
+  }
+}
+
 
 lspconfig.rust_analyzer.setup {
   filetypes = { "rust" },

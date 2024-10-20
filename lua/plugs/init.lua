@@ -53,8 +53,9 @@ lazy.setup({
   },
   {
     "terrortylor/nvim-comment",
+    event = "BufRead",
     config = function()
-      require('nvim_comment').setup({ create_mappings = false })
+      require('nvim_comment').setup({ create_mappings = true })
     end
   },
   {
@@ -68,16 +69,7 @@ lazy.setup({
     lazy = true,
     event = { "BufRead" },
     config = function()
-      require('gitsigns').setup {
-        signs = {
-          add          = { hl = 'GitSignsAdd', text = '│', numhl = 'GitSignsAddNr', linehl = 'GitSignsAddLn' },
-          change       = { hl = 'GitSignsChange', text = '│', numhl = 'GitSignsChangeNr', linehl = 'GitSignsChangeLn' },
-          delete       = { hl = 'GitSignsDelete', text = '_', numhl = 'GitSignsDeleteNr', linehl = 'GitSignsDeleteLn' },
-          topdelete    = { hl = 'GitSignsDelete', text = '‾', numhl = 'GitSignsDeleteNr', linehl = 'GitSignsDeleteLn' },
-          changedelete = { hl = 'GitSignsChange', text = '~', numhl = 'GitSignsChangeNr', linehl = 'GitSignsChangeLn' },
-          untracked    = { hl = 'GitSignsAdd', text = '│', numhl = 'GitSignsAddNr', linehl = 'GitSignsDeleteLn' },
-        },
-      }
+      require("plugs.ui.gitsigns")
     end
   },
   {
@@ -162,13 +154,11 @@ lazy.setup({
     }
   },
   {
-    "goolord/alpha-nvim",
-    cmd = {
-      "Alpha",
-      "AlphaRedraw"
-    },
+    'echasnovski/mini.starter',
+    version = false,
+    lazy = false,
     config = function()
-      require("plugs.ui.alpha")
+      require("plugs.ui.starter")
     end
   },
   {

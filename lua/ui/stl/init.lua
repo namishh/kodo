@@ -22,7 +22,7 @@ end
 
 local setup = function(STYLE)
   vim.opt.statusline = run(STYLE)
-  vim.api.nvim_create_autocmd({ "ModeChanged", "CursorHold" }, {
+  vim.api.nvim_create_autocmd({ "ModeChanged", "CursorHold", "CursorMoved", "CursorMovedI" }, {
     callback = function()
       vim.opt.statusline = run(STYLE)
     end
