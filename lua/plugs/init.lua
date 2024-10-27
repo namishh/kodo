@@ -174,6 +174,13 @@ lazy.setup({
     ft = "astro"
   },
   {
+    "pmizio/typescript-tools.nvim",
+    dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+    opts = {},
+    event = "BufRead",
+    ft = { "ts", "astro", "tsx", "jsx", "js", "vue" }
+  },
+  {
     'prisma/vim-prisma',
     ft = "prisma"
   },

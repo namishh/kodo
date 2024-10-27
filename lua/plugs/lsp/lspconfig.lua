@@ -41,13 +41,13 @@ for _, k in ipairs(servers) do
   }
 end
 
-lspconfig.ts_ls.setup {
-  on_attach = M.on_attach,
-  capabilities = M.capabilities,
-  init_options = {
-    preferences = { includeCompletionsForModuleExports = false }
-  }
-}
+-- lspconfig.ts_ls.setup {
+--   on_attach = M.on_attach,
+--   capabilities = M.capabilities,
+--   init_options = {
+--     preferences = { includeCompletionsForModuleExports = false }
+--   }
+-- }
 
 
 lspconfig.rust_analyzer.setup {
