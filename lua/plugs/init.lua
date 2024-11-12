@@ -174,6 +174,12 @@ lazy.setup({
     ft = "astro"
   },
   {
+    "davidmh/mdx.nvim",
+    config = true,
+    event = "BufEnter *.mdx",
+    dependencies = { "nvim-treesitter/nvim-treesitter" }
+  },
+  {
     "pmizio/typescript-tools.nvim",
     dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
     opts = {},

@@ -7,6 +7,7 @@ local config = require("core.cfg")
 cmd('autocmd BufEnter * set formatoptions-=cro')
 cmd('autocmd BufEnter * setlocal formatoptions-=cro')
 
+vim.treesitter.language.register('markdown', 'mdx')
 opt.hidden = true
 g.code_action_menu_window_border = 'single'
 opt.ch = 0
